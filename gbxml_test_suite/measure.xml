@@ -1,0 +1,93 @@
+<measure>
+  <schema_version>3.0</schema_version>
+  <name>gbxml_test_suite</name>
+  <uid>dacb0627-da48-49a3-9b57-7549bab8171a</uid>
+  <version_id>06ea0731-40b2-4d29-bcb7-7c038c8ebdc4</version_id>
+  <xml_checksum>0AD1E2E2</xml_checksum>
+  <class_name>GBXMLTestSuite</class_name>
+  <display_name>GBXML Test Suite</display_name>
+  <description>A measure to build all of the GBXML Validation Test Cases.  A number is the only property that needs to be provided.</description>
+  <modeler_description>TBD</modeler_description>
+  <arguments>
+    <argument>
+      <name>testcases</name>
+      <display_name>gbXML Validation Test Case Number</display_name>
+      <description>Select a test case based upon gbXML validator test cases.  Refer to gbxml.org for more information.</description>
+      <type>Choice</type>
+      <required>true</required>
+      <model_dependent>false</model_dependent>
+      <choices>
+        <choice>
+          <value>Test Case 1</value>
+          <display_name>Test Case 1</display_name>
+        </choice>
+        <choice>
+          <value>Test Case 2</value>
+          <display_name>Test Case 2</display_name>
+        </choice>
+      </choices>
+    </argument>
+  </arguments>
+  <provenances/>
+  <tags>
+    <tag>Envelope.Form</tag>
+  </tags>
+  <attributes>
+    <attribute>
+      <name>Measure Type</name>
+      <value>ModelMeasure</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Apply Measure Now</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>OpenStudio Application</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Software Tool</name>
+      <value>Parametric Analysis Tool</value>
+      <datatype>string</datatype>
+    </attribute>
+    <attribute>
+      <name>Intended Use Case</name>
+      <value>Model Articulation</value>
+      <datatype>string</datatype>
+    </attribute>
+  </attributes>
+  <files>
+    <file>
+      <filename>example_model.osm</filename>
+      <filetype>osm</filetype>
+      <usage_type>test</usage_type>
+      <checksum>C4F35230</checksum>
+    </file>
+    <file>
+      <filename>run.bat</filename>
+      <filetype>bat</filetype>
+      <usage_type>test</usage_type>
+      <checksum>48046BCD</checksum>
+    </file>
+    <file>
+      <filename>gbxml_test_suite_test.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>test</usage_type>
+      <checksum>488B013B</checksum>
+    </file>
+    <file>
+      <version>
+        <software_program>OpenStudio</software_program>
+        <identifier>1.9.0</identifier>
+        <min_compatible>1.9.0</min_compatible>
+      </version>
+      <filename>measure.rb</filename>
+      <filetype>rb</filetype>
+      <usage_type>script</usage_type>
+      <checksum>97D95DBF</checksum>
+    </file>
+  </files>
+</measure>
