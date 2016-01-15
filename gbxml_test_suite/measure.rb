@@ -156,6 +156,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		if surface_matching
 		  #match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
+		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
@@ -422,6 +423,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		if surface_matching
 		  #match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
+		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
@@ -532,6 +534,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		if surface_matching
 		  #match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
+		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
@@ -654,6 +657,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		if surface_matching
 		  #match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
+		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
