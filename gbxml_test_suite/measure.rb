@@ -1,6 +1,17 @@
 # see the URL below for information on how to write OpenStudio measures
 # http://nrel.github.io/OpenStudio-user-documentation/measures/measure_writing_guide/
 
+def sort_spaces(spaces)
+  temp_spaces = spaces.sort{|x,y| x.floorArea <=> y.floorArea}
+  
+  result = OpenStudio::Model::SpaceVector.new
+  temp_spaces.each do |temp_space|
+    result << temp_space
+  end
+  
+  return result
+end
+
 # start the measure
 class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
@@ -152,11 +163,16 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 			new_zone.setName(zone_name)
 		  end
 		end
+    
+    # temporary workaround to avoid intermittant issue in intersectSurfaces and matchSurfaces
+    spaces = sort_spaces(spaces)
 
 		if surface_matching
-		  #match surfaces for each space in the vector
+      # intersect surfaces to break them into smaller pieces that can be matched
+      OpenStudio::Model.intersectSurfaces(spaces)
+      
+		  # match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
-		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
@@ -420,10 +436,15 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		  end
 		end
 
+    # temporary workaround to avoid intermittant issue in intersectSurfaces and matchSurfaces
+    spaces = sort_spaces(spaces)
+
 		if surface_matching
-		  #match surfaces for each space in the vector
+      # intersect surfaces to break them into smaller pieces that can be matched
+      OpenStudio::Model.intersectSurfaces(spaces)
+      
+		  # match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
-		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
@@ -531,10 +552,15 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		  end
 		end
 
+    # temporary workaround to avoid intermittant issue in intersectSurfaces and matchSurfaces
+    spaces = sort_spaces(spaces)
+
 		if surface_matching
-		  #match surfaces for each space in the vector
+      # intersect surfaces to break them into smaller pieces that can be matched
+      OpenStudio::Model.intersectSurfaces(spaces)
+      
+		  # match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
-		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
@@ -654,10 +680,15 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		  end
 		end
 
+    # temporary workaround to avoid intermittant issue in intersectSurfaces and matchSurfaces
+    spaces = sort_spaces(spaces)
+
 		if surface_matching
-		  #match surfaces for each space in the vector
+      # intersect surfaces to break them into smaller pieces that can be matched
+      OpenStudio::Model.intersectSurfaces(spaces)
+      
+		  # match surfaces for each space in the vector
 		  OpenStudio::Model.matchSurfaces(spaces)
-		  OpenStudio::Model.intersectSurfaces(spaces)
 		end
 		
 		finishing_spaces = model.getSpaces
