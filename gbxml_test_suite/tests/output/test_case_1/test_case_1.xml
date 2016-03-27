@@ -1,68 +1,30 @@
-<gbXML xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd" xmlns="http://www.gbxml.org/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="0.37" temperatureUnit="C" lengthUnit="Meters" xmlns:xhtml="http://www.w3.org/1999/xhtml" areaUnit="SquareMeters" volumeUnit="CubicMeters" xmlns:xsd="http://www.w3.org/2001/XMLSchema" useSIUnitsForResults="true">
+<gbXML areaUnit="SquareMeters" useSIUnitsForResults="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd" temperatureUnit="C" lengthUnit="Meters" volumeUnit="CubicMeters" xmlns:xhtml="http://www.w3.org/1999/xhtml" version="0.37" xmlns="http://www.gbxml.org/schema" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Campus id="Facility">
     <Name>Facility</Name>
     <Building buildingType="Unknown" id="Building_1">
       <Name>Building 1</Name>
       <Area>215.163</Area>
-      <Space zoneIdRef="sp-3-Zone" id="sp-3-Space">
-        <Name>sp-3-Space</Name>
-        <Area>66.8902</Area>
-        <Volume>265.046</Volume>
-      </Space>
-      <Space zoneIdRef="sp-4-Zone" id="sp-4-Space">
-        <Name>sp-4-Space</Name>
-        <Area>66.8902</Area>
-        <Volume>61.1644</Volume>
-      </Space>
-      <Space zoneIdRef="sp-2-Zone" id="sp-2-Space">
+      <Space id="sp-2-Space" zoneIdRef="sp-2-Zone">
         <Name>sp-2-Space</Name>
         <Area>14.4929</Area>
         <Volume>114.853</Volume>
       </Space>
-      <Space zoneIdRef="sp-1-Zone" id="sp-1-Space">
+      <Space id="sp-3-Space" zoneIdRef="sp-3-Zone">
+        <Name>sp-3-Space</Name>
+        <Area>66.8902</Area>
+        <Volume>265.046</Volume>
+      </Space>
+      <Space id="sp-4-Space" zoneIdRef="sp-4-Zone">
+        <Name>sp-4-Space</Name>
+        <Area>66.8902</Area>
+        <Volume>61.1644</Volume>
+      </Space>
+      <Space id="sp-1-Space" zoneIdRef="sp-1-Zone">
         <Name>sp-1-Space</Name>
         <Area>66.8902</Area>
         <Volume>203.881</Volume>
       </Space>
     </Building>
-    <Surface id="Surface_1" surfaceType="UndergroundSlab">
-      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
-        </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>10.9728</Width>
-        <Height>6.096</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
     <Surface id="Surface_11" surfaceType="InteriorFloor">
       <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
       <AdjacentSpaceId spaceIdRef="sp-4-Space"/>
@@ -102,91 +64,51 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_19" surfaceType="ExteriorWall">
+    <Surface id="Surface_18" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
       <RectangularGeometry>
-        <Azimuth>90</Azimuth>
+        <Azimuth>180</Azimuth>
         <CartesianPoint>
-          <Coordinate>2.4384</Coordinate>
+          <Coordinate>0</Coordinate>
           <Coordinate>0.0762</Coordinate>
           <Coordinate>0</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>5.9436</Width>
+        <Width>2.4384</Width>
         <Height>7.9248</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>0.0762</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
+            <Coordinate>0</Coordinate>
             <Coordinate>0.0762</Coordinate>
             <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>2.4384</Coordinate>
-            <Coordinate>6.0198</Coordinate>
+            <Coordinate>0.0762</Coordinate>
             <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>2.4384</Coordinate>
-            <Coordinate>6.0198</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0.0762</Coordinate>
             <Coordinate>7.9248</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_6" surfaceType="InteriorFloor">
-      <AdjacentSpaceId spaceIdRef="sp-4-Space"/>
+    <Surface id="Surface_2" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
-        <Azimuth>90</Azimuth>
+        <Azimuth>270</Azimuth>
         <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>10.9728</Width>
-        <Height>6.096</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_4" surfaceType="InteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
-      <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
+          <Coordinate>-10.9728</Coordinate>
+          <Coordinate>6.096</Coordinate>
           <Coordinate>0</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
@@ -196,19 +118,209 @@
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
             <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
             <Coordinate>6.096</Coordinate>
             <Coordinate>0</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_8" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-4-Space"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>6.096</Coordinate>
+          <Coordinate>3.048</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>10.9728</Width>
+        <Height>0.9144</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.9624</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.9624</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>6.096</Coordinate>
             <Coordinate>3.048</Coordinate>
           </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_14" surfaceType="Roof">
+      <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>6.096</Coordinate>
+          <Coordinate>7.9248</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>10.9728</Width>
+        <Height>6.096</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_22" surfaceType="UndergroundSlab">
+      <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>2.4384</Coordinate>
+          <Coordinate>0.0762</Coordinate>
+          <Coordinate>0</Coordinate>
+        </CartesianPoint>
+        <Tilt>180</Tilt>
+        <Width>2.4384</Width>
+        <Height>5.9436</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_21" surfaceType="Roof">
+      <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>2.4384</Coordinate>
+          <Coordinate>6.0198</Coordinate>
+          <Coordinate>7.9248</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>2.4384</Width>
+        <Height>5.9436</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_1" surfaceType="UndergroundSlab">
+      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>0</Coordinate>
+          <Coordinate>0</Coordinate>
+        </CartesianPoint>
+        <Tilt>180</Tilt>
+        <Width>10.9728</Width>
+        <Height>6.096</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
@@ -218,23 +330,32 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_15" surfaceType="InteriorWall">
+    <Surface id="Surface_12" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
-      <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
       <RectangularGeometry>
-        <Azimuth>90</Azimuth>
+        <Azimuth>330.945</Azimuth>
         <CartesianPoint>
           <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>3.9624</Coordinate>
+          <Coordinate>6.096</Coordinate>
+          <Coordinate>3.048</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>6.096</Width>
-        <Height>3.9624</Height>
+        <Width>8.87591</Width>
+        <Height>3.44842</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.9624</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>6.096</Coordinate>
             <Coordinate>3.9624</Coordinate>
@@ -242,17 +363,7 @@
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>6.096</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.9624</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
@@ -296,40 +407,41 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_22" surfaceType="UndergroundSlab">
+    <Surface id="Surface_17" surfaceType="InteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
+      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
-          <Coordinate>2.4384</Coordinate>
-          <Coordinate>0.0762</Coordinate>
+          <Coordinate>0</Coordinate>
+          <Coordinate>0</Coordinate>
           <Coordinate>0</Coordinate>
         </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>2.4384</Width>
-        <Height>5.9436</Height>
+        <Tilt>90</Tilt>
+        <Width>6.096</Width>
+        <Height>3.048</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>0.0762</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
             <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
-            <Coordinate>0.0762</Coordinate>
+            <Coordinate>6.096</Coordinate>
             <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
-            <Coordinate>6.0198</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>6.0198</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
@@ -372,29 +484,34 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_12" surfaceType="ExteriorWall">
+    <Surface id="Surface_13" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
       <RectangularGeometry>
-        <Azimuth>330.945</Azimuth>
+        <Azimuth>0</Azimuth>
         <CartesianPoint>
           <Coordinate>0</Coordinate>
           <Coordinate>6.096</Coordinate>
-          <Coordinate>3.048</Coordinate>
+          <Coordinate>3.9624</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>8.87591</Width>
-        <Height>3.44842</Height>
+        <Width>10.9728</Width>
+        <Height>3.9624</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>-10.9728</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>6.096</Coordinate>
             <Coordinate>3.9624</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
             <Coordinate>0</Coordinate>
+            <Coordinate>6.096</Coordinate>
             <Coordinate>7.9248</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
@@ -402,62 +519,20 @@
             <Coordinate>6.096</Coordinate>
             <Coordinate>3.9624</Coordinate>
           </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_21" surfaceType="Roof">
-      <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>2.4384</Coordinate>
-          <Coordinate>6.0198</Coordinate>
-          <Coordinate>7.9248</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>2.4384</Width>
-        <Height>5.9436</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>6.0198</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.0198</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0.0762</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>0.0762</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_14" surfaceType="Roof">
-      <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
+    <Surface id="Surface_6" surfaceType="InteriorFloor">
+      <AdjacentSpaceId spaceIdRef="sp-4-Space"/>
+      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>0</Coordinate>
-          <Coordinate>6.096</Coordinate>
-          <Coordinate>7.9248</Coordinate>
+          <Coordinate>0</Coordinate>
+          <Coordinate>3.048</Coordinate>
         </CartesianPoint>
-        <Tilt>0</Tilt>
+        <Tilt>180</Tilt>
         <Width>10.9728</Width>
         <Height>6.096</Height>
       </RectangularGeometry>
@@ -465,23 +540,23 @@
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>7.9248</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>-10.9728</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>7.9248</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.9728</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>7.9248</Coordinate>
+            <Coordinate>6.096</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
@@ -524,78 +599,41 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_18" surfaceType="ExteriorWall">
+    <Surface id="Surface_23" surfaceType="InteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
+      <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
       <RectangularGeometry>
-        <Azimuth>180</Azimuth>
+        <Azimuth>270</Azimuth>
         <CartesianPoint>
           <Coordinate>0</Coordinate>
-          <Coordinate>0.0762</Coordinate>
-          <Coordinate>0</Coordinate>
+          <Coordinate>6.0198</Coordinate>
+          <Coordinate>3.9624</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>2.4384</Width>
-        <Height>7.9248</Height>
+        <Width>5.9436</Width>
+        <Height>3.9624</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>0.0762</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>0.0762</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.4384</Coordinate>
-            <Coordinate>0.0762</Coordinate>
-            <Coordinate>7.9248</Coordinate>
+            <Coordinate>3.9624</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>0.0762</Coordinate>
             <Coordinate>7.9248</Coordinate>
           </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-4-Space"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>6.096</Coordinate>
-          <Coordinate>3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>10.9728</Width>
-        <Height>0.9144</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
           <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.9624</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>7.9248</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
+            <Coordinate>6.0198</Coordinate>
             <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
@@ -638,82 +676,6 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_13" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-3-Space"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>6.096</Coordinate>
-          <Coordinate>3.9624</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>10.9728</Width>
-        <Height>3.9624</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>7.9248</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_2" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>-10.9728</Coordinate>
-          <Coordinate>6.096</Coordinate>
-          <Coordinate>0</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>6.096</Width>
-        <Height>3.048</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.9728</Coordinate>
-            <Coordinate>6.096</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
     <Surface id="Surface_7" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-4-Space"/>
       <RectangularGeometry>
@@ -752,17 +714,55 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
+    <Surface id="Surface_19" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-2-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>2.4384</Coordinate>
+          <Coordinate>0.0762</Coordinate>
+          <Coordinate>0</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>5.9436</Width>
+        <Height>7.9248</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>0.0762</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.4384</Coordinate>
+            <Coordinate>6.0198</Coordinate>
+            <Coordinate>7.9248</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
   </Campus>
   <Zone id="sp-1-Zone">
     <Name>sp-1-Zone</Name>
   </Zone>
-  <Zone id="sp-2-Zone">
-    <Name>sp-2-Zone</Name>
+  <Zone id="sp-4-Zone">
+    <Name>sp-4-Zone</Name>
   </Zone>
   <Zone id="sp-3-Zone">
     <Name>sp-3-Zone</Name>
   </Zone>
-  <Zone id="sp-4-Zone">
-    <Name>sp-4-Zone</Name>
+  <Zone id="sp-2-Zone">
+    <Name>sp-2-Zone</Name>
   </Zone>
 </gbXML>
