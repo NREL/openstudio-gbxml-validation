@@ -706,82 +706,423 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       level3.setNominalFloortoFloorHeight(26*ft_to_m)
       level3.setName("Level 3") 
     
+      sp1 = OpenStudio::Model::Space.new(model)
+      sp1.setBuildingStory(level1)
+      sp1.setName("sp-2-Space")
+      
       #create a vector of points and pass these to a surface
       swpoint = OpenStudio::Point3d.new(-40*ft_to_m,0,0)
       sepoint = OpenStudio::Point3d.new(0,0,0)
       nepoint = OpenStudio::Point3d.new(0,15*ft_to_m,0)
       nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,0)
-      sp1polygon = OpenStudio::Point3dVector.new
-      sp1polygon << swpoint
-      sp1polygon << nwpoint
-      sp1polygon << nepoint
-      sp1polygon << sepoint
-      height = 13*ft_to_m
-      sp1 = OpenStudio::Model::Space::fromFloorPrint(sp1polygon, height, model)
-      sp1 = sp1.get
-      sp1.setName("sp-2-Space")
-      sp1.setBuildingStory(level1)
+      flpolygon = OpenStudio::Point3dVector.new
+      flpolygon << swpoint
+      flpolygon << nwpoint
+      flpolygon << nepoint
+      flpolygon << sepoint
+      floor = OpenStudio::Model::Surface.new(flpolygon,model)
+      floor.setSpace(sp1)
 
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,0,0)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,0,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp1)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,0,0)
+      point2 = OpenStudio::Point3d.new(0,0,0)
+      point3 = OpenStudio::Point3d.new(0,0,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,0,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      swall = OpenStudio::Model::Surface.new(polygon,model)
+      swall.setSpace(sp1)
+      
+      point1 = OpenStudio::Point3d.new(0,0,0)
+      point2 = OpenStudio::Point3d.new(0,15*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,0,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp1)
+      
+      point1 = OpenStudio::Point3d.new(0,15*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      nwall = OpenStudio::Model::Surface.new(polygon,model)
+      nwall.setSpace(sp1)
+      
+      swpoint = OpenStudio::Point3d.new(-40*ft_to_m,0,13*ft_to_m)
+      sepoint = OpenStudio::Point3d.new(0,0,13*ft_to_m)
+      nepoint = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,13*ft_to_m)
+      cpolygon = OpenStudio::Point3dVector.new
+      cpolygon << swpoint
+      cpolygon << sepoint
+      cpolygon << nepoint
+      cpolygon << nwpoint
+      ceil = OpenStudio::Model::Surface.new(cpolygon,model)
+      ceil.setSpace(sp1)
+      
+      sp2 = OpenStudio::Model::Space.new(model)
+      sp2.setBuildingStory(level1)
+      sp2.setName("sp-3-Space")
+      
       swpoint = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,0)
       sepoint = OpenStudio::Point3d.new(0,15*ft_to_m,0)
       nepoint = OpenStudio::Point3d.new(0,50*ft_to_m,0)
       nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,0)
-      spolygon = OpenStudio::Point3dVector.new
-      spolygon << swpoint
-      spolygon << nwpoint
-      spolygon << nepoint
-      spolygon << sepoint
-      height = 13*ft_to_m
-      sp2 = OpenStudio::Model::Space::fromFloorPrint(spolygon, height, model)
-      sp2 = sp2.get
-      sp2.setName("sp-3-Space")
-      sp2.setBuildingStory(level1)
-    
-      swpoint = OpenStudio::Point3d.new(0,0,0)
-      sepoint = OpenStudio::Point3d.new(50*ft_to_m,0,0)
-      nepoint = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,0)
-      nwpoint = OpenStudio::Point3d.new(0,50*ft_to_m,0)
-      spolygon = OpenStudio::Point3dVector.new
-      spolygon << swpoint
-      spolygon << nwpoint
-      spolygon << nepoint
-      spolygon << sepoint
-      height = 26*ft_to_m
-      sp3 = OpenStudio::Model::Space::fromFloorPrint(spolygon, height, model)
-      sp3 = sp3.get
-      sp3.setName("sp-4-Space")
-      sp3.setBuildingStory(level1)
-
+      flpolygon = OpenStudio::Point3dVector.new
+      flpolygon << swpoint
+      flpolygon << nwpoint
+      flpolygon << nepoint
+      flpolygon << sepoint
+      floor = OpenStudio::Model::Surface.new(flpolygon,model)
+      floor.setSpace(sp2)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp2)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(0,15*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      swall = OpenStudio::Model::Surface.new(polygon,model)
+      swall.setSpace(sp2)
+      
+      point1 = OpenStudio::Point3d.new(0,15*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(0,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp2)
+      
+      point1 = OpenStudio::Point3d.new(0,50*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      nwall = OpenStudio::Model::Surface.new(polygon,model)
+      nwall.setSpace(sp2)
+      
+      swpoint = OpenStudio::Point3d.new(-40*ft_to_m,15*ft_to_m,13*ft_to_m)
+      sepoint = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      nepoint = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
+      nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,13*ft_to_m)
+      cpolygon = OpenStudio::Point3dVector.new
+      cpolygon << swpoint
+      cpolygon << sepoint
+      cpolygon << nepoint
+      cpolygon << nwpoint
+      ceil = OpenStudio::Model::Surface.new(cpolygon,model)
+      ceil.setSpace(sp2)
+      
+      sp3 = OpenStudio::Model::Space.new(model)
+      sp3.setBuildingStory(level2)
+      sp3.setName("sp-5-Space")
+      
       swpoint = OpenStudio::Point3d.new(-40*ft_to_m,0,13*ft_to_m)
       sepoint = OpenStudio::Point3d.new(0,0,13*ft_to_m)
       nepoint = OpenStudio::Point3d.new(0,35*ft_to_m,13*ft_to_m)
       nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,13*ft_to_m)
-      spolygon = OpenStudio::Point3dVector.new
-      spolygon << swpoint
-      spolygon << nwpoint
-      spolygon << nepoint
-      spolygon << sepoint
-      height = 13*ft_to_m
-      sp4 = OpenStudio::Model::Space::fromFloorPrint(spolygon, height, model)
-      sp4 = sp4.get
-      sp4.setName("sp-5-Space")
+      flpolygon = OpenStudio::Point3dVector.new
+      flpolygon << swpoint
+      flpolygon << nwpoint
+      flpolygon << nepoint
+      flpolygon << sepoint
+      floor = OpenStudio::Model::Surface.new(flpolygon,model)
+      floor.setSpace(sp3)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,0*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,0*ft_to_m,26*ft_to_m)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp3)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,0*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0*ft_to_m,0*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(0*ft_to_m,0,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,0,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      swall = OpenStudio::Model::Surface.new(polygon,model)
+      swall.setSpace(sp3)
+      
+      point1 = OpenStudio::Point3d.new(0*ft_to_m,0*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,0,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp3)
+      
+      point1 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,35*ft_to_m,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      nwall = OpenStudio::Model::Surface.new(polygon,model)
+      nwall.setSpace(sp3)
+      
+      swpoint = OpenStudio::Point3d.new(-40*ft_to_m,0,26*ft_to_m)
+      sepoint = OpenStudio::Point3d.new(0,0,26*ft_to_m)
+      nepoint = OpenStudio::Point3d.new(0,35*ft_to_m,26*ft_to_m)
+      nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,26*ft_to_m)
+      cpolygon = OpenStudio::Point3dVector.new
+      cpolygon << swpoint
+      cpolygon << sepoint
+      cpolygon << nepoint
+      cpolygon << nwpoint
+      ceil = OpenStudio::Model::Surface.new(cpolygon,model)
+      ceil.setSpace(sp3)
+      
+      sp4 = OpenStudio::Model::Space.new(model)
       sp4.setBuildingStory(level2)
-
+      sp4.setName("sp-6-Space")
+      
       swpoint = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,13*ft_to_m)
       sepoint = OpenStudio::Point3d.new(0,35*ft_to_m,13*ft_to_m)
       nepoint = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
       nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,13*ft_to_m)
-      spolygon = OpenStudio::Point3dVector.new
-      spolygon << swpoint
-      spolygon << nwpoint
-      spolygon << nepoint
-      spolygon << sepoint
-      height = 13*ft_to_m
-      sp5 = OpenStudio::Model::Space::fromFloorPrint(spolygon, height, model)
-      sp5 = sp5.get
-      sp5.setName("sp-6-Space")
+      flpolygon = OpenStudio::Point3dVector.new
+      flpolygon << swpoint
+      flpolygon << nwpoint
+      flpolygon << nepoint
+      flpolygon << sepoint
+      floor = OpenStudio::Model::Surface.new(flpolygon,model)
+      floor.setSpace(sp4)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,26*ft_to_m)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp4)
+      
+      point1 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      swall = OpenStudio::Model::Surface.new(polygon,model)
+      swall.setSpace(sp4)
+      
+      point1 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(0*ft_to_m,50*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,35*ft_to_m,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp4)
+      
+      point1 = OpenStudio::Point3d.new(0*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,50*ft_to_m,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      nwall = OpenStudio::Model::Surface.new(polygon,model)
+      nwall.setSpace(sp4)
+      
+      swpoint = OpenStudio::Point3d.new(-40*ft_to_m,35*ft_to_m,26*ft_to_m)
+      sepoint = OpenStudio::Point3d.new(0,35*ft_to_m,26*ft_to_m)
+      nepoint = OpenStudio::Point3d.new(0,50*ft_to_m,26*ft_to_m)
+      nwpoint = OpenStudio::Point3d.new(-40*ft_to_m,50*ft_to_m,26*ft_to_m)
+      cpolygon = OpenStudio::Point3dVector.new
+      cpolygon << swpoint
+      cpolygon << sepoint
+      cpolygon << nepoint
+      cpolygon << nwpoint
+      ceil = OpenStudio::Model::Surface.new(cpolygon,model)
+      ceil.setSpace(sp4)
+      
+      sp5 = OpenStudio::Model::Space.new(model)
       sp5.setBuildingStory(level2)
-    
+      sp5.setName("sp-4-Space")
+      
+      swpoint = OpenStudio::Point3d.new(0,0,0)
+      sepoint = OpenStudio::Point3d.new(50*ft_to_m,0,0)
+      nepoint = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,0)
+      nwpoint = OpenStudio::Point3d.new(0,50*ft_to_m,0)
+      flpolygon = OpenStudio::Point3dVector.new
+      flpolygon << swpoint
+      flpolygon << nwpoint
+      flpolygon << nepoint
+      flpolygon << sepoint
+      floor = OpenStudio::Model::Surface.new(flpolygon,model)
+      floor.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(0,0,0)
+      point2 = OpenStudio::Point3d.new(0,15*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,0,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point4
+      polygon << point3
+      polygon << point2
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(0,15*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(0,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,15*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point4
+      polygon << point3
+      polygon << point2
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(0*ft_to_m,0*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,0,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point4
+      polygon << point3
+      polygon << point2
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(0*ft_to_m,35*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point3 = OpenStudio::Point3d.new(0*ft_to_m,50*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,35*ft_to_m,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point4
+      polygon << point3
+      polygon << point2
+      wwall = OpenStudio::Model::Surface.new(polygon,model)
+      wwall.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(0,0,0)
+      point2 = OpenStudio::Point3d.new(50*ft_to_m,0,0)
+      point3 = OpenStudio::Point3d.new(50*ft_to_m,0,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,0,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      swall = OpenStudio::Model::Surface.new(polygon,model)
+      swall.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(50*ft_to_m,0,0)
+      point2 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(50*ft_to_m,0,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp5)
+      
+      point1 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,0)
+      point2 = OpenStudio::Point3d.new(0,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,50*ft_to_m,26*ft_to_m)
+      point4 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,26*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      nwall = OpenStudio::Model::Surface.new(polygon,model)
+      nwall.setSpace(sp5)
+      
+      swpoint = OpenStudio::Point3d.new(0,0,26*ft_to_m)
+      sepoint = OpenStudio::Point3d.new(50*ft_to_m,0,26*ft_to_m)
+      nepoint = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,26*ft_to_m)
+      nwpoint = OpenStudio::Point3d.new(0,50*ft_to_m,26*ft_to_m)
+      cpolygon = OpenStudio::Point3dVector.new
+      cpolygon << swpoint
+      cpolygon << sepoint
+      cpolygon << nepoint
+      cpolygon << nwpoint
+      floor = OpenStudio::Model::Surface.new(cpolygon,model)
+      floor.setSpace(sp5)
+      
       #put all of the spaces in the model into a vector
       spaces = OpenStudio::Model::SpaceVector.new
       model.getSpaces.each do |space|
