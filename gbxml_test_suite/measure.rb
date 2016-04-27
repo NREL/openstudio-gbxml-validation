@@ -2606,8 +2606,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       sp0.setName("Space_zone_0")
       
       swpoint = OpenStudio::Point3d.new(0,0,0)
-      nwpoint = OpenStudio::Point3d.new(4.5732,4.5372,0)
-      nepoint = OpenStudio::Point3d.new(45.337799,4.5372,0)
+      nwpoint = OpenStudio::Point3d.new(4.5732,4.5732,0)
+      nepoint = OpenStudio::Point3d.new(45.337799,4.5732,0)
       sepoint = OpenStudio::Point3d.new(49.910999,0,0)
       polygon = OpenStudio::Point3dVector.new
       polygon << swpoint
@@ -2618,8 +2618,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       fl.setSpace(sp0)
       
       swpoint = OpenStudio::Point3d.new(0,0,2.7432)
-      nwpoint = OpenStudio::Point3d.new(4.5732,4.5372,2.7432)
-      nepoint = OpenStudio::Point3d.new(45.337799,4.5372,2.7432)
+      nwpoint = OpenStudio::Point3d.new(4.5732,4.5732,2.7432)
+      nepoint = OpenStudio::Point3d.new(45.337799,4.5732,2.7432)
       sepoint = OpenStudio::Point3d.new(49.910999,0,2.7432)
       polygon = OpenStudio::Point3dVector.new
       polygon << swpoint
@@ -2653,6 +2653,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       s = OpenStudio::Model::Surface.new(polygon,model)
       s.setSpace(sp0)
       
+      point1 = OpenStudio::Point3d.new(0.49911,0,0.914720)
+      point2 = OpenStudio::Point3d.new(49.411888,0,0.914720)
+      point3 = OpenStudio::Point3d.new(49.411888,0,2.532088)
+      point4 = OpenStudio::Point3d.new(0.49911,0,2.532088)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(s)
+      
       point1 = OpenStudio::Point3d.new(49.910999,0,0)
       point2 = OpenStudio::Point3d.new(45.337799,4.5732,0)
       point3 = OpenStudio::Point3d.new(45.337799,4.5732,2.7432)
@@ -2681,7 +2693,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       sp1.setBuildingStory(level1)
       sp1.setName("Space_zone_1")
       
-      swpoint = OpenStudio::Point3d.new(45.337799,4.5372,0)
+      swpoint = OpenStudio::Point3d.new(45.337799,4.5732,0)
       nwpoint = OpenStudio::Point3d.new(45.337799,28.7006,0)
       nepoint = OpenStudio::Point3d.new(49.910999,33.2738,0)
       sepoint = OpenStudio::Point3d.new(49.910999,0,0)
@@ -2693,7 +2705,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       fl = OpenStudio::Model::Surface.new(polygon,model)
       fl.setSpace(sp1)
       
-      swpoint = OpenStudio::Point3d.new(45.337799,4.5372,2.7432)
+      swpoint = OpenStudio::Point3d.new(45.337799,4.5732,2.7432)
       nwpoint = OpenStudio::Point3d.new(45.337799,28.7006,2.7432)
       nepoint = OpenStudio::Point3d.new(49.910999,33.2738,2.7432)
       sepoint = OpenStudio::Point3d.new(49.910999,0,2.7432)
@@ -2741,6 +2753,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       e = OpenStudio::Model::Surface.new(polygon,model)
       e.setSpace(sp1)
       
+      point1 = OpenStudio::Point3d.new(49.910999,0.332738,0.914720)
+      point2 = OpenStudio::Point3d.new(49.910999,32.941063,0.914720)
+      point3 = OpenStudio::Point3d.new(49.910999,32.941063,2.532088)
+      point4 = OpenStudio::Point3d.new(49.910999,0.332738,2.532088)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(e)
+      
       point1 = OpenStudio::Point3d.new(49.910999,33.2738,0)
       point2 = OpenStudio::Point3d.new(45.337799,28.7006,0)
       point3 = OpenStudio::Point3d.new(45.337799,28.7006,2.7432)
@@ -2782,8 +2806,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       ceil.setSpace(sp2)
       
       point1 = OpenStudio::Point3d.new(0,33.2738,0)
-      point2 = OpenStudio::Point3d.new(4.7352,28.7006,0)
-      point3 = OpenStudio::Point3d.new(4.7352,28.7006,2.7432)
+      point2 = OpenStudio::Point3d.new(4.5732,28.7006,0)
+      point3 = OpenStudio::Point3d.new(4.5732,28.7006,2.7432)
       point4 = OpenStudio::Point3d.new(0,33.2738,2.7432)
       polygon = OpenStudio::Point3dVector.new
       polygon << point1
@@ -2829,6 +2853,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       n = OpenStudio::Model::Surface.new(polygon,model)
       n.setSpace(sp2)
       
+      point1 = OpenStudio::Point3d.new(49.411888,33.2738,0.914720)
+      point2 = OpenStudio::Point3d.new(0.49911,33.2738,0.914720)
+      point3 = OpenStudio::Point3d.new(0.49911,33.2738,2.532088)
+      point4 = OpenStudio::Point3d.new(49.411888,33.2738,2.532088)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(n)
+      
       sp3 = OpenStudio::Model::Space.new(model)
       sp3.setBuildingStory(level1)
       sp3.setName("Space_zone_3")
@@ -2868,6 +2904,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       polygon << point4
       w = OpenStudio::Model::Surface.new(polygon,model)
       w.setSpace(sp3)
+      
+      point1 = OpenStudio::Point3d.new(0,32.941063,0.914720)
+      point2 = OpenStudio::Point3d.new(0,0.332738,0.914720)
+      point3 = OpenStudio::Point3d.new(0,0.332738,2.532088)
+      point4 = OpenStudio::Point3d.new(0,32.941063,2.532088)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(w)
       
       point1 = OpenStudio::Point3d.new(0,0,0)
       point2 = OpenStudio::Point3d.new(4.5732,4.5732,0)
@@ -2981,6 +3029,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       n = OpenStudio::Model::Surface.new(polygon,model)
       n.setSpace(sp4)
       
+      #plenum
       sp5 = OpenStudio::Model::Space.new(model)
       sp5.setBuildingStory(level1p)
       sp5.setName("Space_zone_5")
@@ -3062,8 +3111,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       sp6.setName("Space_zone_6")
       
       swpoint = OpenStudio::Point3d.new(0,0,3.9624)
-      nwpoint = OpenStudio::Point3d.new(4.5732,4.5372,3.9624)
-      nepoint = OpenStudio::Point3d.new(45.337799,4.5372,3.9624)
+      nwpoint = OpenStudio::Point3d.new(4.5732,4.5732,3.9624)
+      nepoint = OpenStudio::Point3d.new(45.337799,4.5732,3.9624)
       sepoint = OpenStudio::Point3d.new(49.910999,0,3.9624)
       polygon = OpenStudio::Point3dVector.new
       polygon << swpoint
@@ -3074,8 +3123,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       fl.setSpace(sp6)
       
       swpoint = OpenStudio::Point3d.new(0,0,6.7056)
-      nwpoint = OpenStudio::Point3d.new(4.5732,4.5372,6.7056)
-      nepoint = OpenStudio::Point3d.new(45.337799,4.5372,6.7056)
+      nwpoint = OpenStudio::Point3d.new(4.5732,4.5732,6.7056)
+      nepoint = OpenStudio::Point3d.new(45.337799,4.5732,6.7056)
       sepoint = OpenStudio::Point3d.new(49.910999,0,6.7056)
       polygon = OpenStudio::Point3dVector.new
       polygon << swpoint
@@ -3109,6 +3158,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       s = OpenStudio::Model::Surface.new(polygon,model)
       s.setSpace(sp6)
       
+      point1 = OpenStudio::Point3d.new(0.49911,0,4.87712)
+      point2 = OpenStudio::Point3d.new(49.411888,0,4.87712)
+      point3 = OpenStudio::Point3d.new(49.411888,0,6.494488)
+      point4 = OpenStudio::Point3d.new(0.49911,0,6.494488)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(s)
+      
       point1 = OpenStudio::Point3d.new(49.910999,0,3.9624)
       point2 = OpenStudio::Point3d.new(45.337799,4.5732,3.9624)
       point3 = OpenStudio::Point3d.new(45.337799,4.5732,6.7056)
@@ -3137,7 +3198,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       sp7.setBuildingStory(level2)
       sp7.setName("Space_zone_7")
       
-      swpoint = OpenStudio::Point3d.new(45.337799,4.5372,3.9624)
+      swpoint = OpenStudio::Point3d.new(45.337799,4.5732,3.9624)
       nwpoint = OpenStudio::Point3d.new(45.337799,28.7006,3.9624)
       nepoint = OpenStudio::Point3d.new(49.910999,33.2738,3.9624)
       sepoint = OpenStudio::Point3d.new(49.910999,0,3.9624)
@@ -3149,7 +3210,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       fl = OpenStudio::Model::Surface.new(polygon,model)
       fl.setSpace(sp7)
       
-      swpoint = OpenStudio::Point3d.new(45.337799,4.5372,6.7056)
+      swpoint = OpenStudio::Point3d.new(45.337799,4.5732,6.7056)
       nwpoint = OpenStudio::Point3d.new(45.337799,28.7006,6.7056)
       nepoint = OpenStudio::Point3d.new(49.910999,33.2738,6.7056)
       sepoint = OpenStudio::Point3d.new(49.910999,0,6.7056)
@@ -3197,6 +3258,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       e = OpenStudio::Model::Surface.new(polygon,model)
       e.setSpace(sp7)
       
+      point1 = OpenStudio::Point3d.new(49.910999,0.332738,4.87712)
+      point2 = OpenStudio::Point3d.new(49.910999,32.941063,4.87712)
+      point3 = OpenStudio::Point3d.new(49.910999,32.941063,6.494488)
+      point4 = OpenStudio::Point3d.new(49.910999,0.332738,6.494488)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(e)
+      
       point1 = OpenStudio::Point3d.new(49.910999,33.2738,3.9624)
       point2 = OpenStudio::Point3d.new(45.337799,28.7006,3.9624)
       point3 = OpenStudio::Point3d.new(45.337799,28.7006,6.7056)
@@ -3238,8 +3311,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       ceil.setSpace(sp8)
       
       point1 = OpenStudio::Point3d.new(0,33.2738,3.9624)
-      point2 = OpenStudio::Point3d.new(4.7352,28.7006,3.9624)
-      point3 = OpenStudio::Point3d.new(4.7352,28.7006,6.7056)
+      point2 = OpenStudio::Point3d.new(4.5732,28.7006,3.9624)
+      point3 = OpenStudio::Point3d.new(4.5732,28.7006,6.7056)
       point4 = OpenStudio::Point3d.new(0,33.2738,6.7056)
       polygon = OpenStudio::Point3dVector.new
       polygon << point1
@@ -3285,6 +3358,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       n = OpenStudio::Model::Surface.new(polygon,model)
       n.setSpace(sp8)
       
+      point1 = OpenStudio::Point3d.new(49.411888,33.2738,4.87712)
+      point2 = OpenStudio::Point3d.new(0.49911,33.2738,4.87712)
+      point3 = OpenStudio::Point3d.new(0.49911,33.2738,6.494488)
+      point4 = OpenStudio::Point3d.new(49.411888,33.2738,6.494488)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(n)
+      
       sp9 = OpenStudio::Model::Space.new(model)
       sp9.setBuildingStory(level2)
       sp9.setName("Space_zone_9")
@@ -3324,6 +3409,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       polygon << point4
       w = OpenStudio::Model::Surface.new(polygon,model)
       w.setSpace(sp9)
+      
+      point1 = OpenStudio::Point3d.new(0,32.941063,4.87712)
+      point2 = OpenStudio::Point3d.new(0,0.332738,4.87712)
+      point3 = OpenStudio::Point3d.new(0,0.332738,6.494488)
+      point4 = OpenStudio::Point3d.new(0,32.941063,6.484488)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(w)
       
       point1 = OpenStudio::Point3d.new(0,0,3.9624)
       point2 = OpenStudio::Point3d.new(4.5732,4.5732,3.9624)
@@ -3519,8 +3616,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       sp12.setName("Space_zone_12")
       
       swpoint = OpenStudio::Point3d.new(0,0,7.9248)
-      nwpoint = OpenStudio::Point3d.new(4.5732,4.5372,7.9248)
-      nepoint = OpenStudio::Point3d.new(45.337799,4.5372,7.9248)
+      nwpoint = OpenStudio::Point3d.new(4.5732,4.5732,7.9248)
+      nepoint = OpenStudio::Point3d.new(45.337799,4.5732,7.9248)
       sepoint = OpenStudio::Point3d.new(49.910999,0,7.9248)
       polygon = OpenStudio::Point3dVector.new
       polygon << swpoint
@@ -3531,8 +3628,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       fl.setSpace(sp12)
       
       swpoint = OpenStudio::Point3d.new(0,0,10.668)
-      nwpoint = OpenStudio::Point3d.new(4.5732,4.5372,10.668)
-      nepoint = OpenStudio::Point3d.new(45.337799,4.5372,10.668)
+      nwpoint = OpenStudio::Point3d.new(4.5732,4.5732,10.668)
+      nepoint = OpenStudio::Point3d.new(45.337799,4.5732,10.668)
       sepoint = OpenStudio::Point3d.new(49.910999,0,10.668)
       polygon = OpenStudio::Point3dVector.new
       polygon << swpoint
@@ -3566,6 +3663,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       s = OpenStudio::Model::Surface.new(polygon,model)
       s.setSpace(sp12)
       
+      point1 = OpenStudio::Point3d.new(0.49911,0,8.83952)
+      point2 = OpenStudio::Point3d.new(49.411888,0,8.83952)
+      point3 = OpenStudio::Point3d.new(49.411888,0,10.456888)
+      point4 = OpenStudio::Point3d.new(0.49911,0,10.456888)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(s)
+      
       point1 = OpenStudio::Point3d.new(49.910999,0,7.9248)
       point2 = OpenStudio::Point3d.new(45.337799,4.5732,7.9248)
       point3 = OpenStudio::Point3d.new(45.337799,4.5732,10.668)
@@ -3594,7 +3703,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       sp13.setBuildingStory(level3)
       sp13.setName("Space_zone_13")
       
-      swpoint = OpenStudio::Point3d.new(45.337799,4.5372,7.9248)
+      swpoint = OpenStudio::Point3d.new(45.337799,4.5732,7.9248)
       nwpoint = OpenStudio::Point3d.new(45.337799,28.7006,7.9248)
       nepoint = OpenStudio::Point3d.new(49.910999,33.2738,7.9248)
       sepoint = OpenStudio::Point3d.new(49.910999,0,7.9248)
@@ -3606,7 +3715,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       fl = OpenStudio::Model::Surface.new(polygon,model)
       fl.setSpace(sp13)
       
-      swpoint = OpenStudio::Point3d.new(45.337799,4.5372,10.668)
+      swpoint = OpenStudio::Point3d.new(45.337799,4.5732,10.668)
       nwpoint = OpenStudio::Point3d.new(45.337799,28.7006,10.668)
       nepoint = OpenStudio::Point3d.new(49.910999,33.2738,10.668)
       sepoint = OpenStudio::Point3d.new(49.910999,0,10.668)
@@ -3654,6 +3763,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       e = OpenStudio::Model::Surface.new(polygon,model)
       e.setSpace(sp13)
       
+      point1 = OpenStudio::Point3d.new(49.910999,0.332738,8.83952)
+      point2 = OpenStudio::Point3d.new(49.910999,32.941063,8.83952)
+      point3 = OpenStudio::Point3d.new(49.910999,32.941063,10.456888)
+      point4 = OpenStudio::Point3d.new(49.910999,0.332738,10.456888)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(e)
+      
       point1 = OpenStudio::Point3d.new(49.910999,33.2738,7.9248)
       point2 = OpenStudio::Point3d.new(45.337799,28.7006,7.9248)
       point3 = OpenStudio::Point3d.new(45.337799,28.7006,10.668)
@@ -3695,8 +3816,8 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       ceil.setSpace(sp14)
       
       point1 = OpenStudio::Point3d.new(0,33.2738,7.924800)
-      point2 = OpenStudio::Point3d.new(4.7352,28.7006,7.924800)
-      point3 = OpenStudio::Point3d.new(4.7352,28.7006,10.668)
+      point2 = OpenStudio::Point3d.new(4.5732,28.7006,7.924800)
+      point3 = OpenStudio::Point3d.new(4.5732,28.7006,10.668)
       point4 = OpenStudio::Point3d.new(0,33.2738,10.668)
       polygon = OpenStudio::Point3dVector.new
       polygon << point1
@@ -3742,6 +3863,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       n = OpenStudio::Model::Surface.new(polygon,model)
       n.setSpace(sp14)
       
+      point1 = OpenStudio::Point3d.new(49.411888,33.2738,8.83952)
+      point2 = OpenStudio::Point3d.new(0.49911,33.2738,8.83952)
+      point3 = OpenStudio::Point3d.new(0.49911,33.2738,10.456888)
+      point4 = OpenStudio::Point3d.new(49.411888,33.2738,10.456888)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(n)
+      
       sp15 = OpenStudio::Model::Space.new(model)
       sp15.setBuildingStory(level3)
       sp15.setName("Space_zone_15")
@@ -3781,6 +3914,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       polygon << point4
       w = OpenStudio::Model::Surface.new(polygon,model)
       w.setSpace(sp15)
+      
+      point1 = OpenStudio::Point3d.new(0,32.941063,8.83952)
+      point2 = OpenStudio::Point3d.new(0,0.332738,8.83952)
+      point3 = OpenStudio::Point3d.new(0,0.332738,10.456888)
+      point4 = OpenStudio::Point3d.new(0,32.941063,10.456888)
+      wpolygon = OpenStudio::Point3dVector.new
+      wpolygon << point1
+      wpolygon << point2
+      wpolygon << point3
+      wpolygon << point4
+      window1 = OpenStudio::Model::SubSurface.new(wpolygon,model)
+      window1.setSurface(w)
       
       point1 = OpenStudio::Point3d.new(0,0,7.9248)
       point2 = OpenStudio::Point3d.new(4.5732,4.5732,7.9248)
