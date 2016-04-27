@@ -1,4 +1,4 @@
-<gbXML xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.gbxml.org/schema" xmlns:xhtml="http://www.w3.org/1999/xhtml" lengthUnit="Meters" version="0.37" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" areaUnit="SquareMeters" volumeUnit="CubicMeters" xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd" temperatureUnit="C" useSIUnitsForResults="true">
+<gbXML lengthUnit="Meters" areaUnit="SquareMeters" version="0.37" temperatureUnit="C" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xhtml="http://www.w3.org/1999/xhtml" volumeUnit="CubicMeters" xmlns="http://www.gbxml.org/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" useSIUnitsForResults="true" xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd">
   <Campus id="Facility">
     <Name>Facility</Name>
     <Building id="Building_1" buildingType="Unknown">
@@ -10,6 +10,44 @@
         <Volume>331.307</Volume>
       </Space>
     </Building>
+    <Surface surfaceType="Roof" id="Surface_3">
+      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>9.144</Coordinate>
+          <Coordinate>9.144</Coordinate>
+          <Coordinate>3.9624</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>9.144</Width>
+        <Height>9.144</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.9624</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>9.144</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.9624</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>9.144</Coordinate>
+            <Coordinate>9.144</Coordinate>
+            <Coordinate>3.9624</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+            <Coordinate>3.9624</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
     <Surface surfaceType="ExteriorWall" id="Surface_2">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
@@ -456,44 +494,6 @@
           </PolyLoop>
         </PlanarGeometry>
       </Opening>
-    </Surface>
-    <Surface surfaceType="Roof" id="Surface_3">
-      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>9.144</Coordinate>
-          <Coordinate>9.144</Coordinate>
-          <Coordinate>3.9624</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>9.144</Width>
-        <Height>9.144</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>9.144</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>9.144</Coordinate>
-            <Coordinate>9.144</Coordinate>
-            <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
-            <Coordinate>3.9624</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
     </Surface>
     <Surface surfaceType="UndergroundSlab" id="Surface_1">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
