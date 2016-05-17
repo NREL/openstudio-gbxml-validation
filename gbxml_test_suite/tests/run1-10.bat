@@ -1,0 +1,1 @@
+"c:\Program Files\OpenStudio 1.10.0\ruby-install\ruby\bin\ruby.exe" -I "c:\Program Files\OpenStudio 1.10.0\Ruby" gbxml_test_suite_test.rb

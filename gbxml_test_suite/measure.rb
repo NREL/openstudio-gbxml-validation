@@ -36,16 +36,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
     # the name of the space to add to the model
     chs = OpenStudio::StringVector.new
-    chs << "Test Case 1"
-    chs << "Test Case 2"
-    chs << "Test Case 3"
-    chs << "Test Case 4"
-    chs << "Test Case 5"
-    chs << "Test Case 6"
-    chs << "Test Case 7"
-    chs << "Test Case 8"
-    chs << "Test Case 12"
-    chs << "Whole Building Test Case 1"
+	chs << "Whole Building Test Case 2"
     testcases = OpenStudio::Ruleset::OSArgument::makeChoiceArgument('testcases', chs, true)
     testcases.setDisplayName("gbXML Validation Test Case Number")
     testcases.setDescription("Select a test case based upon gbXML validator test cases.  Refer to gbxml.org for more information.")
@@ -54,6 +45,62 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
     return args
   end
 
+  def makeNewZones(model,zones,newbase,height,newzonenames,newlevel)
+    retarr = []
+	allzs = getMinMaxZ(zones)
+	zones.each_with_index do |z,index|
+	
+	  newspace = OpenStudio::Model::Space.new(model)
+	  newspace.setName(newzonenames[index])
+	  newspace.setBuildingStory(newlevel)
+	  
+	  z.surfaces.each do |surface|
+	    polygon = OpenStudio::Point3dVector.new
+	    surface.vertices.each do |vertex|
+		  allzs.each do |k,v|
+		    if(vertex.z == v && k == "min")
+			  point = OpenStudio::Point3d.new(vertex.x,vertex.y,newbase)
+			  polygon << point
+			end
+			if(vertex.z == v && k == "max")
+			  point = OpenStudio::Point3d.new(vertex.x,vertex.y,newbase+height)
+			  polygon << point
+			end
+		  end
+		end
+		s = OpenStudio::Model::Surface.new(polygon,model)
+	    s.setSpace(newspace)
+	  end
+	end
+	return model
+  end
+  
+  def getMinMaxZ(zones)
+    minz = 0 
+	maxz = 0
+    vertexcount = 0
+    zones.each do |z|
+	  z.surfaces.each do |surface| 
+	    surface.vertices.each do |vertex|
+		  if(vertexcount == 0)
+		    minz = vertex.z
+			maxz = vertex.z
+		  else
+		    if(minz > vertex.z) 
+		      minz = vertex.z
+		    end
+		    if(vertex.z > maxz)
+		      maxz = vertex.z
+		    end
+		  end
+		  vertexcount+=1
+		end
+	  end
+	end
+	zvalues = {"min"=>minz,"max"=>maxz}
+	return zvalues
+  end
+  
   # define what happens when the measure is run
   def run(model, runner, user_arguments)
     make_zones = true
@@ -68,6 +115,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
     # assign the user inputs to variables
     test_case = runner.getStringArgumentValue("testcases", user_arguments)
+	
 
   #add a switch statement based upon the test case number
   case test_case
@@ -696,7 +744,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
 
     when "Test Case 3"
-      runner.registerInfo("Starting Test Case 5")
+      runner.registerInfo("Starting Test Case 3")
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
@@ -1080,6 +1128,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       
       point1 = OpenStudio::Point3d.new(0,0,0)
       point2 = OpenStudio::Point3d.new(50*ft_to_m,0,0)
+      point3 = OpenStudio::Point3d.new(50*ft_to_m,0,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(0,0,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      swall = OpenStudio::Model::Surface.new(polygon,model)
+      swall.setSpace(sp5)
+	  
+	  point1 = OpenStudio::Point3d.new(0,0,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(50*ft_to_m,0,13*ft_to_m)
       point3 = OpenStudio::Point3d.new(50*ft_to_m,0,26*ft_to_m)
       point4 = OpenStudio::Point3d.new(0,0,26*ft_to_m)
       polygon = OpenStudio::Point3dVector.new
@@ -1092,6 +1152,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       
       point1 = OpenStudio::Point3d.new(50*ft_to_m,0,0)
       point2 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(50*ft_to_m,0,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      ewall = OpenStudio::Model::Surface.new(polygon,model)
+      ewall.setSpace(sp5)
+	  
+	  point1 = OpenStudio::Point3d.new(50*ft_to_m,0,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,13*ft_to_m)
       point3 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,26*ft_to_m)
       point4 = OpenStudio::Point3d.new(50*ft_to_m,0,26*ft_to_m)
       polygon = OpenStudio::Point3dVector.new
@@ -1104,6 +1176,18 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       
       point1 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,0)
       point2 = OpenStudio::Point3d.new(0,50*ft_to_m,0)
+      point3 = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
+      point4 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,13*ft_to_m)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      nwall = OpenStudio::Model::Surface.new(polygon,model)
+      nwall.setSpace(sp5)
+	  
+	  point1 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,13*ft_to_m)
+      point2 = OpenStudio::Point3d.new(0,50*ft_to_m,13*ft_to_m)
       point3 = OpenStudio::Point3d.new(0,50*ft_to_m,26*ft_to_m)
       point4 = OpenStudio::Point3d.new(50*ft_to_m,50*ft_to_m,26*ft_to_m)
       polygon = OpenStudio::Point3dVector.new
@@ -4131,13 +4215,232 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       spaces = sort_spaces(spaces)
       if surface_matching
         #match surfaces for each space in the vector
-         OpenStudio::Model.intersectSurfaces(spaces)
+        OpenStudio::Model.intersectSurfaces(spaces)
         OpenStudio::Model.matchSurfaces(spaces)
        
       end
 
       finishing_spaces = model.getSpaces
       runner.registerFinalCondition("The building finished with #{finishing_spaces.size} spaces.")	    
+	  
+	when "Whole Building Test Case 2"
+	  runner.registerInfo("Starting Whole Building Test Case 2")
+      facility = model.getFacility
+      building = model.getBuilding
+	  blevel = OpenStudio::Model::BuildingStory.new(model)
+	  blevel.setNominalZCoordinate(-2.439)
+	  blevel.setName("Basement Level")
+      level1 = OpenStudio::Model::BuildingStory.new(model)
+      level1.setNominalZCoordinate(0)
+      level1.setName("Level 1")
+      level1p = OpenStudio::Model::BuildingStory.new(model)
+      level1p.setNominalZCoordinate(2.744)
+      level1p.setName("Level 1 Plenum")
+      level2 = OpenStudio::Model::BuildingStory.new(model)
+      level2.setNominalZCoordinate(3.9632)
+      level2.setName("Level 2")
+      level4 = OpenStudio::Model::BuildingStory.new(model)
+      level4.setNominalZCoordinate(16.7683)
+      level4.setName("Level 4")
+      level4p = OpenStudio::Model::BuildingStory.new(model)
+      level4p.setNominalZCoordinate(19.5123)
+      level4p.setName("Level 4 Plenum")
+	  level5 = OpenStudio::Model::BuildingStory.new(model)
+      level5.setNominalZCoordinate(20.7315)
+      level5.setName("Level 5")
+	  level8 = OpenStudio::Model::BuildingStory.new(model)
+      level8.setNominalZCoordinate(33.5366)
+      level8.setName("Level 8")
+      level8p = OpenStudio::Model::BuildingStory.new(model)
+      level8p.setNominalZCoordinate(36.2800)
+      level8p.setName("Level 8 Plenum")
+      levelr = OpenStudio::Model::BuildingStory.new(model)
+      levelr.setNominalZCoordinate(37.4998)
+      levelr.setName("Roof Level")
+	  
+	  sp0 = OpenStudio::Model::Space.new(model)
+      sp0.setBuildingStory(blevel)
+      sp0.setName("Space_zone_0")
+      
+	  basezones = Array.new
+	  
+      swpoint = OpenStudio::Point3d.new(0,0,-2.439)
+      nwpoint = OpenStudio::Point3d.new(0,48.7381,-2.439)
+      nepoint = OpenStudio::Point3d.new(16.0782,48.7381,-2.439)
+      sepoint = OpenStudio::Point3d.new(16.0782,0,-2.439)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << swpoint
+      polygon << nwpoint
+      polygon << nepoint
+      polygon << sepoint
+      fl = OpenStudio::Model::Surface.new(polygon,model)
+      fl.setSpace(sp0)
+      
+      swpoint = OpenStudio::Point3d.new(0,0,0)
+      nwpoint = OpenStudio::Point3d.new(0,48.7381,0)
+      nepoint = OpenStudio::Point3d.new(16.0782,48.7381,0)
+      sepoint = OpenStudio::Point3d.new(16.0782,0,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << swpoint
+      polygon << sepoint
+      polygon << nepoint
+      polygon << nwpoint
+      ceil = OpenStudio::Model::Surface.new(polygon,model)
+      ceil.setSpace(sp0)
+      
+      point1 = OpenStudio::Point3d.new(0,0,0)
+      point2 = OpenStudio::Point3d.new(0,48.7381,0)
+      point3 = OpenStudio::Point3d.new(0,48.7381,-2.439)
+      point4 = OpenStudio::Point3d.new(0,0,-2.439)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      w = OpenStudio::Model::Surface.new(polygon,model)
+      w.setSpace(sp0)
+      
+      point1 = OpenStudio::Point3d.new(0,0,-2.439)
+      point2 = OpenStudio::Point3d.new(16.0782,0,-2.439)
+      point3 = OpenStudio::Point3d.new(16.0782,0,0)
+      point4 = OpenStudio::Point3d.new(0,0,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      s = OpenStudio::Model::Surface.new(polygon,model)
+      s.setSpace(sp0)
+      
+      point1 = OpenStudio::Point3d.new(16.0782,0,-2.439)
+      point2 = OpenStudio::Point3d.new(16.0782,48.7381,-2.439)
+      point3 = OpenStudio::Point3d.new(16.0782,48.7381,0)
+      point4 = OpenStudio::Point3d.new(16.0782,0,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      e = OpenStudio::Model::Surface.new(polygon,model)
+      e.setSpace(sp0)
+      
+      point1 = OpenStudio::Point3d.new(16.0782,48.7381,-2.439)
+      point2 = OpenStudio::Point3d.new(0,48.7381,-2.439)
+      point3 = OpenStudio::Point3d.new(0,48.7381,0)
+      point4 = OpenStudio::Point3d.new(16.0782,48.7381,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      n = OpenStudio::Model::Surface.new(polygon,model)
+      n.setSpace(sp0)
+	  
+	  sp1 = OpenStudio::Model::Space.new(model)
+      sp1.setBuildingStory(blevel)
+      sp1.setName("Space_zone_1")
+	  
+	  swpoint = OpenStudio::Point3d.new(16.0782,0,-2.439)
+      nwpoint = OpenStudio::Point3d.new(16.0782,48.7381,-2.439)
+      nepoint = OpenStudio::Point3d.new(73.1072,48.7381,-2.439)
+      sepoint = OpenStudio::Point3d.new(73.1072,0,-2.439)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << swpoint
+      polygon << nwpoint
+      polygon << nepoint
+      polygon << sepoint
+      fl = OpenStudio::Model::Surface.new(polygon,model)
+      fl.setSpace(sp1)
+	  
+	  swpoint = OpenStudio::Point3d.new(16.0782,0,0)
+      nwpoint = OpenStudio::Point3d.new(16.0782,48.7381,0)
+      nepoint = OpenStudio::Point3d.new(73.1072,48.7381,0)
+      sepoint = OpenStudio::Point3d.new(73.1072,0,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << swpoint
+      polygon << sepoint
+      polygon << nepoint
+      polygon << nwpoint
+      ceil = OpenStudio::Model::Surface.new(polygon,model)
+      ceil.setSpace(sp1)
+	  
+	  point1 = OpenStudio::Point3d.new(16.0782,0,0)
+      point2 = OpenStudio::Point3d.new(16.0782,48.7381,0)
+      point3 = OpenStudio::Point3d.new(16.0782,48.7381,-2.439)
+      point4 = OpenStudio::Point3d.new(16.0782,0,-2.439)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      w = OpenStudio::Model::Surface.new(polygon,model)
+      w.setSpace(sp1)
+	  
+	  point1 = OpenStudio::Point3d.new(16.0782,0,-2.439)
+      point2 = OpenStudio::Point3d.new(73.1072,0,-2.439)
+      point3 = OpenStudio::Point3d.new(73.1072,0,0)
+      point4 = OpenStudio::Point3d.new(16.0782,0,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      s = OpenStudio::Model::Surface.new(polygon,model)
+      s.setSpace(sp1)
+	  
+	  point1 = OpenStudio::Point3d.new(73.1072,0,-2.439)
+      point2 = OpenStudio::Point3d.new(73.1072,48.7381,-2.439)
+      point3 = OpenStudio::Point3d.new(73.1072,48.7381,0)
+      point4 = OpenStudio::Point3d.new(73.1072,0,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      e = OpenStudio::Model::Surface.new(polygon,model)
+      e.setSpace(sp1)
+	  
+	  point1 = OpenStudio::Point3d.new(73.1072,48.7381,-2.439)
+      point2 = OpenStudio::Point3d.new(16.0782,48.7381,-2.439)
+      point3 = OpenStudio::Point3d.new(16.0782,48.7381,0)
+      point4 = OpenStudio::Point3d.new(73.1072,48.7381,0)
+      polygon = OpenStudio::Point3dVector.new
+      polygon << point1
+      polygon << point2
+      polygon << point3
+      polygon << point4
+      n = OpenStudio::Model::Surface.new(polygon,model)
+      n.setSpace(sp1)
+	  
+	  basezones << sp0
+	  basezones << sp1
+	  
+	  model = makeNewZones(model,basezones,0,10,["ZoneH","ZoneC"],level1)
+	  puts model.getSpaces
+	  
+    #put all of the spaces in the model into a vector
+      spaces = OpenStudio::Model::SpaceVector.new
+      model.getSpaces.each do |space|
+        spaces << space
+        if make_zones
+        #create zones
+        new_zone = OpenStudio::Model::ThermalZone.new(model)
+        space.setThermalZone(new_zone)
+        zone_name = space.name.get.gsub("Space","Zone")
+        new_zone.setName(zone_name)
+        end
+      end
+      spaces = sort_spaces(spaces)
+      if surface_matching
+        #match surfaces for each space in the vector
+        OpenStudio::Model.intersectSurfaces(spaces)
+        OpenStudio::Model.matchSurfaces(spaces)
+       
+      end
+
+      finishing_spaces = model.getSpaces
+      runner.registerFinalCondition("The building finished with #{finishing_spaces.size} spaces.")	      
+	
     else
 
       #error here, return false

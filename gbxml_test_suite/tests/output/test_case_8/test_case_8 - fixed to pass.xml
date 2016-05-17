@@ -1,287 +1,25 @@
-<gbXML xmlns="http://www.gbxml.org/schema" xmlns:xhtml="http://www.w3.org/1999/xhtml" lengthUnit="Meters" useSIUnitsForResults="true" xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd" version="0.37" xmlns:xsd="http://www.w3.org/2001/XMLSchema" temperatureUnit="C" volumeUnit="CubicMeters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" areaUnit="SquareMeters">
+<gbXML xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd" useSIUnitsForResults="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.gbxml.org/schema" lengthUnit="Meters" version="0.37" xmlns:xhtml="http://www.w3.org/1999/xhtml" areaUnit="SquareMeters" volumeUnit="CubicMeters" temperatureUnit="C" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Campus id="Facility">
     <Name>Facility</Name>
-    <Building buildingType="Unknown" id="Building_1">
+    <Building id="Building_1" buildingType="Unknown">
       <Name>Building 1</Name>
       <Area>1114.84</Area>
-      <Space zoneIdRef="sp-3-Roof_Void" id="sp-3-Roof_Void">
+      <Space id="sp-3-Roof_Void" zoneIdRef="sp-3-Roof_Void">
         <Name>sp-3-Roof_Void</Name>
         <Area>557.418</Area>
         <Volume>1274.26</Volume>
       </Space>
-      <Space zoneIdRef="sp-1-Occupied_Auditorium" id="sp-1-Occupied_Auditorium">
-        <Name>sp-1-Occupied_Auditorium</Name>
-        <Area>0</Area>
-        <Volume>0</Volume>
-      </Space>
-      <Space zoneIdRef="sp-2-Unoccupied_Auditorium" id="sp-2-Unoccupied_Auditorium">
+      <Space id="sp-2-Unoccupied_Auditorium" zoneIdRef="sp-2-Unoccupied_Auditorium">
         <Name>sp-2-Unoccupied_Auditorium</Name>
         <Area>557.418</Area>
         <Volume>3398.02</Volume>
       </Space>
+      <Space id="sp-1-Occupied_Auditorium" zoneIdRef="sp-1-Occupied_Auditorium">
+        <Name>sp-1-Occupied_Auditorium</Name>
+        <Area>0</Area>
+        <Volume>0</Volume>
+      </Space>
     </Building>
-    <Surface id="Surface_11" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>18.288</Coordinate>
-          <Coordinate>3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>18.288</Width>
-        <Height>6.096</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_9" surfaceType="Ceiling">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.48</Coordinate>
-          <Coordinate>18.288</Coordinate>
-          <Coordinate>3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>30.48</Width>
-        <Height>18.288</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_20" surfaceType="Roof">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.48</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>9.144</Coordinate>
-        </CartesianPoint>
-        <Tilt>11.8483</Tilt>
-        <Width>18.288</Width>
-        <Height>22.2676</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>8.6868</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>13.716</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>8.6868</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>13.716</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_8" surfaceType="UndergroundWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>18.288</Coordinate>
-          <Coordinate>-3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>21.5526</Width>
-        <Height>2.15526</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>-3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_1" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.48</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
-        </CartesianPoint>
-        <Tilt>174.289</Tilt>
-        <Width>30.632</Width>
-        <Height>18.288</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>-3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_2" surfaceType="UndergroundWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>18.288</Coordinate>
-          <Coordinate>-3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>18.288</Width>
-        <Height>3.048</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>-3.048</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_14" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.48</Coordinate>
-          <Coordinate>18.288</Coordinate>
-          <Coordinate>3.048</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>30.48</Width>
-        <Height>6.096</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
     <Surface id="Surface_6" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
@@ -320,38 +58,111 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_7" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+    <Surface id="Surface_18" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
         <CartesianPoint>
           <Coordinate>30.48</Coordinate>
           <Coordinate>18.288</Coordinate>
-          <Coordinate>0</Coordinate>
+          <Coordinate>9.144</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>30.48</Width>
-        <Height>3.048</Height>
+        <Width>21.5526</Width>
+        <Height>3.23289</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>30.48</Coordinate>
             <Coordinate>18.288</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>18.288</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.6868</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>13.716</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_16" surfaceType="InteriorFloor">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.48</Coordinate>
+          <Coordinate>0</Coordinate>
+          <Coordinate>9.144</Coordinate>
+        </CartesianPoint>
+        <Tilt>180</Tilt>
+        <Width>30.48</Width>
+        <Height>18.288</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
             <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>18.288</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_9" surfaceType="Ceiling">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.48</Coordinate>
+          <Coordinate>18.288</Coordinate>
+          <Coordinate>3.048</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>30.48</Width>
+        <Height>18.288</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
             <Coordinate>3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.48</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
             <Coordinate>18.288</Coordinate>
             <Coordinate>3.048</Coordinate>
           </CartesianPoint>
@@ -396,31 +207,30 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_16" surfaceType="InteriorFloor">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+    <Surface id="Surface_13" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>30.48</Coordinate>
           <Coordinate>0</Coordinate>
-          <Coordinate>9.144</Coordinate>
+          <Coordinate>3.048</Coordinate>
         </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>30.48</Width>
-        <Height>18.288</Height>
+        <Tilt>90</Tilt>
+        <Width>18.288</Width>
+        <Height>6.096</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
+            <Coordinate>30.48</Coordinate>
             <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.48</Coordinate>
@@ -435,25 +245,30 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_18" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+    <Surface id="Surface_14" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
         <CartesianPoint>
           <Coordinate>30.48</Coordinate>
           <Coordinate>18.288</Coordinate>
-          <Coordinate>9.144</Coordinate>
+          <Coordinate>3.048</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>21.5526</Width>
-        <Height>3.23289</Height>
+        <Width>30.48</Width>
+        <Height>6.096</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>30.48</Coordinate>
             <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
@@ -461,63 +276,25 @@
             <Coordinate>9.144</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>8.6868</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>13.716</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_19" surfaceType="Roof">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>18.288</Coordinate>
-          <Coordinate>9.144</Coordinate>
-        </CartesianPoint>
-        <Tilt>27.7585</Tilt>
-        <Width>18.288</Width>
-        <Height>9.8165</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>8.6868</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>13.716</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>8.6868</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>13.716</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0</Coordinate>
+            <Coordinate>30.48</Coordinate>
             <Coordinate>18.288</Coordinate>
             <Coordinate>9.144</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_5" surfaceType="ExteriorWall">
+    <Surface id="Surface_1" surfaceType="ExteriorWall">
       <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
-        <Azimuth>180</Azimuth>
+        <Azimuth>90</Azimuth>
         <CartesianPoint>
+          <Coordinate>30.48</Coordinate>
           <Coordinate>0</Coordinate>
           <Coordinate>0</Coordinate>
-          <Coordinate>-3.048</Coordinate>
         </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>21.5526</Width>
-        <Height>2.15526</Height>
+        <Tilt>174.289</Tilt>
+        <Width>30.632</Width>
+        <Height>18.288</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
@@ -527,12 +304,17 @@
             <Coordinate>-3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
             <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>-3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
             <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
+            <Coordinate>30.48</Coordinate>
             <Coordinate>0</Coordinate>
             <Coordinate>0</Coordinate>
           </CartesianPoint>
@@ -577,73 +359,73 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_13" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+    <Surface id="Surface_2" surfaceType="UndergroundWall">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
-        <Azimuth>90</Azimuth>
+        <Azimuth>270</Azimuth>
         <CartesianPoint>
-          <Coordinate>30.48</Coordinate>
           <Coordinate>0</Coordinate>
-          <Coordinate>3.048</Coordinate>
+          <Coordinate>18.288</Coordinate>
+          <Coordinate>-3.048</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
         <Width>18.288</Width>
-        <Height>6.096</Height>
+        <Height>3.048</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>3.048</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
-            <Coordinate>18.288</Coordinate>
-            <Coordinate>9.144</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.48</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
+            <Coordinate>-3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>-3.048</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_17" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+    <Surface id="Surface_5" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>180</Azimuth>
         <CartesianPoint>
           <Coordinate>0</Coordinate>
           <Coordinate>0</Coordinate>
-          <Coordinate>9.144</Coordinate>
+          <Coordinate>-3.048</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
         <Width>21.5526</Width>
-        <Height>3.23289</Height>
+        <Height>2.15526</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
+            <Coordinate>-3.048</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.48</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>9.144</Coordinate>
+            <Coordinate>0</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>8.6868</Coordinate>
             <Coordinate>0</Coordinate>
-            <Coordinate>13.716</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
@@ -681,6 +463,224 @@
           <CartesianPoint>
             <Coordinate>0</Coordinate>
             <Coordinate>0</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_19" surfaceType="Roof">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>18.288</Coordinate>
+          <Coordinate>9.144</Coordinate>
+        </CartesianPoint>
+        <Tilt>27.7585</Tilt>
+        <Width>18.288</Width>
+        <Height>9.8165</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.6868</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>13.716</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.6868</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>13.716</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_8" surfaceType="UndergroundWall">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>18.288</Coordinate>
+          <Coordinate>-3.048</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>21.5526</Width>
+        <Height>2.15526</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>-3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_7" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.48</Coordinate>
+          <Coordinate>18.288</Coordinate>
+          <Coordinate>0</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>30.48</Width>
+        <Height>3.048</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>0</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_17" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <RectangularGeometry>
+        <Azimuth>180</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>0</Coordinate>
+          <Coordinate>9.144</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>21.5526</Width>
+        <Height>3.23289</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.6868</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>13.716</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_20" surfaceType="Roof">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.48</Coordinate>
+          <Coordinate>0</Coordinate>
+          <Coordinate>9.144</Coordinate>
+        </CartesianPoint>
+        <Tilt>11.8483</Tilt>
+        <Width>18.288</Width>
+        <Height>22.2676</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>8.6868</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>13.716</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.48</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.6868</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>13.716</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface id="Surface_11" surfaceType="ExteriorWall">
+      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0</Coordinate>
+          <Coordinate>18.288</Coordinate>
+          <Coordinate>3.048</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>18.288</Width>
+        <Height>6.096</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>3.048</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>0</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
+            <Coordinate>9.144</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0</Coordinate>
+            <Coordinate>18.288</Coordinate>
             <Coordinate>3.048</Coordinate>
           </CartesianPoint>
         </PolyLoop>
