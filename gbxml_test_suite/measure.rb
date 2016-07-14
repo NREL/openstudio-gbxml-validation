@@ -89,6 +89,9 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
     # add in default templates
     add_defaults(model)
     
+    # create an unnoccupied space type with no loads or people
+    unnoccupied_space_type = OpenStudio::Model::SpaceType.new(model)
+    
   #add a switch statement based upon the test case number
   case test_case
     when "Test Case 1"
@@ -119,6 +122,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		
       sp4 = OpenStudio::Model::Space.new(model)
       sp4.setBuildingStory(level1p)
+      sp4.setSpaceType(unnoccupied_space_type)
       sp4.setName("sp-4-Space")
 		
       sp3 = OpenStudio::Model::Space.new(model)
@@ -2023,6 +2027,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       
       sp2 = OpenStudio::Model::Space.new(model)
       sp2.setBuildingStory(level2)
+      sp2.setSpaceType(unnoccupied_space_type)
       sp2.setName("sp-2-Unoccupied_Auditorium")
       
       swpoint = OpenStudio::Point3d.new(0,0,10*ft_to_m)
@@ -3053,6 +3058,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #plenum
       sp5 = OpenStudio::Model::Space.new(model)
       sp5.setBuildingStory(level1p)
+      sp5.setSpaceType(unnoccupied_space_type)
       sp5.setName("Space_zone_5")
       
       swpoint = OpenStudio::Point3d.new(0,0,2.7342)
@@ -3558,6 +3564,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #plenum
       sp11 = OpenStudio::Model::Space.new(model)
       sp11.setBuildingStory(level2p)
+      sp11.setSpaceType(unnoccupied_space_type)
       sp11.setName("Space_zone_11")
       
       swpoint = OpenStudio::Point3d.new(0,0,6.7056)
@@ -4063,6 +4070,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #plenum
       sp17 = OpenStudio::Model::Space.new(model)
       sp17.setBuildingStory(level3p)
+      sp17.setSpaceType(unnoccupied_space_type)
       sp17.setName("Space_zone_17")
       
       swpoint = OpenStudio::Point3d.new(0,0,10.668)
