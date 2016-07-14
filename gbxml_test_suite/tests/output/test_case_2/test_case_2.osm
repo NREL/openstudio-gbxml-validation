@@ -1,41 +1,41 @@
 
 OS:Version,
-  {75a77b96-66aa-4da6-9b4c-f2939d33949f}, !- Handle
+  {6a4cd089-70b1-4b05-a484-66d57678d7b5}, !- Handle
   1.12.2;                                 !- Version Identifier
 
 OS:SpaceType,
-  {21e83938-bc1c-43d7-ad7e-80280dc5b332}, !- Handle
+  {08d8a08a-f3dc-441a-a2c2-f405573d0801}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8,    !- Name
   ,                                       !- Default Construction Set Name
-  {121a92c4-cbeb-4668-9fa9-95e7693705be}, !- Default Schedule Set Name
-  {fc72c2e6-7613-442b-bedc-4e88f4ea9064}, !- Group Rendering Name
-  {7f3c0e4c-fba7-4c2f-bef8-abf80ffb9dff}, !- Design Specification Outdoor Air Object Name
+  {5fe23dde-d74e-49cb-bff6-acfcce276748}, !- Default Schedule Set Name
+  {0d06a706-dda8-4dde-bcbd-9258d5e43f0a}, !- Group Rendering Name
+  {9adc3945-7696-48f7-9a2a-41d845ec9a55}, !- Design Specification Outdoor Air Object Name
   Office,                                 !- Standards Building Type
   Lobby;                                  !- Standards Space Type
 
 OS:DefaultScheduleSet,
-  {121a92c4-cbeb-4668-9fa9-95e7693705be}, !- Handle
+  {5fe23dde-d74e-49cb-bff6-acfcce276748}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Schedule Set, !- Name
   ,                                       !- Hours of Operation Schedule Name
-  {3fcd22d2-9c8e-4d4f-91e3-1a4834d800ce}, !- Number of People Schedule Name
-  {74593558-ded0-45db-9bda-5fb7a8dceed1}, !- People Activity Level Schedule Name
-  {e35e47cb-a473-42cb-9458-159bdac2482e}, !- Lighting Schedule Name
-  {ae997c3b-5196-40d8-ad2c-ad8160a1cf12}, !- Electric Equipment Schedule Name
+  {550295ef-25a1-42b2-bfac-15236a36ad18}, !- Number of People Schedule Name
+  {19257c7e-e0e9-41f7-ada1-ff92e6749cf9}, !- People Activity Level Schedule Name
+  {860f6362-0b08-4d9e-bfe2-a1360592015e}, !- Lighting Schedule Name
+  {e90ca46e-95e9-47b5-b61b-fc0853e0cc82}, !- Electric Equipment Schedule Name
   ,                                       !- Gas Equipment Schedule Name
   ,                                       !- Hot Water Equipment Schedule Name
-  {6a017310-92e5-4fe0-b44c-95a7a3a63f4b}, !- Infiltration Schedule Name
+  {96867d19-f0ac-41d5-8f6b-1bd4d36568dc}, !- Infiltration Schedule Name
   ,                                       !- Steam Equipment Schedule Name
   ;                                       !- Other Equipment Schedule Name
 
 OS:Rendering:Color,
-  {fc72c2e6-7613-442b-bedc-4e88f4ea9064}, !- Handle
+  {0d06a706-dda8-4dde-bcbd-9258d5e43f0a}, !- Handle
   Rendering Color 23,                     !- Name
   230,                                    !- Rendering Red Value
   157,                                    !- Rendering Green Value
   120;                                    !- Rendering Blue Value
 
 OS:DesignSpecification:OutdoorAir,
-  {7f3c0e4c-fba7-4c2f-bef8-abf80ffb9dff}, !- Handle
+  {9adc3945-7696-48f7-9a2a-41d845ec9a55}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Ventilation, !- Name
   Sum,                                    !- Outdoor Air Method
   0.007079211648,                         !- Outdoor Air Flow per Person {m3/s-person}
@@ -45,17 +45,17 @@ OS:DesignSpecification:OutdoorAir,
   ;                                       !- Outdoor Air Flow Rate Fraction Schedule Name
 
 OS:Schedule:Ruleset,
-  {3fcd22d2-9c8e-4d4f-91e3-1a4834d800ce}, ! Handle
+  {550295ef-25a1-42b2-bfac-15236a36ad18}, ! Handle
   Office Misc Occ,                        ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
-  {47f788c0-b610-42f9-b5ff-28a768a6a247}, ! Default Day Schedule Name
-  {656c9fc2-61d3-4135-82c9-aba6a377fbd1}, ! Summer Design Day Schedule Name
-  {96a0bcfe-d77c-4eb0-a588-967932a30bd8}; ! Winter Design Day Schedule Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
+  {3f9f5ce3-6178-473e-a5b3-2feda5087e81}, ! Default Day Schedule Name
+  {d3ecc18b-eea0-4ceb-a2e3-7694d2bea52d}, ! Summer Design Day Schedule Name
+  {4d92d36f-81c3-479a-8f2b-d838f8423d32}; ! Winter Design Day Schedule Name
 
 OS:Schedule:Day,
-  {47f788c0-b610-42f9-b5ff-28a768a6a247}, ! Handle
+  {3f9f5ce3-6178-473e-a5b3-2feda5087e81}, ! Handle
   Office Bldg Occ Default Schedule 1,     ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      !- Hour 1
   0,                                      !- Minute 1
@@ -77,9 +77,9 @@ OS:Schedule:Day,
   0.0500000007450581;                     !- Value Until Time 6
 
 OS:Schedule:Day,
-  {656c9fc2-61d3-4135-82c9-aba6a377fbd1}, ! Handle
+  {d3ecc18b-eea0-4ceb-a2e3-7694d2bea52d}, ! Handle
   Office Bldg Occ Summer Design Day 1,    ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      ! Hour 1
   0,                                      ! Minute 1
@@ -92,20 +92,20 @@ OS:Schedule:Day,
   0.050000000000000003;                   ! Value Until Time 3
 
 OS:Schedule:Day,
-  {96a0bcfe-d77c-4eb0-a588-967932a30bd8}, ! Handle
+  {4d92d36f-81c3-479a-8f2b-d838f8423d32}, ! Handle
   Office Bldg Occ Winter Design Day 1,    ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   0;                                      ! Value Until Time 1
 
 OS:Schedule:Rule,
-  {9fd60fbb-5441-4c1b-9b99-6f28097cbec6}, ! Handle
+  {e677d93e-f73a-4732-82aa-0a28451395ee}, ! Handle
   Office Misc Occ Rule 1,                 ! Name
-  {3fcd22d2-9c8e-4d4f-91e3-1a4834d800ce}, ! Schedule Ruleset Name
+  {550295ef-25a1-42b2-bfac-15236a36ad18}, ! Schedule Ruleset Name
   0,                                      ! Rule Order
-  {d6ceeaa4-2ed6-4058-a92d-51e7b99d2f60}, ! Day Schedule Name
+  {818addab-1ae4-4d3f-b650-266ef09480ea}, ! Day Schedule Name
   Yes,                                    ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -121,11 +121,11 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Rule,
-  {b20a5bca-2be2-43c5-9ae1-ab165696dc10}, ! Handle
+  {90a6219c-50c9-4636-bd9c-30cfdeea7d8a}, ! Handle
   Office Misc Occ Rule 2,                 ! Name
-  {3fcd22d2-9c8e-4d4f-91e3-1a4834d800ce}, ! Schedule Ruleset Name
+  {550295ef-25a1-42b2-bfac-15236a36ad18}, ! Schedule Ruleset Name
   1,                                      ! Rule Order
-  {68ba8458-dae6-4321-a8bd-cd477a5fed69}, ! Day Schedule Name
+  {4c530a93-fbb6-42cb-937b-dfdd363b9d1d}, ! Day Schedule Name
   No,                                     ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -141,18 +141,18 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Day,
-  {d6ceeaa4-2ed6-4058-a92d-51e7b99d2f60}, ! Handle
+  {818addab-1ae4-4d3f-b650-266ef09480ea}, ! Handle
   Office Bldg Occ Rule 1 Day Schedule 1,  ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   0;                                      ! Value Until Time 1
 
 OS:Schedule:Day,
-  {68ba8458-dae6-4321-a8bd-cd477a5fed69}, ! Handle
+  {4c530a93-fbb6-42cb-937b-dfdd363b9d1d}, ! Handle
   Office Bldg Occ Rule 2 Day Schedule 1,  ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      !- Hour 1
   0,                                      !- Minute 1
@@ -171,52 +171,52 @@ OS:Schedule:Day,
   0;                                      !- Value Until Time 5
 
 OS:Schedule:Ruleset,
-  {74593558-ded0-45db-9bda-5fb7a8dceed1}, ! Handle
+  {19257c7e-e0e9-41f7-ada1-ff92e6749cf9}, ! Handle
   Office Activity,                        ! Name
-  {37dea812-8cf9-4453-81e7-518d069c63bc}, ! Schedule Type Limits Name
-  {f971d592-ca33-4a8b-87b4-1528604d7203}, ! Default Day Schedule Name
-  {163c89ea-8deb-4b6e-88e1-319016350e68}, ! Summer Design Day Schedule Name
-  {a8c2ae72-0fed-4285-9039-ac4c3bd1ac4f}; ! Winter Design Day Schedule Name
+  {8e4ea9ca-96fb-4027-a986-915c84fe9796}, ! Schedule Type Limits Name
+  {9cad0d08-c80d-4f7a-82da-a1734de89237}, ! Default Day Schedule Name
+  {2e150b34-e37b-4668-8f85-7120d5f29045}, ! Summer Design Day Schedule Name
+  {1dc368d2-e5ea-4675-bd67-a4a9e9760cff}; ! Winter Design Day Schedule Name
 
 OS:Schedule:Day,
-  {f971d592-ca33-4a8b-87b4-1528604d7203}, ! Handle
+  {9cad0d08-c80d-4f7a-82da-a1734de89237}, ! Handle
   Office Activity Default Schedule,       ! Name
-  {37dea812-8cf9-4453-81e7-518d069c63bc}, ! Schedule Type Limits Name
+  {8e4ea9ca-96fb-4027-a986-915c84fe9796}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     !- Hour 1
   0,                                      !- Minute 1
   132;                                    !- Value Until Time 1
 
 OS:Schedule:Day,
-  {163c89ea-8deb-4b6e-88e1-319016350e68}, ! Handle
+  {2e150b34-e37b-4668-8f85-7120d5f29045}, ! Handle
   Office Activity Summer Design Day,      ! Name
-  {37dea812-8cf9-4453-81e7-518d069c63bc}, ! Schedule Type Limits Name
+  {8e4ea9ca-96fb-4027-a986-915c84fe9796}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     !- Hour 1
   0,                                      !- Minute 1
   132;                                    !- Value Until Time 1
 
 OS:Schedule:Day,
-  {a8c2ae72-0fed-4285-9039-ac4c3bd1ac4f}, ! Handle
+  {1dc368d2-e5ea-4675-bd67-a4a9e9760cff}, ! Handle
   Office Activity Winter Design Day,      ! Name
-  {37dea812-8cf9-4453-81e7-518d069c63bc}, ! Schedule Type Limits Name
+  {8e4ea9ca-96fb-4027-a986-915c84fe9796}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     !- Hour 1
   0,                                      !- Minute 1
   132;                                    !- Value Until Time 1
 
 OS:Schedule:Ruleset,
-  {e35e47cb-a473-42cb-9458-159bdac2482e}, ! Handle
+  {860f6362-0b08-4d9e-bfe2-a1360592015e}, ! Handle
   Office Bldg Light,                      ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
-  {7d5ac9e4-8193-4c56-8920-ec856e96be92}, ! Default Day Schedule Name
-  {6893628d-8a67-454e-912f-003f032b05eb}, ! Summer Design Day Schedule Name
-  {4a656bd2-447e-4131-9b24-1d8fd41b492d}; ! Winter Design Day Schedule Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
+  {4acd250d-320c-4ebc-9698-ec72f27c6cd0}, ! Default Day Schedule Name
+  {76f66ae4-eafe-4ece-ace9-3791e19b29a7}, ! Summer Design Day Schedule Name
+  {65d95efe-f5be-46f5-9a34-8564298d5bb8}; ! Winter Design Day Schedule Name
 
 OS:Schedule:Day,
-  {7d5ac9e4-8193-4c56-8920-ec856e96be92}, ! Handle
+  {4acd250d-320c-4ebc-9698-ec72f27c6cd0}, ! Handle
   Office Bldg Light Default Schedule,     ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   5,                                      !- Hour 1
   0,                                      !- Minute 1
@@ -247,29 +247,29 @@ OS:Schedule:Day,
   0.05;                                   !- Value Until Time 9
 
 OS:Schedule:Day,
-  {6893628d-8a67-454e-912f-003f032b05eb}, ! Handle
+  {76f66ae4-eafe-4ece-ace9-3791e19b29a7}, ! Handle
   Office Bldg Light Summer Design Day,    ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   1;                                      ! Value Until Time 1
 
 OS:Schedule:Day,
-  {4a656bd2-447e-4131-9b24-1d8fd41b492d}, ! Handle
+  {65d95efe-f5be-46f5-9a34-8564298d5bb8}, ! Handle
   Office Bldg Light Winter Design Day,    ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   0;                                      ! Value Until Time 1
 
 OS:Schedule:Rule,
-  {23e37a0e-1c17-436e-bb7d-f34c97d353e0}, ! Handle
+  {faae75d7-46bb-4f07-9dd1-69df61287e6c}, ! Handle
   Office Bldg Light Rule 1,               ! Name
-  {e35e47cb-a473-42cb-9458-159bdac2482e}, ! Schedule Ruleset Name
+  {860f6362-0b08-4d9e-bfe2-a1360592015e}, ! Schedule Ruleset Name
   0,                                      ! Rule Order
-  {e63b6b98-8047-4bb4-834d-b5324a049ca9}, ! Day Schedule Name
+  {cb0e5eac-6b19-4ea3-969b-3ac194b848fa}, ! Day Schedule Name
   Yes,                                    ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -285,11 +285,11 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Rule,
-  {dde3a852-4d94-402e-b8a2-a174b1ab23e9}, ! Handle
+  {be555d7a-1e1c-4163-800c-c95b8077a501}, ! Handle
   Office Bldg Light Rule 2,               ! Name
-  {e35e47cb-a473-42cb-9458-159bdac2482e}, ! Schedule Ruleset Name
+  {860f6362-0b08-4d9e-bfe2-a1360592015e}, ! Schedule Ruleset Name
   1,                                      ! Rule Order
-  {407ecb30-cfa1-457c-af27-aa614a1fd8df}, ! Day Schedule Name
+  {44e1dc2c-ee51-43e4-8723-4d6da44bc515}, ! Day Schedule Name
   No,                                     ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -305,18 +305,18 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Day,
-  {e63b6b98-8047-4bb4-834d-b5324a049ca9}, ! Handle
+  {cb0e5eac-6b19-4ea3-969b-3ac194b848fa}, ! Handle
   Office Bldg Light Rule 1 Day Schedule,  ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   0.050000000000000003;                   ! Value Until Time 1
 
 OS:Schedule:Day,
-  {407ecb30-cfa1-457c-af27-aa614a1fd8df}, ! Handle
+  {44e1dc2c-ee51-43e4-8723-4d6da44bc515}, ! Handle
   Office Bldg Light Rule 2 Day Schedule,  ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      ! Hour 1
   0,                                      ! Minute 1
@@ -335,17 +335,17 @@ OS:Schedule:Day,
   0.050000000000000003;                   ! Value Until Time 5
 
 OS:Schedule:Ruleset,
-  {ae997c3b-5196-40d8-ad2c-ad8160a1cf12}, ! Handle
+  {e90ca46e-95e9-47b5-b61b-fc0853e0cc82}, ! Handle
   Office Bldg Equip,                      ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
-  {5e9f6b2a-d78d-47fd-9b29-5daa6aabe9d5}, ! Default Day Schedule Name
-  {b59138dd-d5a4-43ba-a7e5-855318b684c7}, ! Summer Design Day Schedule Name
-  {547ee253-1a08-402d-bead-993a210e8532}; ! Winter Design Day Schedule Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
+  {c4a50bdf-f27f-4465-a7e2-e952ecacc95e}, ! Default Day Schedule Name
+  {ad31d0b6-5d2b-4d05-8e57-99b48cd57a90}, ! Summer Design Day Schedule Name
+  {93b2ba7a-6e37-44fe-a490-633e1127f88c}; ! Winter Design Day Schedule Name
 
 OS:Schedule:Day,
-  {5e9f6b2a-d78d-47fd-9b29-5daa6aabe9d5}, ! Handle
+  {c4a50bdf-f27f-4465-a7e2-e952ecacc95e}, ! Handle
   Office Bldg Equip Default Schedule,     ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   8,                                      !- Hour 1
   0,                                      !- Minute 1
@@ -373,29 +373,29 @@ OS:Schedule:Day,
   0.4;                                    !- Value Until Time 8
 
 OS:Schedule:Day,
-  {b59138dd-d5a4-43ba-a7e5-855318b684c7}, ! Handle
+  {ad31d0b6-5d2b-4d05-8e57-99b48cd57a90}, ! Handle
   Office Bldg Equip Summer Design Day,    ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   1;                                      ! Value Until Time 1
 
 OS:Schedule:Day,
-  {547ee253-1a08-402d-bead-993a210e8532}, ! Handle
+  {93b2ba7a-6e37-44fe-a490-633e1127f88c}, ! Handle
   Office Bldg Equip Winter Design Day,    ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   0;                                      ! Value Until Time 1
 
 OS:Schedule:Rule,
-  {02e625e5-ea8c-41b7-9fa5-52a1e4106291}, ! Handle
+  {370c6d64-9592-4eb7-8356-dd24497d0f32}, ! Handle
   Office Bldg Equip Rule 1,               ! Name
-  {ae997c3b-5196-40d8-ad2c-ad8160a1cf12}, ! Schedule Ruleset Name
+  {e90ca46e-95e9-47b5-b61b-fc0853e0cc82}, ! Schedule Ruleset Name
   0,                                      ! Rule Order
-  {b9db2ed2-4360-4fe4-a1fc-8aeeb101d535}, ! Day Schedule Name
+  {f1d36275-e93f-429d-bf1e-a9e366f7e9d0}, ! Day Schedule Name
   Yes,                                    ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -411,11 +411,11 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Rule,
-  {f0db1e1c-d87f-40a7-9414-56963e274374}, ! Handle
+  {59382f2c-0957-4c08-b821-24c1dfdada5b}, ! Handle
   Office Bldg Equip Rule 2,               ! Name
-  {ae997c3b-5196-40d8-ad2c-ad8160a1cf12}, ! Schedule Ruleset Name
+  {e90ca46e-95e9-47b5-b61b-fc0853e0cc82}, ! Schedule Ruleset Name
   1,                                      ! Rule Order
-  {cf4e4531-4481-4173-91d6-1681fed802cb}, ! Day Schedule Name
+  {55cce4af-4705-4c83-9dbb-75a86e4bd295}, ! Day Schedule Name
   No,                                     ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -431,18 +431,18 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Day,
-  {b9db2ed2-4360-4fe4-a1fc-8aeeb101d535}, ! Handle
+  {f1d36275-e93f-429d-bf1e-a9e366f7e9d0}, ! Handle
   Office Bldg Equip Rule 1 Day Schedule,  ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   0.29999999999999999;                    ! Value Until Time 1
 
 OS:Schedule:Day,
-  {cf4e4531-4481-4173-91d6-1681fed802cb}, ! Handle
+  {55cce4af-4705-4c83-9dbb-75a86e4bd295}, ! Handle
   Office Bldg Equip Rule 2 Day Schedule,  ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      ! Hour 1
   0,                                      ! Minute 1
@@ -461,17 +461,17 @@ OS:Schedule:Day,
   0.29999999999999999;                    ! Value Until Time 5
 
 OS:Schedule:Ruleset,
-  {6a017310-92e5-4fe0-b44c-95a7a3a63f4b}, ! Handle
+  {96867d19-f0ac-41d5-8f6b-1bd4d36568dc}, ! Handle
   Office Infil Quarter On,                ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
-  {a7683024-77ff-4f46-919e-bb5c97ba2a37}, ! Default Day Schedule Name
-  {18202b06-4194-4727-a008-55dc1f8bdc8e}, ! Summer Design Day Schedule Name
-  {7889ff86-91be-453b-9ba8-83ce8354e2d8}; ! Winter Design Day Schedule Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
+  {dd629cad-7034-4c5b-a487-f82a383d49f5}, ! Default Day Schedule Name
+  {e3e5c678-ecb0-44b5-8433-85d9c31b2eb3}, ! Summer Design Day Schedule Name
+  {95446f85-5401-4d4c-b797-c0c974bb0f4e}; ! Winter Design Day Schedule Name
 
 OS:Schedule:Day,
-  {a7683024-77ff-4f46-919e-bb5c97ba2a37}, ! Handle
+  {dd629cad-7034-4c5b-a487-f82a383d49f5}, ! Handle
   Office Infil Quarter On Default Schedule, ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      !- Hour 1
   0,                                      !- Minute 1
@@ -484,9 +484,9 @@ OS:Schedule:Day,
   1;                                      !- Value Until Time 3
 
 OS:Schedule:Day,
-  {18202b06-4194-4727-a008-55dc1f8bdc8e}, ! Handle
+  {e3e5c678-ecb0-44b5-8433-85d9c31b2eb3}, ! Handle
   Office Infil Quarter On Summer Design Day, ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      ! Hour 1
   0,                                      ! Minute 1
@@ -499,9 +499,9 @@ OS:Schedule:Day,
   1;                                      ! Value Until Time 3
 
 OS:Schedule:Day,
-  {7889ff86-91be-453b-9ba8-83ce8354e2d8}, ! Handle
+  {95446f85-5401-4d4c-b797-c0c974bb0f4e}, ! Handle
   Office Infil Quarter On Winter Design Day, ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      ! Hour 1
   0,                                      ! Minute 1
@@ -514,11 +514,11 @@ OS:Schedule:Day,
   1;                                      ! Value Until Time 3
 
 OS:Schedule:Rule,
-  {627a1cbd-fa9e-4fea-9408-f9b3ea0276c6}, ! Handle
+  {dee39647-0087-40e3-8887-993a22d49542}, ! Handle
   Office Infil Quarter On Rule 1,         ! Name
-  {6a017310-92e5-4fe0-b44c-95a7a3a63f4b}, ! Schedule Ruleset Name
+  {96867d19-f0ac-41d5-8f6b-1bd4d36568dc}, ! Schedule Ruleset Name
   0,                                      ! Rule Order
-  {7c8a52e0-1d32-4f86-bdef-ffd8ca50cc73}, ! Day Schedule Name
+  {36f253b4-76f6-46ae-99f1-68684b22e013}, ! Day Schedule Name
   Yes,                                    ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -534,11 +534,11 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Rule,
-  {f22507e8-65fd-447f-82f4-a74d21ddfea7}, ! Handle
+  {af873e4b-42d3-4351-8e97-b4fda1878156}, ! Handle
   Office Infil Quarter On Rule 2,         ! Name
-  {6a017310-92e5-4fe0-b44c-95a7a3a63f4b}, ! Schedule Ruleset Name
+  {96867d19-f0ac-41d5-8f6b-1bd4d36568dc}, ! Schedule Ruleset Name
   1,                                      ! Rule Order
-  {afa032d3-f429-4b19-bb3a-3548f2f47b72}, ! Day Schedule Name
+  {707f11ac-df02-4f36-b637-34d02e8bbc7a}, ! Day Schedule Name
   No,                                     ! Apply Sunday
   No,                                     ! Apply Monday
   No,                                     ! Apply Tuesday
@@ -554,18 +554,18 @@ OS:Schedule:Rule,
   31;                                     ! End Day
 
 OS:Schedule:Day,
-  {7c8a52e0-1d32-4f86-bdef-ffd8ca50cc73}, ! Handle
+  {36f253b4-76f6-46ae-99f1-68684b22e013}, ! Handle
   Office Infil Quarter On Rule 1 Day Schedule, ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   24,                                     ! Hour 1
   0,                                      ! Minute 1
   1;                                      ! Value Until Time 1
 
 OS:Schedule:Day,
-  {afa032d3-f429-4b19-bb3a-3548f2f47b72}, ! Handle
+  {707f11ac-df02-4f36-b637-34d02e8bbc7a}, ! Handle
   Office Infil Quarter On Rule 2 Day Schedule, ! Name
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Schedule Type Limits Name
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Schedule Type Limits Name
   ,                                       ! Interpolate to Timestep
   6,                                      ! Hour 1
   0,                                      ! Minute 1
@@ -578,14 +578,14 @@ OS:Schedule:Day,
   1;                                      ! Value Until Time 3
 
 OS:ScheduleTypeLimits,
-  {dac51c59-0c5c-42b4-beaf-9e7dd2e925f8}, ! Handle
+  {871c9c91-b526-497d-886a-493bc459d826}, ! Handle
   Fraction,                               ! Name
   0,                                      ! Lower Limit Value
   1,                                      ! Upper Limit Value
   CONTINUOUS;                             ! Numeric Type
 
 OS:ScheduleTypeLimits,
-  {37dea812-8cf9-4453-81e7-518d069c63bc}, !- Handle
+  {8e4ea9ca-96fb-4027-a986-915c84fe9796}, !- Handle
   ActivityLevel,                          !- Name
   0,                                      !- Lower Limit Value
   ,                                       !- Upper Limit Value
@@ -593,13 +593,13 @@ OS:ScheduleTypeLimits,
   ActivityLevel;                          !- Unit Type
 
 OS:People,
-  {e091b86e-4a1c-4c0a-a77c-ba664a1c9da9}, !- Handle
+  {3096fa31-fe96-48c8-a885-cd3c4ae0673f}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 People, !- Name
-  {969f873a-749c-42f3-b85c-438f3a6562e4}, !- People Definition Name
-  {21e83938-bc1c-43d7-ad7e-80280dc5b332}; !- Space or SpaceType Name
+  {badf20a6-6545-4589-b8a0-037864378608}, !- People Definition Name
+  {08d8a08a-f3dc-441a-a2c2-f405573d0801}; !- Space or SpaceType Name
 
 OS:People:Definition,
-  {969f873a-749c-42f3-b85c-438f3a6562e4}, !- Handle
+  {badf20a6-6545-4589-b8a0-037864378608}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 People Definition, !- Name
   People/Area,                            !- Number of People Calculation Method
   ,                                       !- Number of People {people}
@@ -608,13 +608,13 @@ OS:People:Definition,
   0.3;                                    !- Fraction Radiant
 
 OS:Lights,
-  {bc57bcf8-8fd4-45f0-8298-27faa137cc22}, !- Handle
+  {6fce3163-8248-463e-9fa0-1a75cbd2b726}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Lights, !- Name
-  {635a2813-0504-40fd-8d1b-c9fa6f7ca8d0}, !- Lights Definition Name
-  {21e83938-bc1c-43d7-ad7e-80280dc5b332}; !- Space or SpaceType Name
+  {6eecc26f-80f5-4fbd-b437-3bd514e1f463}, !- Lights Definition Name
+  {08d8a08a-f3dc-441a-a2c2-f405573d0801}; !- Space or SpaceType Name
 
 OS:Lights:Definition,
-  {635a2813-0504-40fd-8d1b-c9fa6f7ca8d0}, !- Handle
+  {6eecc26f-80f5-4fbd-b437-3bd514e1f463}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Lights Definition, !- Name
   Watts/Area,                             !- Design Level Calculation Method
   ,                                       !- Lighting Level {W}
@@ -622,13 +622,13 @@ OS:Lights:Definition,
   ;                                       !- Watts per Person {W/person}
 
 OS:ElectricEquipment,
-  {d13d3d27-ec33-40dd-892e-6ba72660450b}, !- Handle
+  {14fa963a-214d-4a40-89c5-086b9559b715}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Electric Equipment, !- Name
-  {ef4cfcc4-cf9b-4cb1-bece-6dad2fc4b88f}, !- Electric Equipment Definition Name
-  {21e83938-bc1c-43d7-ad7e-80280dc5b332}; !- Space or SpaceType Name
+  {2664eac4-b1fa-4966-9c0e-aa1ab93bea6b}, !- Electric Equipment Definition Name
+  {08d8a08a-f3dc-441a-a2c2-f405573d0801}; !- Space or SpaceType Name
 
 OS:ElectricEquipment:Definition,
-  {ef4cfcc4-cf9b-4cb1-bece-6dad2fc4b88f}, !- Handle
+  {2664eac4-b1fa-4966-9c0e-aa1ab93bea6b}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Electric Equipment Definition, !- Name
   Watts/Area,                             !- Design Level Calculation Method
   ,                                       !- Design Level {W}
@@ -636,9 +636,9 @@ OS:ElectricEquipment:Definition,
   ;                                       !- Watts per Person {W/person}
 
 OS:SpaceInfiltration:DesignFlowRate,
-  {b6f96ceb-4190-4bf5-9523-2996d78bed6c}, !- Handle
+  {cd4c3b73-ca5f-490a-a4a1-dd73d59d44fa}, !- Handle
   189.1-2009 - Office - Lobby - CZ4-8 Infiltration, !- Name
-  {21e83938-bc1c-43d7-ad7e-80280dc5b332}, !- Space or SpaceType Name
+  {08d8a08a-f3dc-441a-a2c2-f405573d0801}, !- Space or SpaceType Name
   ,                                       !- Schedule Name
   Flow/ExteriorArea,                      !- Design Flow Rate Calculation Method
   ,                                       !- Design Flow Rate {m3/s}
@@ -651,71 +651,71 @@ OS:SpaceInfiltration:DesignFlowRate,
   ;                                       !- Velocity Squared Term Coefficient
 
 OS:DefaultScheduleSet,
-  {86b81c84-7e47-4460-bc0d-84e586277a4a}, !- Handle
+  {2899b51a-edc4-45aa-b4da-35842b078857}, !- Handle
   189.1-2009 - Office - PrintRoom - CZ4-8 Schedule Set, !- Name
   ,                                       !- Hours of Operation Schedule Name
-  {3fcd22d2-9c8e-4d4f-91e3-1a4834d800ce}, !- Number of People Schedule Name
-  {74593558-ded0-45db-9bda-5fb7a8dceed1}, !- People Activity Level Schedule Name
-  {e35e47cb-a473-42cb-9458-159bdac2482e}, !- Lighting Schedule Name
-  {ae997c3b-5196-40d8-ad2c-ad8160a1cf12}, !- Electric Equipment Schedule Name
+  {550295ef-25a1-42b2-bfac-15236a36ad18}, !- Number of People Schedule Name
+  {19257c7e-e0e9-41f7-ada1-ff92e6749cf9}, !- People Activity Level Schedule Name
+  {860f6362-0b08-4d9e-bfe2-a1360592015e}, !- Lighting Schedule Name
+  {e90ca46e-95e9-47b5-b61b-fc0853e0cc82}, !- Electric Equipment Schedule Name
   ,                                       !- Gas Equipment Schedule Name
   ,                                       !- Hot Water Equipment Schedule Name
-  {6a017310-92e5-4fe0-b44c-95a7a3a63f4b}, !- Infiltration Schedule Name
+  {96867d19-f0ac-41d5-8f6b-1bd4d36568dc}, !- Infiltration Schedule Name
   ,                                       !- Steam Equipment Schedule Name
   ;                                       !- Other Equipment Schedule Name
 
 OS:DefaultConstructionSet,
-  {86b2a3f1-27e8-44bf-88b1-efb65660c3de}, !- Handle
+  {89eee11e-54d3-49c7-8a59-01d2af52c347}, !- Handle
   189.1-2009 - CZ7-8 - Office,            !- Name
-  {a86d9fe0-096b-4cfc-91df-b6d3170bf21f}, !- Default Exterior Surface Constructions Name
-  {3354ea85-808d-48fd-9782-801d184bf45e}, !- Default Interior Surface Constructions Name
-  {c39ff4ed-c058-457c-a631-758d2441211f}, !- Default Ground Contact Surface Constructions Name
-  {78e45f0f-6ce5-44b7-a17e-792974e4c4a2}, !- Default Exterior SubSurface Constructions Name
-  {421a6fde-d36e-466d-a274-cf3c8f46a187}, !- Default Interior SubSurface Constructions Name
-  {e0685ef8-260a-4106-988b-add0986bf00d}, !- Interior Partition Construction Name
-  ,                                       !- Space Shading Construction Name
-  ,                                       !- Building Shading Construction Name
-  ;                                       !- Site Shading Construction Name
+  {fa86f805-7f50-4af2-9506-1a34d3f2c81b}, !- Default Exterior Surface Constructions Name
+  {42cf76d9-4008-4125-85b5-e0d26e3d1b45}, !- Default Interior Surface Constructions Name
+  {fec60b8d-4d8f-489d-9739-970a1f6f6555}, !- Default Ground Contact Surface Constructions Name
+  {b1c1367f-0ef8-4b52-ab44-3464101630a3}, !- Default Exterior SubSurface Constructions Name
+  {d0092211-e5f3-41d3-82a8-c2f602054d1a}, !- Default Interior SubSurface Constructions Name
+  {57172bb8-e7e1-4ce4-8db8-30ef5f2cae49}, !- Interior Partition Construction Name
+  {f1429fbc-756f-44a3-96ad-545a8cd6f34d}, !- Space Shading Construction Name
+  {f1429fbc-756f-44a3-96ad-545a8cd6f34d}, !- Building Shading Construction Name
+  {f1429fbc-756f-44a3-96ad-545a8cd6f34d}; !- Site Shading Construction Name
 
 OS:DefaultSurfaceConstructions,
-  {a86d9fe0-096b-4cfc-91df-b6d3170bf21f}, !- Handle
+  {fa86f805-7f50-4af2-9506-1a34d3f2c81b}, !- Handle
   Default Surface Constructions 19,       !- Name
-  {7b7b9c16-c7eb-4225-87ca-a6efbe9a38b6}, !- Floor Construction Name
-  {f77ffce0-c28d-4b51-a655-aaa699bb94e0}, !- Wall Construction Name
-  {a97e6382-678d-44b1-bc7e-86378563b6e2}; !- Roof Ceiling Construction Name
+  {2f9a1a7d-e802-4fae-b994-416b7742fc34}, !- Floor Construction Name
+  {f1429fbc-756f-44a3-96ad-545a8cd6f34d}, !- Wall Construction Name
+  {17eecde7-42b4-450a-a241-24aad34ed383}; !- Roof Ceiling Construction Name
 
 OS:DefaultSurfaceConstructions,
-  {3354ea85-808d-48fd-9782-801d184bf45e}, !- Handle
+  {42cf76d9-4008-4125-85b5-e0d26e3d1b45}, !- Handle
   Default Surface Constructions 20,       !- Name
-  {4a924ed7-13b2-4473-9110-b58095e36a82}, !- Floor Construction Name
-  {670c599f-c833-40e2-ae9e-9956245b81a2}, !- Wall Construction Name
-  {6afdace2-385c-4452-a465-72b8aaf30389}; !- Roof Ceiling Construction Name
+  {17cf5b4e-4667-4249-978c-40c4e9e5008f}, !- Floor Construction Name
+  {1f2b8e74-579a-4636-aeac-9a4fdabfb4c8}, !- Wall Construction Name
+  {405035fb-1b5f-40e1-8eaa-c9220c12ab34}; !- Roof Ceiling Construction Name
 
 OS:DefaultSurfaceConstructions,
-  {c39ff4ed-c058-457c-a631-758d2441211f}, !- Handle
+  {fec60b8d-4d8f-489d-9739-970a1f6f6555}, !- Handle
   Default Surface Constructions 21,       !- Name
-  {7b7b9c16-c7eb-4225-87ca-a6efbe9a38b6}, !- Floor Construction Name
-  {7b7b9c16-c7eb-4225-87ca-a6efbe9a38b6}, !- Wall Construction Name
-  {7b7b9c16-c7eb-4225-87ca-a6efbe9a38b6}; !- Roof Ceiling Construction Name
+  {2f9a1a7d-e802-4fae-b994-416b7742fc34}, !- Floor Construction Name
+  {2f9a1a7d-e802-4fae-b994-416b7742fc34}, !- Wall Construction Name
+  {2f9a1a7d-e802-4fae-b994-416b7742fc34}; !- Roof Ceiling Construction Name
 
 OS:DefaultSubSurfaceConstructions,
-  {78e45f0f-6ce5-44b7-a17e-792974e4c4a2}, !- Handle
+  {b1c1367f-0ef8-4b52-ab44-3464101630a3}, !- Handle
   Default Sub Surface Constructions 13,   !- Name
-  {517949c9-78f6-4b14-8a66-da0d67958241}, !- Fixed Window Construction Name
-  {517949c9-78f6-4b14-8a66-da0d67958241}, !- Operable Window Construction Name
-  {0f6c30a1-f86b-43d1-83ca-7c0f3cc23d0f}, !- Door Construction Name
+  {4c165ac5-8f7e-44f2-9123-d9f27e6981cc}, !- Fixed Window Construction Name
+  {4c165ac5-8f7e-44f2-9123-d9f27e6981cc}, !- Operable Window Construction Name
+  {f608a7b3-8514-4737-b877-9c951ae57a5c}, !- Door Construction Name
   ,                                       !- Glass Door Construction Name
   ,                                       !- Overhead Door Construction Name
   ,                                       !- Skylight Construction Name
-  {6700fc69-ac24-474d-ae6f-a8e8ea536e93}, !- Tubular Daylight Dome Construction Name
-  {6700fc69-ac24-474d-ae6f-a8e8ea536e93}; !- Tubular Daylight Diffuser Construction Name
+  {824be103-c0e3-4271-93f2-0e0ec6f6d948}, !- Tubular Daylight Dome Construction Name
+  {824be103-c0e3-4271-93f2-0e0ec6f6d948}; !- Tubular Daylight Diffuser Construction Name
 
 OS:DefaultSubSurfaceConstructions,
-  {421a6fde-d36e-466d-a274-cf3c8f46a187}, !- Handle
+  {d0092211-e5f3-41d3-82a8-c2f602054d1a}, !- Handle
   Default Sub Surface Constructions 14,   !- Name
-  {6700fc69-ac24-474d-ae6f-a8e8ea536e93}, !- Fixed Window Construction Name
-  {6700fc69-ac24-474d-ae6f-a8e8ea536e93}, !- Operable Window Construction Name
-  {7ae45470-69b7-45da-996c-ee1be30c0975}, !- Door Construction Name
+  {824be103-c0e3-4271-93f2-0e0ec6f6d948}, !- Fixed Window Construction Name
+  {824be103-c0e3-4271-93f2-0e0ec6f6d948}, !- Operable Window Construction Name
+  {ac8a5fba-0ef4-4700-9d59-d1cf94b57e22}, !- Door Construction Name
   ,                                       !- Glass Door Construction Name
   ,                                       !- Overhead Door Construction Name
   ,                                       !- Skylight Construction Name
@@ -723,152 +723,152 @@ OS:DefaultSubSurfaceConstructions,
   ;                                       !- Tubular Daylight Diffuser Construction Name
 
 OS:Construction,
-  {e0685ef8-260a-4106-988b-add0986bf00d}, !- Handle
+  {57172bb8-e7e1-4ce4-8db8-30ef5f2cae49}, !- Handle
   Interior Partition,                     !- Name
   ,                                       !- Surface Rendering Name
-  {b53a6d76-f379-4e7c-958b-88bd00897ba6}; !- Layer 1
+  {f778e56d-73aa-4a00-9523-7b0597beab86}; !- Layer 1
 
 OS:StandardsInformation:Construction,
-  {3410f8cc-7115-43f1-b3aa-61eff5b6f574}, !- Handle
-  {e0685ef8-260a-4106-988b-add0986bf00d}, !- Construction Name
+  {f05316a9-7d64-4f83-a945-9edab716626b}, !- Handle
+  {57172bb8-e7e1-4ce4-8db8-30ef5f2cae49}, !- Construction Name
   InteriorPartition,                      !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {7b7b9c16-c7eb-4225-87ca-a6efbe9a38b6}, !- Handle
-  ExtSlabCarpet 4in ClimateZone 1-8,      !- Name
-  ,                                       !- Surface Rendering Name
-  {5c3b4d6f-5c9f-41c5-8f05-67a5afd48e76}, !- Layer 1
-  {f14e574b-7bfd-4048-84c7-8e09af73410e}; !- Layer 2
-
-OS:StandardsInformation:Construction,
-  {b8141dd1-b136-4fd4-bfbe-408c77fe6f6c}, !- Handle
-  {7b7b9c16-c7eb-4225-87ca-a6efbe9a38b6}, !- Construction Name
-  ExteriorFloor,                          !- Intended Surface Type
-  ;                                       !- Standards Construction Type
-
-OS:Construction,
-  {f77ffce0-c28d-4b51-a655-aaa699bb94e0}, !- Handle
+  {f1429fbc-756f-44a3-96ad-545a8cd6f34d}, !- Handle
   ASHRAE 189.1-2009 ExtWall Mass ClimateZone 7-8, !- Name
   ,                                       !- Surface Rendering Name
-  {9c83bdac-13eb-493a-99a8-b56df88d8a91}, !- Layer 1
-  {f505093e-e961-4a66-be07-9267c48004ce}, !- Layer 2
-  {9f723bdc-c7e6-43fe-afff-82b101857aeb}, !- Layer 3
-  {e6dcfdd7-54e2-4c45-8d71-7b9eb22ff66c}; !- Layer 4
+  {bfec19db-ffbb-477c-bf88-748e1e23396e}, !- Layer 1
+  {21752e98-158f-473e-a1c3-8bf01b219853}, !- Layer 2
+  {d9c8657a-4061-4a99-8c93-d1948aa889dc}, !- Layer 3
+  {1cec8de5-178d-4e06-babe-24ee6144a6a7}; !- Layer 4
 
 OS:StandardsInformation:Construction,
-  {71a81cb1-c6e1-4dad-b75b-31f9f0f2843f}, !- Handle
-  {f77ffce0-c28d-4b51-a655-aaa699bb94e0}, !- Construction Name
+  {49c2c720-8a56-4a73-bc26-88acd33351f5}, !- Handle
+  {f1429fbc-756f-44a3-96ad-545a8cd6f34d}, !- Construction Name
   ExteriorWall,                           !- Intended Surface Type
   Mass;                                   !- Standards Construction Type
 
 OS:Construction,
-  {a97e6382-678d-44b1-bc7e-86378563b6e2}, !- Handle
-  ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8, !- Name
+  {2f9a1a7d-e802-4fae-b994-416b7742fc34}, !- Handle
+  ExtSlabCarpet 4in ClimateZone 1-8,      !- Name
   ,                                       !- Surface Rendering Name
-  {7ac2ae3f-0026-4d0b-a2e6-45a730f8b79d}, !- Layer 1
-  {794950a0-24c4-492a-9bc4-8c3db9b9b38e}, !- Layer 2
-  {35a01d0e-320e-4999-bc1d-90463258774e}; !- Layer 3
+  {3e2ca711-74c7-47a4-ad98-067d5cb070b1}, !- Layer 1
+  {414c6ce1-4a78-4ee5-aa54-75b1f6cdc4b4}; !- Layer 2
 
 OS:StandardsInformation:Construction,
-  {f7d747b2-7687-4e83-aa79-a877fb03f787}, !- Handle
-  {a97e6382-678d-44b1-bc7e-86378563b6e2}, !- Construction Name
+  {cac18732-da62-4bed-b7bc-22402fa6b3fd}, !- Handle
+  {2f9a1a7d-e802-4fae-b994-416b7742fc34}, !- Construction Name
+  ExteriorFloor,                          !- Intended Surface Type
+  ;                                       !- Standards Construction Type
+
+OS:Construction,
+  {17eecde7-42b4-450a-a241-24aad34ed383}, !- Handle
+  ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8, !- Name
+  ,                                       !- Surface Rendering Name
+  {920012e6-fc3f-4877-a41b-7292a33374d3}, !- Layer 1
+  {8c1ae4ca-8b59-4a39-942d-cfcbd4e257fc}, !- Layer 2
+  {b77e1cd4-4730-439b-a6df-9afd114beab7}; !- Layer 3
+
+OS:StandardsInformation:Construction,
+  {8b7f5167-cb26-4c84-b9bc-9b90e38a7bae}, !- Handle
+  {17eecde7-42b4-450a-a241-24aad34ed383}, !- Construction Name
   ExteriorRoof,                           !- Intended Surface Type
   IEAD;                                   !- Standards Construction Type
 
 OS:Construction,
-  {4a924ed7-13b2-4473-9110-b58095e36a82}, !- Handle
+  {17cf5b4e-4667-4249-978c-40c4e9e5008f}, !- Handle
   Interior Floor,                         !- Name
   ,                                       !- Surface Rendering Name
-  {6826d45a-63a8-4e89-a799-97342d6fc9e2}, !- Layer 1
-  {e2511df4-fad7-4dd4-8ccf-e3719e8e1d04}, !- Layer 2
-  {1bd9fda4-6989-4d3e-be02-a1508d4151a4}; !- Layer 3
+  {32889c21-0db4-4f1d-8a4d-56fea5eabe31}, !- Layer 1
+  {06a29216-bc80-40e0-9297-f0b54e08fddc}, !- Layer 2
+  {0ffcf6da-4d1c-4826-bac1-10bc7b1d42f8}; !- Layer 3
 
 OS:StandardsInformation:Construction,
-  {c59d4174-d197-4d92-bafb-0196f9fe278f}, !- Handle
-  {4a924ed7-13b2-4473-9110-b58095e36a82}, !- Construction Name
+  {b2621608-8e98-4dd0-87e4-14c9c27706fd}, !- Handle
+  {17cf5b4e-4667-4249-978c-40c4e9e5008f}, !- Construction Name
   InteriorFloor,                          !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {670c599f-c833-40e2-ae9e-9956245b81a2}, !- Handle
+  {1f2b8e74-579a-4636-aeac-9a4fdabfb4c8}, !- Handle
   Interior Wall,                          !- Name
   ,                                       !- Surface Rendering Name
-  {b4d83a9a-5106-4d1b-8731-0069cf6139c9}, !- Layer 1
-  {c54100ff-474f-434c-bc24-2ac5638cc594}, !- Layer 2
-  {b4d83a9a-5106-4d1b-8731-0069cf6139c9}; !- Layer 3
+  {1d0c23d3-b8a3-48da-abf6-e408d90a48cb}, !- Layer 1
+  {ab1c7420-8b76-4d6e-b954-5a683037dbea}, !- Layer 2
+  {1d0c23d3-b8a3-48da-abf6-e408d90a48cb}; !- Layer 3
 
 OS:StandardsInformation:Construction,
-  {9bb1118e-2e8d-45ff-876c-b602e40f5b1f}, !- Handle
-  {670c599f-c833-40e2-ae9e-9956245b81a2}, !- Construction Name
+  {dc739b66-a113-46af-8f04-e2dadb8a3154}, !- Handle
+  {1f2b8e74-579a-4636-aeac-9a4fdabfb4c8}, !- Construction Name
   InteriorWall,                           !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {6afdace2-385c-4452-a465-72b8aaf30389}, !- Handle
+  {405035fb-1b5f-40e1-8eaa-c9220c12ab34}, !- Handle
   Interior Ceiling,                       !- Name
   ,                                       !- Surface Rendering Name
-  {1bd9fda4-6989-4d3e-be02-a1508d4151a4}, !- Layer 1
-  {e2511df4-fad7-4dd4-8ccf-e3719e8e1d04}, !- Layer 2
-  {6826d45a-63a8-4e89-a799-97342d6fc9e2}; !- Layer 3
+  {0ffcf6da-4d1c-4826-bac1-10bc7b1d42f8}, !- Layer 1
+  {06a29216-bc80-40e0-9297-f0b54e08fddc}, !- Layer 2
+  {32889c21-0db4-4f1d-8a4d-56fea5eabe31}; !- Layer 3
 
 OS:StandardsInformation:Construction,
-  {3a477e20-118c-4e3e-a62d-bdf2a6625669}, !- Handle
-  {6afdace2-385c-4452-a465-72b8aaf30389}, !- Construction Name
+  {73e53e94-f40a-4b3e-a5d3-f3894810f1c1}, !- Handle
+  {405035fb-1b5f-40e1-8eaa-c9220c12ab34}, !- Construction Name
   InteriorCeiling,                        !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {517949c9-78f6-4b14-8a66-da0d67958241}, !- Handle
+  {4c165ac5-8f7e-44f2-9123-d9f27e6981cc}, !- Handle
   ASHRAE 189.1-2009 ExtWindow ClimateZone 7-8, !- Name
   ,                                       !- Surface Rendering Name
-  {24551665-f442-4cd4-ae90-24cc54840f53}; !- Layer 1
+  {5b2da5b9-2bdb-4ca2-9afb-984bb7c3bdc6}; !- Layer 1
 
 OS:StandardsInformation:Construction,
-  {460cb576-8fab-4bd0-a00a-60620e7e99ab}, !- Handle
-  {517949c9-78f6-4b14-8a66-da0d67958241}, !- Construction Name
+  {e414a0a2-c1a8-453e-98fb-bce01631e1d8}, !- Handle
+  {4c165ac5-8f7e-44f2-9123-d9f27e6981cc}, !- Construction Name
   ExteriorWindow,                         !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {0f6c30a1-f86b-43d1-83ca-7c0f3cc23d0f}, !- Handle
+  {f608a7b3-8514-4737-b877-9c951ae57a5c}, !- Handle
   Exterior Door,                          !- Name
   ,                                       !- Surface Rendering Name
-  {06db4fb4-347b-4cbb-b74d-00385b80fc13}, !- Layer 1
-  {4e04cb29-b317-422e-8e04-4376a3ddc39a}; !- Layer 2
+  {3253dec5-92c1-4bc3-8eeb-04eb6bbec3cc}, !- Layer 1
+  {4379a0b6-343d-485a-8441-7797286a70f8}; !- Layer 2
 
 OS:StandardsInformation:Construction,
-  {cdfdcf71-f363-44d8-a540-1bc440822db7}, !- Handle
-  {0f6c30a1-f86b-43d1-83ca-7c0f3cc23d0f}, !- Construction Name
+  {bbc22d1f-b230-4a8b-8bf8-0947a154aee0}, !- Handle
+  {f608a7b3-8514-4737-b877-9c951ae57a5c}, !- Construction Name
   ExteriorDoor,                           !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {6700fc69-ac24-474d-ae6f-a8e8ea536e93}, !- Handle
+  {824be103-c0e3-4271-93f2-0e0ec6f6d948}, !- Handle
   Interior Window,                        !- Name
   ,                                       !- Surface Rendering Name
-  {0ef73b73-86aa-4c71-a645-26ca3e7be7ea}; !- Layer 1
+  {8e1152c7-bbb9-4994-b430-d42bdff68765}; !- Layer 1
 
 OS:StandardsInformation:Construction,
-  {5006ad34-3a13-46a7-b01e-09d2375bd4da}, !- Handle
-  {6700fc69-ac24-474d-ae6f-a8e8ea536e93}, !- Construction Name
+  {76912e96-c9a0-4b24-8b54-c0ac1065d558}, !- Handle
+  {824be103-c0e3-4271-93f2-0e0ec6f6d948}, !- Construction Name
   InteriorWindow,                         !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Construction,
-  {7ae45470-69b7-45da-996c-ee1be30c0975}, !- Handle
+  {ac8a5fba-0ef4-4700-9d59-d1cf94b57e22}, !- Handle
   Interior Door,                          !- Name
   ,                                       !- Surface Rendering Name
-  {b53a6d76-f379-4e7c-958b-88bd00897ba6}; !- Layer 1
+  {f778e56d-73aa-4a00-9523-7b0597beab86}; !- Layer 1
 
 OS:StandardsInformation:Construction,
-  {1bb128f0-6189-426a-b364-ea900614419d}, !- Handle
-  {7ae45470-69b7-45da-996c-ee1be30c0975}, !- Construction Name
+  {484d1df8-976c-4e28-9fec-7da3218b8d37}, !- Handle
+  {ac8a5fba-0ef4-4700-9d59-d1cf94b57e22}, !- Construction Name
   InteriorDoor,                           !- Intended Surface Type
   ;                                       !- Standards Construction Type
 
 OS:Material,
-  {b53a6d76-f379-4e7c-958b-88bd00897ba6}, !- Handle
+  {f778e56d-73aa-4a00-9523-7b0597beab86}, !- Handle
   G05 25mm wood,                          !- Name
   MediumSmooth,                           !- Roughness
   0.0254,                                 !- Thickness {m}
@@ -880,28 +880,7 @@ OS:Material,
   0.5;                                    !- Visible Absorptance
 
 OS:Material,
-  {5c3b4d6f-5c9f-41c5-8f05-67a5afd48e76}, !- Handle
-  MAT-CC05 4 HW CONCRETE,                 !- Name
-  Rough,                                  !- Roughness
-  0.1016,                                 !- Thickness {m}
-  1.311,                                  !- Conductivity {W/m-K}
-  2240,                                   !- Density {kg/m3}
-  836.800000000001,                       !- Specific Heat {J/kg-K}
-  0.9,                                    !- Thermal Absorptance
-  0.85,                                   !- Solar Absorptance
-  0.85;                                   !- Visible Absorptance
-
-OS:Material:NoMass,
-  {f14e574b-7bfd-4048-84c7-8e09af73410e}, !- Handle
-  CP02 CARPET PAD,                        !- Name
-  Smooth,                                 !- Roughness
-  0.1,                                    !- Thermal Resistance {m2-K/W}
-  0.9,                                    !- Thermal Absorptance
-  0.8,                                    !- Solar Absorptance
-  0.8;                                    !- Visible Absorptance
-
-OS:Material,
-  {9c83bdac-13eb-493a-99a8-b56df88d8a91}, !- Handle
+  {bfec19db-ffbb-477c-bf88-748e1e23396e}, !- Handle
   1IN Stucco,                             !- Name
   Smooth,                                 !- Roughness
   0.0253,                                 !- Thickness {m}
@@ -913,7 +892,7 @@ OS:Material,
   0.92;                                   !- Visible Absorptance
 
 OS:Material,
-  {f505093e-e961-4a66-be07-9267c48004ce}, !- Handle
+  {21752e98-158f-473e-a1c3-8bf01b219853}, !- Handle
   8IN Concrete HW,                        !- Name
   MediumRough,                            !- Roughness
   0.2033,                                 !- Thickness {m}
@@ -925,7 +904,7 @@ OS:Material,
   0.65;                                   !- Visible Absorptance
 
 OS:Material,
-  {9f723bdc-c7e6-43fe-afff-82b101857aeb}, !- Handle
+  {d9c8657a-4061-4a99-8c93-d1948aa889dc}, !- Handle
   Wall Insulation [44],                   !- Name
   MediumRough,                            !- Roughness
   0.1104,                                 !- Thickness {m}
@@ -937,7 +916,7 @@ OS:Material,
   0.5;                                    !- Visible Absorptance
 
 OS:Material,
-  {e6dcfdd7-54e2-4c45-8d71-7b9eb22ff66c}, !- Handle
+  {1cec8de5-178d-4e06-babe-24ee6144a6a7}, !- Handle
   1/2IN Gypsum,                           !- Name
   Smooth,                                 !- Roughness
   0.0127,                                 !- Thickness {m}
@@ -949,7 +928,28 @@ OS:Material,
   0.4;                                    !- Visible Absorptance
 
 OS:Material,
-  {7ac2ae3f-0026-4d0b-a2e6-45a730f8b79d}, !- Handle
+  {3e2ca711-74c7-47a4-ad98-067d5cb070b1}, !- Handle
+  MAT-CC05 4 HW CONCRETE,                 !- Name
+  Rough,                                  !- Roughness
+  0.1016,                                 !- Thickness {m}
+  1.311,                                  !- Conductivity {W/m-K}
+  2240,                                   !- Density {kg/m3}
+  836.800000000001,                       !- Specific Heat {J/kg-K}
+  0.9,                                    !- Thermal Absorptance
+  0.85,                                   !- Solar Absorptance
+  0.85;                                   !- Visible Absorptance
+
+OS:Material:NoMass,
+  {414c6ce1-4a78-4ee5-aa54-75b1f6cdc4b4}, !- Handle
+  CP02 CARPET PAD,                        !- Name
+  Smooth,                                 !- Roughness
+  0.1,                                    !- Thermal Resistance {m2-K/W}
+  0.9,                                    !- Thermal Absorptance
+  0.8,                                    !- Solar Absorptance
+  0.8;                                    !- Visible Absorptance
+
+OS:Material,
+  {920012e6-fc3f-4877-a41b-7292a33374d3}, !- Handle
   Roof Membrane,                          !- Name
   VeryRough,                              !- Roughness
   0.0095,                                 !- Thickness {m}
@@ -961,7 +961,7 @@ OS:Material,
   0.7;                                    !- Visible Absorptance
 
 OS:Material,
-  {794950a0-24c4-492a-9bc4-8c3db9b9b38e}, !- Handle
+  {8c1ae4ca-8b59-4a39-942d-cfcbd4e257fc}, !- Handle
   Roof Insulation [26],                   !- Name
   MediumRough,                            !- Roughness
   0.2941,                                 !- Thickness {m}
@@ -973,7 +973,7 @@ OS:Material,
   0.7;                                    !- Visible Absorptance
 
 OS:Material,
-  {35a01d0e-320e-4999-bc1d-90463258774e}, !- Handle
+  {b77e1cd4-4730-439b-a6df-9afd114beab7}, !- Handle
   Metal Decking,                          !- Name
   MediumSmooth,                           !- Roughness
   0.0015,                                 !- Thickness {m}
@@ -985,7 +985,7 @@ OS:Material,
   0.6;                                    !- Visible Absorptance
 
 OS:Material,
-  {6826d45a-63a8-4e89-a799-97342d6fc9e2}, !- Handle
+  {32889c21-0db4-4f1d-8a4d-56fea5eabe31}, !- Handle
   F16 Acoustic tile,                      !- Name
   MediumSmooth,                           !- Roughness
   0.0191,                                 !- Thickness {m}
@@ -997,12 +997,12 @@ OS:Material,
   0.3;                                    !- Visible Absorptance
 
 OS:Material:AirGap,
-  {e2511df4-fad7-4dd4-8ccf-e3719e8e1d04}, !- Handle
+  {06a29216-bc80-40e0-9297-f0b54e08fddc}, !- Handle
   F05 Ceiling air space resistance,       !- Name
   0.18;                                   !- Thermal Resistance {m2-K/W}
 
 OS:Material,
-  {1bd9fda4-6989-4d3e-be02-a1508d4151a4}, !- Handle
+  {0ffcf6da-4d1c-4826-bac1-10bc7b1d42f8}, !- Handle
   M11 100mm lightweight concrete,         !- Name
   MediumRough,                            !- Roughness
   0.1016,                                 !- Thickness {m}
@@ -1014,7 +1014,7 @@ OS:Material,
   0.5;                                    !- Visible Absorptance
 
 OS:Material,
-  {b4d83a9a-5106-4d1b-8731-0069cf6139c9}, !- Handle
+  {1d0c23d3-b8a3-48da-abf6-e408d90a48cb}, !- Handle
   G01a 19mm gypsum board,                 !- Name
   MediumSmooth,                           !- Roughness
   0.019,                                  !- Thickness {m}
@@ -1026,12 +1026,12 @@ OS:Material,
   0.4;                                    !- Visible Absorptance
 
 OS:Material:AirGap,
-  {c54100ff-474f-434c-bc24-2ac5638cc594}, !- Handle
+  {ab1c7420-8b76-4d6e-b954-5a683037dbea}, !- Handle
   F04 Wall air space resistance,          !- Name
   0.15;                                   !- Thermal Resistance {m2-K/W}
 
 OS:WindowMaterial:Glazing,
-  {24551665-f442-4cd4-ae90-24cc54840f53}, !- Handle
+  {5b2da5b9-2bdb-4ca2-9afb-984bb7c3bdc6}, !- Handle
   Theoretical Glass [221],                !- Name
   SpectralAverage,                        !- Optical Data Type
   ,                                       !- Window Glass Spectral Data Set Name
@@ -1050,7 +1050,7 @@ OS:WindowMaterial:Glazing,
   No;                                     !- Solar Diffusing
 
 OS:Material,
-  {06db4fb4-347b-4cbb-b74d-00385b80fc13}, !- Handle
+  {3253dec5-92c1-4bc3-8eeb-04eb6bbec3cc}, !- Handle
   F08 Metal surface,                      !- Name
   Smooth,                                 !- Roughness
   0.0008,                                 !- Thickness {m}
@@ -1062,7 +1062,7 @@ OS:Material,
   0.7;                                    !- Visible Absorptance
 
 OS:Material,
-  {4e04cb29-b317-422e-8e04-4376a3ddc39a}, !- Handle
+  {4379a0b6-343d-485a-8441-7797286a70f8}, !- Handle
   I01 25mm insulation board,              !- Name
   MediumRough,                            !- Roughness
   0.0254,                                 !- Thickness {m}
@@ -1074,7 +1074,7 @@ OS:Material,
   0.6;                                    !- Visible Absorptance
 
 OS:WindowMaterial:Glazing,
-  {0ef73b73-86aa-4c71-a645-26ca3e7be7ea}, !- Handle
+  {8e1152c7-bbb9-4994-b430-d42bdff68765}, !- Handle
   Clear 3mm,                              !- Name
   SpectralAverage,                        !- Optical Data Type
   ,                                       !- Window Glass Spectral Data Set Name
@@ -1093,20 +1093,24 @@ OS:WindowMaterial:Glazing,
   No;                                     !- Solar Diffusing
 
 OS:Building,
-  {9181b753-6f13-4066-acab-9621339c98d0}, !- Handle
+  {18430980-55ed-4c0c-9f52-c30e3b61cde2}, !- Handle
   Building 1,                             !- Name
   ,                                       !- Building Sector Type
   ,                                       !- North Axis {deg}
   ,                                       !- Nominal Floor to Floor Height {m}
-  {21e83938-bc1c-43d7-ad7e-80280dc5b332}, !- Space Type Name
-  {86b2a3f1-27e8-44bf-88b1-efb65660c3de}, !- Default Construction Set Name
-  {86b81c84-7e47-4460-bc0d-84e586277a4a}; !- Default Schedule Set Name
+  {08d8a08a-f3dc-441a-a2c2-f405573d0801}, !- Space Type Name
+  {89eee11e-54d3-49c7-8a59-01d2af52c347}, !- Default Construction Set Name
+  {2899b51a-edc4-45aa-b4da-35842b078857}; !- Default Schedule Set Name
+
+OS:SpaceType,
+  {27e39310-bf1e-45d4-a81c-51ede8da5099}, !- Handle
+  Space Type 1;                           !- Name
 
 OS:Facility,
-  {503cd015-d5c7-4853-9cbd-4f3c9a3b162c}; !- Handle
+  {8ccbbb9d-7db4-4fc7-b7b9-b08e0bd3d4e0}; !- Handle
 
 OS:BuildingStory,
-  {3adc9cba-d944-4147-831a-4ff5d323adcd}, !- Handle
+  {7feaf83a-5ee9-4aec-a53b-05a2b688072c}, !- Handle
   Level 1,                                !- Name
   ,                                       !- Nominal Z Coordinate {m}
   ,                                       !- Nominal Floor to Floor Height {m}
@@ -1115,7 +1119,7 @@ OS:BuildingStory,
   ;                                       !- Group Rendering Name
 
 OS:BuildingStory,
-  {432152b5-486f-494b-9d2f-02095e0facb8}, !- Handle
+  {49a4c9a9-40f0-4f9c-81d5-cd4cdcfe6f01}, !- Handle
   Level 2,                                !- Name
   ,                                       !- Nominal Z Coordinate {m}
   3.9624,                                 !- Nominal Floor to Floor Height {m}
@@ -1124,12 +1128,12 @@ OS:BuildingStory,
   ;                                       !- Group Rendering Name
 
 OS:ShadingSurfaceGroup,
-  {2d04ea59-c566-48bd-9e5c-8662a25975df}, !- Handle
+  {a34ec921-915e-4da9-83c5-b771a3066539}, !- Handle
   Shading Surface Group 1,                !- Name
   Building;                               !- Shading Surface Type
 
 OS:Space,
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Handle
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Handle
   sp-1-Space,                             !- Name
   ,                                       !- Space Type Name
   ,                                       !- Default Construction Set Name
@@ -1138,15 +1142,15 @@ OS:Space,
   ,                                       !- X Origin {m}
   ,                                       !- Y Origin {m}
   ,                                       !- Z Origin {m}
-  {3adc9cba-d944-4147-831a-4ff5d323adcd}, !- Building Story Name
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}; !- Thermal Zone Name
+  {7feaf83a-5ee9-4aec-a53b-05a2b688072c}, !- Building Story Name
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}; !- Thermal Zone Name
 
 OS:Surface,
-  {a0a8650a-07a7-47bc-a4a3-bebbf2eb1f1a}, !- Handle
+  {03cfee8b-d16f-45fb-8b79-68f0bbdbf48d}, !- Handle
   Surface 1,                              !- Name
   Floor,                                  !- Surface Type
   ,                                       !- Construction Name
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Space Name
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Space Name
   Ground,                                 !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   NoSun,                                  !- Sun Exposure
@@ -1159,11 +1163,11 @@ OS:Surface,
   9.144, 0, 0;                            !- X,Y,Z Vertex 4 {m}
 
 OS:Surface,
-  {0baf9c9e-1d8e-446d-8fa0-af3ebe6dc7b3}, !- Handle
+  {7d3306c9-fccf-4cb0-832e-2b69c75dbd0d}, !- Handle
   Surface 2,                              !- Name
   Wall,                                   !- Surface Type
   ,                                       !- Construction Name
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Space Name
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Space Name
   Outdoors,                               !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   SunExposed,                             !- Sun Exposure
@@ -1176,11 +1180,11 @@ OS:Surface,
   0, 9.144, 0;                            !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {7f800b3c-d07b-4c33-87bb-79c1611e5c34}, !- Handle
+  {3db537fc-ffd3-4b5c-ba0a-e08ec131084e}, !- Handle
   Sub Surface 1,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {0baf9c9e-1d8e-446d-8fa0-af3ebe6dc7b3}, !- Surface Name
+  {7d3306c9-fccf-4cb0-832e-2b69c75dbd0d}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1193,11 +1197,11 @@ OS:SubSurface,
   0, 7.52475, 2.1336;                     !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {c8a9bdec-4804-45a9-bfee-9619a94f0146}, !- Handle
+  {55f982a1-2471-42d1-9a2f-99c51676da7a}, !- Handle
   Sub Surface 2,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {0baf9c9e-1d8e-446d-8fa0-af3ebe6dc7b3}, !- Surface Name
+  {7d3306c9-fccf-4cb0-832e-2b69c75dbd0d}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1210,11 +1214,11 @@ OS:SubSurface,
   0, 5.0292, 2.1336;                      !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {3d2aa9f9-c2e1-4bf4-b5a8-992b67172de5}, !- Handle
+  {03aecbcd-591b-42f6-939a-684648390554}, !- Handle
   Sub Surface 3,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {0baf9c9e-1d8e-446d-8fa0-af3ebe6dc7b3}, !- Surface Name
+  {7d3306c9-fccf-4cb0-832e-2b69c75dbd0d}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1227,11 +1231,11 @@ OS:SubSurface,
   0, 2.53365, 2.1336;                     !- X,Y,Z Vertex 4 {m}
 
 OS:Surface,
-  {75e953d1-4db2-40fe-9abc-3d7b87173203}, !- Handle
+  {ba339cf1-3033-451d-b240-be22d1276522}, !- Handle
   Surface 3,                              !- Name
   RoofCeiling,                            !- Surface Type
   ,                                       !- Construction Name
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Space Name
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Space Name
   Outdoors,                               !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   SunExposed,                             !- Sun Exposure
@@ -1244,11 +1248,11 @@ OS:Surface,
   0, 9.144, 3.9624;                       !- X,Y,Z Vertex 4 {m}
 
 OS:Surface,
-  {a45d1778-9adc-4b16-b794-4a3577827d4b}, !- Handle
+  {96e39c1c-f7a5-4a75-9145-b20dba2bcea6}, !- Handle
   Surface 4,                              !- Name
   Wall,                                   !- Surface Type
   ,                                       !- Construction Name
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Space Name
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Space Name
   Outdoors,                               !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   SunExposed,                             !- Sun Exposure
@@ -1261,11 +1265,11 @@ OS:Surface,
   9.144, 9.144, 0;                        !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {71f69a7d-499b-446d-a63a-74eab3326489}, !- Handle
+  {c9125686-5acb-4881-b1a7-13446e24aeda}, !- Handle
   Sub Surface 4,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {a45d1778-9adc-4b16-b794-4a3577827d4b}, !- Surface Name
+  {96e39c1c-f7a5-4a75-9145-b20dba2bcea6}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1278,11 +1282,11 @@ OS:SubSurface,
   7.534275, 9.144, 2.1336;                !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {5525833d-4948-484b-99fc-90c879609119}, !- Handle
+  {1db06ff6-83e7-4a8c-9ad2-500ce263a2c2}, !- Handle
   Sub Surface 5,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {a45d1778-9adc-4b16-b794-4a3577827d4b}, !- Surface Name
+  {96e39c1c-f7a5-4a75-9145-b20dba2bcea6}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1295,11 +1299,11 @@ OS:SubSurface,
   5.04825, 9.144, 2.1336;                 !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {ecac6335-6d63-45cf-a7ee-982d71cf60c2}, !- Handle
+  {33e15f87-a5ed-49d4-b891-38248b0b39f0}, !- Handle
   Sub Surface 6,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {a45d1778-9adc-4b16-b794-4a3577827d4b}, !- Surface Name
+  {96e39c1c-f7a5-4a75-9145-b20dba2bcea6}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1312,11 +1316,11 @@ OS:SubSurface,
   2.562225, 9.144, 2.1336;                !- X,Y,Z Vertex 4 {m}
 
 OS:Surface,
-  {a0e8b656-265f-42c4-a51d-be8a49f1bb72}, !- Handle
+  {705efb17-c74a-4aa8-a948-9bbaa34fdc5c}, !- Handle
   Surface 5,                              !- Name
   Wall,                                   !- Surface Type
   ,                                       !- Construction Name
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Space Name
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Space Name
   Outdoors,                               !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   SunExposed,                             !- Sun Exposure
@@ -1329,11 +1333,11 @@ OS:Surface,
   9.144, 0, 0;                            !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {c9004730-115b-4616-944c-5ef86e85e0c6}, !- Handle
+  {e871b28b-3054-4369-a902-620a9047174c}, !- Handle
   Sub Surface 7,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {a0e8b656-265f-42c4-a51d-be8a49f1bb72}, !- Surface Name
+  {705efb17-c74a-4aa8-a948-9bbaa34fdc5c}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1346,11 +1350,11 @@ OS:SubSurface,
   9.144, 1.6319501016, 2.1336;            !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {71767aa9-5812-4ad1-9d7d-85e7e1f2aaba}, !- Handle
+  {e49903ff-a1f3-45f8-bbbe-a47b0d28d437}, !- Handle
   Sub Surface 8,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {a0e8b656-265f-42c4-a51d-be8a49f1bb72}, !- Surface Name
+  {705efb17-c74a-4aa8-a948-9bbaa34fdc5c}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1363,11 +1367,11 @@ OS:SubSurface,
   9.144, 4.1148, 2.1336;                  !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {d5224146-e592-4d5f-8118-84032293d5ed}, !- Handle
+  {3cad80bb-2bdc-4646-8c1a-44ca6cd8843d}, !- Handle
   Sub Surface 9,                          !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {a0e8b656-265f-42c4-a51d-be8a49f1bb72}, !- Surface Name
+  {705efb17-c74a-4aa8-a948-9bbaa34fdc5c}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1380,11 +1384,11 @@ OS:SubSurface,
   9.144, 6.61035, 2.1336;                 !- X,Y,Z Vertex 4 {m}
 
 OS:Surface,
-  {32a71358-5849-47a0-9e27-cc5a3bb557ec}, !- Handle
+  {8d59cb9b-8a78-4cba-a812-e0a7a4f21e0a}, !- Handle
   Surface 6,                              !- Name
   Wall,                                   !- Surface Type
   ,                                       !- Construction Name
-  {cbdc11a1-36f2-4b6f-a9f6-2df1b5aa4108}, !- Space Name
+  {c327b952-64e3-46c5-96db-8e60397a88fe}, !- Space Name
   Outdoors,                               !- Outside Boundary Condition
   ,                                       !- Outside Boundary Condition Object
   SunExposed,                             !- Sun Exposure
@@ -1397,11 +1401,11 @@ OS:Surface,
   0, 0, 0;                                !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {43a49d19-c803-470c-bd2f-961d4462af0b}, !- Handle
+  {d50947a7-9a76-4e26-9f65-f5c2f64a99bc}, !- Handle
   Sub Surface 10,                         !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {32a71358-5849-47a0-9e27-cc5a3bb557ec}, !- Surface Name
+  {8d59cb9b-8a78-4cba-a812-e0a7a4f21e0a}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1414,10 +1418,10 @@ OS:SubSurface,
   1.666875, 0, 2.1336;                    !- X,Y,Z Vertex 4 {m}
 
 OS:ShadingSurface,
-  {179d7707-7b07-4aa4-b122-6e5f3d5fe021}, !- Handle
+  {08e991f5-5ecf-4674-b647-33481e0675a6}, !- Handle
   Shading Surface 1,                      !- Name
   ,                                       !- Construction Name
-  {2d04ea59-c566-48bd-9e5c-8662a25975df}, !- Shading Surface Group Name
+  {a34ec921-915e-4da9-83c5-b771a3066539}, !- Shading Surface Group Name
   ,                                       !- Transmittance Schedule Name
   ,                                       !- Number of Vertices
   1.666875, 0, 1.49861016,                !- X,Y,Z Vertex 1 {m}
@@ -1426,11 +1430,11 @@ OS:ShadingSurface,
   2.581275, 0, 1.49861016;                !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {5510f67a-dd93-434b-ae5d-c0aca7a4d59f}, !- Handle
+  {3282e222-04a5-4f8c-a641-da1f196ab2d6}, !- Handle
   Sub Surface 11,                         !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {32a71358-5849-47a0-9e27-cc5a3bb557ec}, !- Surface Name
+  {8d59cb9b-8a78-4cba-a812-e0a7a4f21e0a}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1443,11 +1447,11 @@ OS:SubSurface,
   4.1529, 0, 2.1336;                      !- X,Y,Z Vertex 4 {m}
 
 OS:SubSurface,
-  {2446acfd-0bd1-4849-9525-231ae695b9e3}, !- Handle
+  {341bc755-692e-4246-92b7-bcf8cafe6879}, !- Handle
   Sub Surface 12,                         !- Name
   FixedWindow,                            !- Sub Surface Type
   ,                                       !- Construction Name
-  {32a71358-5849-47a0-9e27-cc5a3bb557ec}, !- Surface Name
+  {8d59cb9b-8a78-4cba-a812-e0a7a4f21e0a}, !- Surface Name
   ,                                       !- Outside Boundary Condition Object
   ,                                       !- View Factor to Ground
   ,                                       !- Shading Control Name
@@ -1460,7 +1464,7 @@ OS:SubSurface,
   6.619875, 0, 2.1336;                    !- X,Y,Z Vertex 4 {m}
 
 OS:ThermalZone,
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}, !- Handle
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}, !- Handle
   sp-1-Zone,                              !- Name
   ,                                       !- Multiplier
   ,                                       !- Ceiling Height {m}
@@ -1469,9 +1473,9 @@ OS:ThermalZone,
   ,                                       !- Zone Inside Convection Algorithm
   ,                                       !- Zone Outside Convection Algorithm
   ,                                       !- Zone Conditioning Equipment List Name
-  {195294e9-953c-4119-b6e4-50b55639ec9d}, !- Zone Air Inlet Port List
-  {84e94d0c-6565-4cae-aef1-9cab0a258a25}, !- Zone Air Exhaust Port List
-  {f1383782-a0c7-4592-ad00-6fb8f3477d4c}, !- Zone Air Node Name
+  {a20c7def-c491-4e3e-8842-777682df8650}, !- Zone Air Inlet Port List
+  {b9577776-bf6d-4e1c-a775-973dda2c82dc}, !- Zone Air Exhaust Port List
+  {89104995-7567-4c6e-8836-402b1bc4d781}, !- Zone Air Node Name
   ,                                       !- Zone Return Air Node Name
   ,                                       !- Primary Daylighting Control Name
   ,                                       !- Fraction of Zone Controlled by Primary Daylighting Control
@@ -1483,32 +1487,32 @@ OS:ThermalZone,
   No;                                     !- Use Ideal Air Loads
 
 OS:Node,
-  {9c8ddef9-34fe-417f-b92d-70ee10d2854d}, !- Handle
+  {a4adaa8e-5aec-4ee7-858c-44050ef3782e}, !- Handle
   Node 1,                                 !- Name
-  {f1383782-a0c7-4592-ad00-6fb8f3477d4c}, !- Inlet Port
+  {89104995-7567-4c6e-8836-402b1bc4d781}, !- Inlet Port
   ;                                       !- Outlet Port
 
 OS:Connection,
-  {f1383782-a0c7-4592-ad00-6fb8f3477d4c}, !- Handle
-  {e0520c3f-d6fa-4a1c-a6a9-9a98f51a89fe}, !- Name
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}, !- Source Object
+  {89104995-7567-4c6e-8836-402b1bc4d781}, !- Handle
+  {c927807a-2a85-4f55-8d9b-67b443eaefb9}, !- Name
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}, !- Source Object
   11,                                     !- Outlet Port
-  {9c8ddef9-34fe-417f-b92d-70ee10d2854d}, !- Target Object
+  {a4adaa8e-5aec-4ee7-858c-44050ef3782e}, !- Target Object
   2;                                      !- Inlet Port
 
 OS:PortList,
-  {195294e9-953c-4119-b6e4-50b55639ec9d}, !- Handle
+  {a20c7def-c491-4e3e-8842-777682df8650}, !- Handle
   Port List 1,                            !- Name
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}; !- HVAC Component
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}; !- HVAC Component
 
 OS:PortList,
-  {84e94d0c-6565-4cae-aef1-9cab0a258a25}, !- Handle
+  {b9577776-bf6d-4e1c-a775-973dda2c82dc}, !- Handle
   Port List 2,                            !- Name
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}; !- HVAC Component
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}; !- HVAC Component
 
 OS:Sizing:Zone,
-  {738184fa-d398-411d-bf6e-8324f021e7e4}, !- Handle
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}, !- Zone or ZoneList Name
+  {ae5cf3e1-67db-48fe-8e4d-91a275ee7a1d}, !- Handle
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}, !- Zone or ZoneList Name
   SupplyAirTemperature,                   !- Zone Cooling Design Supply Air Temperature Input Method
   14,                                     !- Zone Cooling Design Supply Air Temperature {C}
   11.11,                                  !- Zone Cooling Design Supply Air Temperature Difference {deltaC}
@@ -1537,7 +1541,7 @@ OS:Sizing:Zone,
   autosize;                               !- Dedicated Outdoor Air High Setpoint Temperature for Design {C}
 
 OS:ZoneHVAC:EquipmentList,
-  {3360ddec-c33f-4da7-9b19-f0f0a4197030}, !- Handle
+  {80671e32-f637-4e94-81ae-e089ede45af5}, !- Handle
   Zone HVAC Equipment List 1,             !- Name
-  {758d2e10-499b-4c65-8bf4-f02665839d1e}; !- Thermal Zone
+  {8454b8d9-ce32-49e1-95e6-065f5bbc8bf9}; !- Thermal Zone
 
