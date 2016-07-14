@@ -1,33 +1,33 @@
-<gbXML lengthUnit="Meters" SurfaceReferenceLocation="Centerline" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" volumeUnit="CubicMeters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" areaUnit="SquareMeters" xmlns="http://www.gbxml.org/schema" temperatureUnit="C" useSIUnitsForResults="true" version="6.01">
+<gbXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.01" lengthUnit="Meters" xmlns:xhtml="http://www.w3.org/1999/xhtml" temperatureUnit="C" areaUnit="SquareMeters" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" useSIUnitsForResults="true" xmlns="http://www.gbxml.org/schema" volumeUnit="CubicMeters" SurfaceReferenceLocation="Centerline" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Campus id="Facility">
     <Name>Facility</Name>
     <Building buildingType="Unknown" id="Building_1">
       <Name>Building 1</Name>
-      <Area>0.000000</Area>
-      <Space id="Space_0_0" zoneIdRef="Zone_0_0" buildingStoreyIdRef="Level_1">
-        <Name>Space_0_0</Name>
-        <Area>560.000000</Area>
-        <Volume>3920.000000</Volume>
-      </Space>
-      <Space id="Space_4_0" zoneIdRef="Zone_4_0" buildingStoreyIdRef="Level_1">
+      <Area>1560.000000</Area>
+      <Space zoneIdRef="Zone_4_0" id="Space_4_0" buildingStoreyIdRef="Level_1">
         <Name>Space_4_0</Name>
         <Area>400.000000</Area>
         <Volume>2800.000000</Volume>
       </Space>
-      <Space id="Space_3_0" zoneIdRef="Zone_3_0" buildingStoreyIdRef="Level_1">
-        <Name>Space_3_0</Name>
-        <Area>200.000000</Area>
-        <Volume>1400.000000</Volume>
-      </Space>
-      <Space id="Space_1_0" zoneIdRef="Zone_1_0" buildingStoreyIdRef="Level_1">
+      <Space zoneIdRef="Zone_1_0" id="Space_1_0" buildingStoreyIdRef="Level_1">
         <Name>Space_1_0</Name>
         <Area>200.000000</Area>
         <Volume>1400.000000</Volume>
       </Space>
-      <Space id="Space_2_0" zoneIdRef="Zone_2_0" buildingStoreyIdRef="Level_1">
+      <Space zoneIdRef="Zone_2_0" id="Space_2_0" buildingStoreyIdRef="Level_1">
         <Name>Space_2_0</Name>
         <Area>200.000000</Area>
         <Volume>1400.000000</Volume>
+      </Space>
+      <Space zoneIdRef="Zone_3_0" id="Space_3_0" buildingStoreyIdRef="Level_1">
+        <Name>Space_3_0</Name>
+        <Area>200.000000</Area>
+        <Volume>1400.000000</Volume>
+      </Space>
+      <Space zoneIdRef="Zone_0_0" id="Space_0_0" buildingStoreyIdRef="Level_1">
+        <Name>Space_0_0</Name>
+        <Area>560.000000</Area>
+        <Volume>3920.000000</Volume>
       </Space>
       <BuildingStorey id="Level_2">
         <Name>Level 2</Name>
@@ -42,14 +42,282 @@
         <Level>0.000000</Level>
       </BuildingStorey>
     </Building>
-    <Surface surfaceType="InteriorWall" id="Surface_33">
+    <Surface surfaceType="Ceiling" id="Surface_6" constructionIdRef="Interior_Ceiling">
       <AdjacentSpaceId spaceIdRef="Space_0_0"/>
-      <AdjacentSpaceId spaceIdRef="Space_3_0"/>
+      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>10.000000</Coordinate>
-          <Coordinate>-14.000000</Coordinate>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>7.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>20.000000</Width>
+        <Height>20.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="InteriorWall" id="Surface_17" constructionIdRef="Interior_Wall">
+      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>5.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>20.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_28" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>-10.000000</Coordinate>
+          <Coordinate>7.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>20.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_26" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>-10.000000</Coordinate>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>7.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>20.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" id="Surface_12" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>15.000000</Coordinate>
+          <Coordinate>7.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>20.000000</Width>
+        <Height>10.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_21" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_3_0"/>
+      <RectangularGeometry>
+        <Azimuth>180</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>-15.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>20.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_16" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>-5.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>10.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="InteriorWall" id="Surface_4" constructionIdRef="Interior_Wall">
+      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>5.000000</Coordinate>
           <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
@@ -60,148 +328,34 @@
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_31">
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>15.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>1.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_5">
-      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>14.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>20.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="Roof" id="Surface_12">
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.000000</Coordinate>
-          <Coordinate>15.000000</Coordinate>
-          <Coordinate>7.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>20.000000</Width>
-        <Height>10.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
             <Coordinate>5.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
             <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="Roof" id="Surface_35">
+    <Surface surfaceType="Roof" id="Surface_36" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="Space_0_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>10.000000</Coordinate>
-          <Coordinate>14.000000</Coordinate>
+          <Coordinate>-10.000000</Coordinate>
           <Coordinate>7.000000</Coordinate>
         </CartesianPoint>
         <Tilt>0</Tilt>
@@ -212,104 +366,28 @@
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>-10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_26">
-      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>-10.000000</Coordinate>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>7.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>20.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_10">
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.000000</Coordinate>
-          <Coordinate>5.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>10.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_22">
+    <Surface surfaceType="SlabOnGrade" id="Surface_19" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
       <AdjacentSpaceId spaceIdRef="Space_3_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -318,198 +396,7 @@
           <Coordinate>-15.000000</Coordinate>
           <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>10.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="InteriorWall" id="Surface_9">
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
-      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>5.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>20.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_28">
-      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>-10.000000</Coordinate>
-          <Coordinate>7.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>20.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_34">
-      <AdjacentSpaceId spaceIdRef="Space_3_0"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>-14.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>1.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_11">
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.000000</Coordinate>
-          <Coordinate>15.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>20.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="Roof" id="Surface_18">
-      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.000000</Coordinate>
-          <Coordinate>5.000000</Coordinate>
-          <Coordinate>7.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
+        <Tilt>180</Tilt>
         <Width>20.000000</Width>
         <Height>10.000000</Height>
       </RectangularGeometry>
@@ -517,66 +404,28 @@
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
             <Coordinate>-5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.000000</Coordinate>
             <Coordinate>-5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="Roof" id="Surface_36">
-      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>-10.000000</Coordinate>
-          <Coordinate>7.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>20.000000</Width>
-        <Height>4.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="SlabOnGrade" id="Surface_1">
+    <Surface surfaceType="SlabOnGrade" id="Surface_1" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
       <AdjacentSpaceId spaceIdRef="Space_0_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -614,7 +463,45 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="InteriorWall" id="Surface_15">
+    <Surface surfaceType="Roof" id="Surface_30" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>14.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>20.000000</Width>
+        <Height>20.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="InteriorWall" id="Surface_15" constructionIdRef="Interior_Wall">
       <AdjacentSpaceId spaceIdRef="Space_1_0"/>
       <AdjacentSpaceId spaceIdRef="Space_3_0"/>
       <RectangularGeometry>
@@ -653,14 +540,14 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="InteriorWall" id="Surface_14">
-      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
+    <Surface surfaceType="InteriorWall" id="Surface_32" constructionIdRef="Interior_Wall">
       <AdjacentSpaceId spaceIdRef="Space_0_0"/>
+      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
       <RectangularGeometry>
-        <Azimuth>270</Azimuth>
+        <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>10.000000</Coordinate>
-          <Coordinate>5.000000</Coordinate>
+          <Coordinate>-5.000000</Coordinate>
           <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
@@ -671,28 +558,105 @@
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
             <Coordinate>5.000000</Coordinate>
             <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>10.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="Roof" id="Surface_24">
+    <Surface surfaceType="SlabOnGrade" id="Surface_7" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>5.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>180</Tilt>
+        <Width>20.000000</Width>
+        <Height>10.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="InteriorWall" id="Surface_20" constructionIdRef="Interior_Wall">
+      <AdjacentSpaceId spaceIdRef="Space_3_0"/>
+      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>-5.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>9.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" id="Surface_24" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="Space_3_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -730,51 +694,13 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_21">
+    <Surface surfaceType="ExteriorWall" id="Surface_22" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="Space_3_0"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>-15.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>20.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_16">
-      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>30.000000</Coordinate>
-          <Coordinate>-5.000000</Coordinate>
+          <Coordinate>-15.000000</Coordinate>
           <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
@@ -785,28 +711,28 @@
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>30.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
             <Coordinate>-5.000000</Coordinate>
             <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_29">
+    <Surface surfaceType="ExteriorWall" id="Surface_29" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="Space_4_0"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
@@ -844,45 +770,7 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="Roof" id="Surface_30">
-      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>14.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>20.000000</Width>
-        <Height>20.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_3">
+    <Surface surfaceType="ExteriorWall" id="Surface_3" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="Space_0_0"/>
       <RectangularGeometry>
         <Azimuth>180</Azimuth>
@@ -920,83 +808,45 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="SlabOnGrade" id="Surface_7">
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+    <Surface surfaceType="Roof" id="Surface_35" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
-          <Coordinate>30.000000</Coordinate>
-          <Coordinate>5.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>20.000000</Width>
-        <Height>10.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_2">
-      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>-10.000000</Coordinate>
+          <Coordinate>10.000000</Coordinate>
           <Coordinate>14.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
+          <Coordinate>7.000000</Coordinate>
         </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>28.000000</Width>
-        <Height>7.000000</Height>
+        <Tilt>0</Tilt>
+        <Width>20.000000</Width>
+        <Height>4.000000</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
             <Coordinate>14.000000</Coordinate>
             <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>-10.000000</Coordinate>
             <Coordinate>14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="SlabOnGrade" id="Surface_13">
+    <Surface surfaceType="SlabOnGrade" id="Surface_13" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
       <AdjacentSpaceId spaceIdRef="Space_1_0"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -1034,123 +884,7 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="SlabOnGrade" id="Surface_19">
-      <AdjacentSpaceId spaceIdRef="Space_3_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.000000</Coordinate>
-          <Coordinate>-15.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>20.000000</Width>
-        <Height>10.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.000000</Coordinate>
-            <Coordinate>-15.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="InteriorFloor" id="Surface_25">
-      <AdjacentSpaceId spaceIdRef="Space_4_0"/>
-      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>-10.000000</Coordinate>
-          <Coordinate>7.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>20.000000</Width>
-        <Height>20.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.000000</Coordinate>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="InteriorWall" id="Surface_4">
-      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
-      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>10.000000</Coordinate>
-          <Coordinate>5.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>9.000000</Width>
-        <Height>7.000000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>5.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>10.000000</Coordinate>
-            <Coordinate>14.000000</Coordinate>
-            <Coordinate>7.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_27">
+    <Surface surfaceType="ExteriorWall" id="Surface_27" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="Space_4_0"/>
       <RectangularGeometry>
         <Azimuth>180</Azimuth>
@@ -1188,24 +922,323 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_34" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_3_0"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>-14.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>1.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_31" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>15.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>1.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_11" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>15.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>20.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" id="Surface_18" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_1_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>5.000000</Coordinate>
+          <Coordinate>7.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>20.000000</Width>
+        <Height>10.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>-5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_5" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>10.000000</Coordinate>
+          <Coordinate>14.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>20.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_2" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_0_0"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>-10.000000</Coordinate>
+          <Coordinate>14.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>28.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>-14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.000000</Coordinate>
+            <Coordinate>14.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_10" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="Space_2_0"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.000000</Coordinate>
+          <Coordinate>5.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>10.000000</Width>
+        <Height>7.000000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>15.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.000000</Coordinate>
+            <Coordinate>5.000000</Coordinate>
+            <Coordinate>7.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
   </Campus>
+  <Construction id="Exterior_Door">
+    <Name>Exterior Door</Name>
+  </Construction>
+  <Construction id="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8</Name>
+  </Construction>
+  <Construction id="Interior_Wall">
+    <Name>Interior Wall</Name>
+  </Construction>
+  <Construction id="Interior_Ceiling">
+    <Name>Interior Ceiling</Name>
+  </Construction>
+  <Construction id="ExtSlabCarpet_4in_ClimateZone_1-8">
+    <Name>ExtSlabCarpet 4in ClimateZone 1-8</Name>
+  </Construction>
+  <Construction id="Interior_Partition">
+    <Name>Interior Partition</Name>
+  </Construction>
+  <Construction id="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtWall Mass ClimateZone 7-8</Name>
+  </Construction>
+  <Construction id="Interior_Floor">
+    <Name>Interior Floor</Name>
+  </Construction>
+  <Construction id="Interior_Door">
+    <Name>Interior Door</Name>
+  </Construction>
+  <WindowType id="Interior_Window">
+    <Name>Interior Window</Name>
+  </WindowType>
+  <WindowType id="ASHRAE_189.1-2009_ExtWindow_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtWindow ClimateZone 7-8</Name>
+  </WindowType>
   <Zone id="Zone_3_0">
     <Name>Zone_3_0</Name>
   </Zone>
-  <Zone id="Zone_2_0">
-    <Name>Zone_2_0</Name>
+  <Zone id="Zone_0_0">
+    <Name>Zone_0_0</Name>
   </Zone>
   <Zone id="Zone_4_0">
     <Name>Zone_4_0</Name>
   </Zone>
-  <Zone id="Zone_0_0">
-    <Name>Zone_0_0</Name>
+  <Zone id="Zone_2_0">
+    <Name>Zone_2_0</Name>
   </Zone>
   <Zone id="Zone_1_0">
     <Name>Zone_1_0</Name>
   </Zone>
   <DocumentHistory>
-    <CreatedBy date="2016-07-13T20:17:20-06:00" personId="unknown" programId="openstudio"/>
+    <CreatedBy programId="openstudio" date="2016-07-14T13:04:55-06:00" personId="unknown"/>
     <ProgramInfo id="openstudio">
       <ProductName>OpenStudio</ProductName>
       <Version>1.12.2</Version>

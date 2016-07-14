@@ -53,6 +53,23 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
     return args
   end
+  
+  def add_defaults(model)
+    vt = OpenStudio::OSVersion::VersionTranslator.new
+    template = vt.loadModel("#{File.dirname(__FILE__)}/resources/MinimalTemplate.osm").get
+    space_type = template.getSpaceTypes[0]
+    default_schedule_set = template.getDefaultScheduleSets[0]
+    default_construction_set = template.getDefaultConstructionSets[0]
+    
+    space_type = space_type.clone(model).to_SpaceType.get
+    default_schedule_set = default_schedule_set.clone(model).to_DefaultScheduleSet.get
+    default_construction_set = default_construction_set.clone(model).to_DefaultConstructionSet.get
+    
+    building = model.getBuilding
+    building.setSpaceType(space_type)
+    building.setDefaultScheduleSet(default_schedule_set)
+    building.setDefaultConstructionSet(default_construction_set)
+  end
 
   # define what happens when the measure is run
   def run(model, runner, user_arguments)
@@ -69,6 +86,9 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
     # assign the user inputs to variables
     test_case = runner.getStringArgumentValue("testcases", user_arguments)
 
+    # add in default templates
+    add_defaults(model)
+    
   #add a switch statement based upon the test case number
   case test_case
     when "Test Case 1"
@@ -2144,7 +2164,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
         #create zones
         new_zone = OpenStudio::Model::ThermalZone.new(model)
         space.setThermalZone(new_zone)
-        zone_name = space.name.get.gsub("Space","Zone")
+        zone_name = space.name.get.gsub("Space","Zone").gsub("sp","zn")
         new_zone.setName(zone_name)
         end
       end

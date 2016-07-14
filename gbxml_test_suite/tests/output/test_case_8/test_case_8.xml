@@ -1,48 +1,48 @@
-<gbXML lengthUnit="Meters" SurfaceReferenceLocation="Centerline" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" volumeUnit="CubicMeters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" areaUnit="SquareMeters" xmlns="http://www.gbxml.org/schema" temperatureUnit="C" useSIUnitsForResults="true" version="6.01">
+<gbXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="6.01" lengthUnit="Meters" xmlns:xhtml="http://www.w3.org/1999/xhtml" temperatureUnit="C" areaUnit="SquareMeters" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" useSIUnitsForResults="true" xmlns="http://www.gbxml.org/schema" volumeUnit="CubicMeters" SurfaceReferenceLocation="Centerline" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Campus id="Facility">
     <Name>Facility</Name>
     <Building buildingType="Unknown" id="Building_1">
       <Name>Building 1</Name>
-      <Area>0.000000</Area>
-      <Space id="sp-1-Occupied_Auditorium" zoneIdRef="sp-1-Occupied_Auditorium" buildingStoreyIdRef="Level_1">
+      <Area>1114.836480</Area>
+      <Space zoneIdRef="zn-1-Occupied_Auditorium" id="sp-1-Occupied_Auditorium" buildingStoreyIdRef="Level_1">
         <Name>sp-1-Occupied_Auditorium</Name>
         <Area>0.000000</Area>
         <Volume>0.000000</Volume>
       </Space>
-      <Space id="sp-3-Roof_Void" zoneIdRef="sp-3-Roof_Void" buildingStoreyIdRef="Level_2">
+      <Space zoneIdRef="zn-3-Roof_Void" id="sp-3-Roof_Void" buildingStoreyIdRef="Level_2">
         <Name>sp-3-Roof_Void</Name>
         <Area>557.418240</Area>
         <Volume>1274.258097</Volume>
       </Space>
-      <Space id="sp-2-Unoccupied_Auditorium" zoneIdRef="sp-2-Unoccupied_Auditorium" buildingStoreyIdRef="Level_2">
+      <Space zoneIdRef="zn-2-Unoccupied_Auditorium" id="sp-2-Unoccupied_Auditorium" buildingStoreyIdRef="Level_2">
         <Name>sp-2-Unoccupied_Auditorium</Name>
         <Area>557.418240</Area>
         <Volume>3398.021591</Volume>
       </Space>
-      <BuildingStorey id="Roof_Level">
-        <Name>Roof Level</Name>
-        <Level>0.000000</Level>
+      <BuildingStorey id="Level_2">
+        <Name>Level 2</Name>
+        <Level>3.048000</Level>
       </BuildingStorey>
       <BuildingStorey id="Level_1">
         <Name>Level 1</Name>
         <Level>-3.048000</Level>
       </BuildingStorey>
-      <BuildingStorey id="Level_2">
-        <Name>Level 2</Name>
-        <Level>3.048000</Level>
+      <BuildingStorey id="Roof_Level">
+        <Name>Roof Level</Name>
+        <Level>0.000000</Level>
       </BuildingStorey>
     </Building>
-    <Surface surfaceType="Ceiling" id="Surface_15">
-      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+    <Surface surfaceType="InteriorFloor" id="Surface_16" constructionIdRef="Interior_Floor">
       <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>30.480000</Coordinate>
-          <Coordinate>18.288000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
           <Coordinate>9.144000</Coordinate>
         </CartesianPoint>
-        <Tilt>0</Tilt>
+        <Tilt>180</Tilt>
         <Width>30.480000</Width>
         <Height>18.288000</Height>
       </RectangularGeometry>
@@ -54,8 +54,8 @@
             <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
             <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
@@ -64,47 +64,52 @@
             <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
             <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_18">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+    <Surface surfaceType="ExteriorWall" id="Surface_7" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
         <CartesianPoint>
           <Coordinate>30.480000</Coordinate>
           <Coordinate>18.288000</Coordinate>
-          <Coordinate>9.144000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>21.552615</Width>
-        <Height>3.232892</Height>
+        <Width>30.480000</Width>
+        <Height>3.048000</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>30.480000</Coordinate>
             <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
             <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>8.686800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
             <Coordinate>18.288000</Coordinate>
-            <Coordinate>13.716000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="UndergroundWall" id="Surface_8">
+    <Surface surfaceType="UndergroundWall" id="Surface_8" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
       <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
@@ -137,84 +142,47 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="Roof" id="Surface_19">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+    <Surface surfaceType="ExteriorWall" id="Surface_3" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>270</Azimuth>
         <CartesianPoint>
           <Coordinate>0.000000</Coordinate>
           <Coordinate>18.288000</Coordinate>
-          <Coordinate>9.144000</Coordinate>
-        </CartesianPoint>
-        <Tilt>27.7585</Tilt>
-        <Width>18.288000</Width>
-        <Height>9.816500</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>8.686800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>13.716000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>8.686800</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>13.716000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_12">
-      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
           <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>30.480000</Width>
-        <Height>6.096000</Height>
+        <Width>18.288000</Width>
+        <Height>3.048000</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
             <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
+            <Coordinate>18.288000</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_13">
+    <Surface surfaceType="InteriorFloor" id="Surface_10" constructionIdRef="Interior_Floor">
       <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
@@ -222,84 +190,7 @@
           <Coordinate>0.000000</Coordinate>
           <Coordinate>3.048000</Coordinate>
         </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>18.288000</Width>
-        <Height>6.096000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_14">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.480000</Coordinate>
-          <Coordinate>18.288000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>30.480000</Width>
-        <Height>6.096000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="Ceiling" id="Surface_9">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.480000</Coordinate>
-          <Coordinate>18.288000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
+        <Tilt>180</Tilt>
         <Width>30.480000</Width>
         <Height>18.288000</Height>
       </RectangularGeometry>
@@ -311,14 +202,85 @@
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>30.480000</Coordinate>
             <Coordinate>18.288000</Coordinate>
             <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_17" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <RectangularGeometry>
+        <Azimuth>180</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>9.144000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>21.552615</Width>
+        <Height>3.232892</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.686800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>13.716000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_11" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>18.288000</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>18.288000</Width>
+        <Height>6.096000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
@@ -328,7 +290,78 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="Roof" id="Surface_20">
+    <Surface surfaceType="ExteriorWall" id="Surface_6" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.480000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>18.288000</Width>
+        <Height>3.048000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_5" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>180</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>-3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>21.552615</Width>
+        <Height>2.155261</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" id="Surface_20" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -366,187 +399,7 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="UndergroundWall" id="Surface_2">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>18.288000</Coordinate>
-          <Coordinate>-3.048000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>18.288000</Width>
-        <Height>3.048000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>-3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>-3.048000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_5">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>-3.048000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>21.552615</Width>
-        <Height>2.155261</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>-3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_3">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>270</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>18.288000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>18.288000</Width>
-        <Height>3.048000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_17">
-      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>9.144000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>21.552615</Width>
-        <Height>3.232892</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>8.686800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>13.716000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="UndergroundWall" id="Surface_4">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>30.480000</Width>
-        <Height>3.048000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_1">
+    <Surface surfaceType="ExteriorWall" id="Surface_1" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -584,55 +437,17 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_6">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>30.480000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>18.288000</Width>
-        <Height>3.048000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_11">
+    <Surface surfaceType="ExteriorWall" id="Surface_12" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
       <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
       <RectangularGeometry>
-        <Azimuth>270</Azimuth>
+        <Azimuth>180</Azimuth>
         <CartesianPoint>
           <Coordinate>0.000000</Coordinate>
-          <Coordinate>18.288000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
           <Coordinate>3.048000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>18.288000</Width>
+        <Width>30.480000</Width>
         <Height>6.096000</Height>
       </RectangularGeometry>
       <PlanarGeometry>
@@ -643,30 +458,106 @@
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>9.144000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
             <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface surfaceType="ExteriorWall" id="Surface_7">
-      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+    <Surface surfaceType="ExteriorWall" id="Surface_13" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-2-Unoccupied_Auditorium"/>
       <RectangularGeometry>
-        <Azimuth>0</Azimuth>
+        <Azimuth>90</Azimuth>
         <CartesianPoint>
           <Coordinate>30.480000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>18.288000</Width>
+        <Height>6.096000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" id="Surface_19" constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
           <Coordinate>18.288000</Coordinate>
+          <Coordinate>9.144000</Coordinate>
+        </CartesianPoint>
+        <Tilt>27.7585</Tilt>
+        <Width>18.288000</Width>
+        <Height>9.816500</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.686800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>13.716000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.686800</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>13.716000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="UndergroundWall" id="Surface_4" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>180</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
           <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
@@ -676,40 +567,182 @@
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
             <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
             <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>30.480000</Coordinate>
-            <Coordinate>18.288000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
+    <Surface surfaceType="UndergroundWall" id="Surface_2" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>18.288000</Coordinate>
+          <Coordinate>-3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>18.288000</Width>
+        <Height>3.048000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>-3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_18" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-3-Roof_Void"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.480000</Coordinate>
+          <Coordinate>18.288000</Coordinate>
+          <Coordinate>9.144000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>21.552615</Width>
+        <Height>3.232892</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>8.686800</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>13.716000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" id="Surface_14" constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+      <AdjacentSpaceId spaceIdRef="sp-1-Occupied_Auditorium"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>30.480000</Coordinate>
+          <Coordinate>18.288000</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>30.480000</Width>
+        <Height>6.096000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>30.480000</Coordinate>
+            <Coordinate>18.288000</Coordinate>
+            <Coordinate>9.144000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
   </Campus>
-  <Zone id="sp-2-Unoccupied_Auditorium">
-    <Name>sp-2-Unoccupied_Auditorium</Name>
+  <Construction id="Interior_Floor">
+    <Name>Interior Floor</Name>
+  </Construction>
+  <Construction id="ExtSlabCarpet_4in_ClimateZone_1-8">
+    <Name>ExtSlabCarpet 4in ClimateZone 1-8</Name>
+  </Construction>
+  <Construction id="Exterior_Door">
+    <Name>Exterior Door</Name>
+  </Construction>
+  <Construction id="Interior_Ceiling">
+    <Name>Interior Ceiling</Name>
+  </Construction>
+  <Construction id="Interior_Door">
+    <Name>Interior Door</Name>
+  </Construction>
+  <Construction id="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8</Name>
+  </Construction>
+  <Construction id="Interior_Partition">
+    <Name>Interior Partition</Name>
+  </Construction>
+  <Construction id="Interior_Wall">
+    <Name>Interior Wall</Name>
+  </Construction>
+  <Construction id="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtWall Mass ClimateZone 7-8</Name>
+  </Construction>
+  <WindowType id="ASHRAE_189.1-2009_ExtWindow_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtWindow ClimateZone 7-8</Name>
+  </WindowType>
+  <WindowType id="Interior_Window">
+    <Name>Interior Window</Name>
+  </WindowType>
+  <Zone id="zn-1-Occupied_Auditorium">
+    <Name>zn-1-Occupied_Auditorium</Name>
   </Zone>
-  <Zone id="sp-1-Occupied_Auditorium">
-    <Name>sp-1-Occupied_Auditorium</Name>
+  <Zone id="zn-3-Roof_Void">
+    <Name>zn-3-Roof_Void</Name>
   </Zone>
-  <Zone id="sp-3-Roof_Void">
-    <Name>sp-3-Roof_Void</Name>
+  <Zone id="zn-2-Unoccupied_Auditorium">
+    <Name>zn-2-Unoccupied_Auditorium</Name>
   </Zone>
   <DocumentHistory>
-    <CreatedBy date="2016-07-13T20:17:18-06:00" personId="unknown" programId="openstudio"/>
+    <CreatedBy programId="openstudio" date="2016-07-14T13:02:12-06:00" personId="unknown"/>
     <ProgramInfo id="openstudio">
       <ProductName>OpenStudio</ProductName>
       <Version>1.12.2</Version>
