@@ -36,7 +36,16 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
     # the name of the space to add to the model
     chs = OpenStudio::StringVector.new
-	chs << "Whole Building Test Case 2"
+    chs << "Test Case 1"
+    chs << "Test Case 2"
+    chs << "Test Case 3"
+    chs << "Test Case 5"
+    chs << "Test Case 6"
+    chs << "Test Case 7"
+    chs << "Test Case 8"
+    chs << "Test Case 12"
+    chs << "Whole Building Test Case 1"
+    chs << "Whole Building Test Case 2"
     testcases = OpenStudio::Ruleset::OSArgument::makeChoiceArgument('testcases', chs, true)
     testcases.setDisplayName("gbXML Validation Test Case Number")
     testcases.setDescription("Select a test case based upon gbXML validator test cases.  Refer to gbxml.org for more information.")
@@ -2011,6 +2020,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       flpolygon << nepoint
       flpolygon << sepoint
       floor = OpenStudio::Model::Surface.new(flpolygon,model)
+      floor.setSurfaceType("Floor")
       floor.setSpace(sp1)
       
       point1 = OpenStudio::Point3d.new(0,0,-10*ft_to_m)
