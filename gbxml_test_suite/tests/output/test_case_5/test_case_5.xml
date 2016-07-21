@@ -1,282 +1,340 @@
-<gbXML xmlns="http://www.gbxml.org/schema" xmlns:xhtml="http://www.w3.org/1999/xhtml" lengthUnit="Meters" useSIUnitsForResults="true" xsi:schemaLocation="http://www.gbxml.org/schema http://www.gbxml.org/schema/0-37/GreenBuildingXML.xsd" version="0.37" xmlns:xsd="http://www.w3.org/2001/XMLSchema" temperatureUnit="C" volumeUnit="CubicMeters" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" areaUnit="SquareMeters">
+<gbXML useSIUnitsForResults="true" volumeUnit="CubicMeters" areaUnit="SquareMeters" temperatureUnit="C" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SurfaceReferenceLocation="Centerline" version="6.01" xmlns="http://www.gbxml.org/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lengthUnit="Meters" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <Campus id="Facility">
     <Name>Facility</Name>
     <Building buildingType="Unknown" id="Building_1">
       <Name>Building 1</Name>
-      <Area>54.9289</Area>
-      <Space zoneIdRef="sp-1-Zone" id="sp-1-Space">
+      <Area>54.928922</Area>
+      <Space zoneIdRef="sp-1-Zone" buildingStoreyIdRef="Level_B1" id="sp-1-Space">
         <Name>sp-1-Space</Name>
-        <Area>54.9289</Area>
-        <Volume>200.908</Volume>
+        <Area>54.928922</Area>
+        <Volume>200.908027</Volume>
       </Space>
+      <BuildingStorey id="Level_1">
+        <Name>Level 1</Name>
+        <Level>0.000000</Level>
+      </BuildingStorey>
+      <BuildingStorey id="Level_2">
+        <Name>Level 2</Name>
+        <Level>0.000000</Level>
+      </BuildingStorey>
+      <BuildingStorey id="Level_B1">
+        <Name>Level B1</Name>
+        <Level>-3.657600</Level>
+      </BuildingStorey>
     </Building>
-    <Surface id="Surface_5" surfaceType="ExteriorWall">
+    <Surface constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1-8" surfaceType="UndergroundSlab" id="Surface_1">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
-          <Coordinate>6.5532</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>-3.6576</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>8.382</Width>
-        <Height>3.6576</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_1" surfaceType="UndergroundSlab">
-      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>6.5532</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>-3.6576</Coordinate>
+          <Coordinate>6.553200</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>-3.657600</Coordinate>
         </CartesianPoint>
         <Tilt>180</Tilt>
-        <Width>6.5532</Width>
-        <Height>8.382</Height>
+        <Width>6.553200</Width>
+        <Height>8.382000</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_2" surfaceType="ExteriorWall">
+    <Surface constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8" surfaceType="ExteriorWall" id="Surface_2">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>270</Azimuth>
         <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>8.382</Coordinate>
-          <Coordinate>-3.6576</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>8.382000</Coordinate>
+          <Coordinate>-3.657600</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>8.382</Width>
-        <Height>3.6576</Height>
+        <Width>8.382000</Width>
+        <Height>3.657600</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_6" surfaceType="ExteriorWall">
+    <Surface constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8" surfaceType="ExteriorWall" id="Surface_6">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>180</Azimuth>
         <CartesianPoint>
-          <Coordinate>0</Coordinate>
-          <Coordinate>0</Coordinate>
-          <Coordinate>-3.6576</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>-3.657600</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>6.5532</Width>
-        <Height>3.6576</Height>
+        <Width>6.553200</Width>
+        <Height>3.657600</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
-      <Opening openingType="FixedWindow" id="Sub_Surface_1">
+      <Opening windowTypeIdRef="ASHRAE_189.1-2009_ExtWindow_ClimateZone_7-8" openingType="FixedWindow" id="Sub_Surface_1">
         <RectangularGeometry>
           <Azimuth>180</Azimuth>
           <CartesianPoint>
-            <Coordinate>0.5</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>-3.5052</Coordinate>
+            <Coordinate>0.500000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.505200</Coordinate>
           </CartesianPoint>
           <Tilt>90</Tilt>
-          <Width>5.9008</Width>
-          <Height>3.0052</Height>
+          <Width>5.900800</Width>
+          <Height>3.005200</Height>
         </RectangularGeometry>
         <PlanarGeometry>
           <PolyLoop>
             <CartesianPoint>
-              <Coordinate>6.4008</Coordinate>
-              <Coordinate>0</Coordinate>
-              <Coordinate>-3.5052</Coordinate>
+              <Coordinate>6.400800</Coordinate>
+              <Coordinate>0.000000</Coordinate>
+              <Coordinate>-3.505200</Coordinate>
             </CartesianPoint>
             <CartesianPoint>
-              <Coordinate>6.4008</Coordinate>
-              <Coordinate>0</Coordinate>
-              <Coordinate>-0.5</Coordinate>
+              <Coordinate>6.400800</Coordinate>
+              <Coordinate>0.000000</Coordinate>
+              <Coordinate>-0.500000</Coordinate>
             </CartesianPoint>
             <CartesianPoint>
-              <Coordinate>0.5</Coordinate>
-              <Coordinate>0</Coordinate>
-              <Coordinate>-0.5</Coordinate>
+              <Coordinate>0.500000</Coordinate>
+              <Coordinate>0.000000</Coordinate>
+              <Coordinate>-0.500000</Coordinate>
             </CartesianPoint>
             <CartesianPoint>
-              <Coordinate>0.5</Coordinate>
-              <Coordinate>0</Coordinate>
-              <Coordinate>-3.5052</Coordinate>
+              <Coordinate>0.500000</Coordinate>
+              <Coordinate>0.000000</Coordinate>
+              <Coordinate>-3.505200</Coordinate>
             </CartesianPoint>
           </PolyLoop>
         </PlanarGeometry>
       </Opening>
     </Surface>
-    <Surface id="Surface_3" surfaceType="Roof">
+    <Surface constructionIdRef="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8" surfaceType="Roof" id="Surface_3">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
         <CartesianPoint>
-          <Coordinate>6.5532</Coordinate>
-          <Coordinate>8.382</Coordinate>
-          <Coordinate>0</Coordinate>
+          <Coordinate>6.553200</Coordinate>
+          <Coordinate>8.382000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>0</Tilt>
-        <Width>6.5532</Width>
-        <Height>8.382</Height>
+        <Width>6.553200</Width>
+        <Height>8.382000</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>0</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_4" surfaceType="ExteriorWall">
+    <Surface constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8" surfaceType="ExteriorWall" id="Surface_4">
       <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
         <CartesianPoint>
-          <Coordinate>6.5532</Coordinate>
-          <Coordinate>8.382</Coordinate>
-          <Coordinate>-3.6576</Coordinate>
+          <Coordinate>6.553200</Coordinate>
+          <Coordinate>8.382000</Coordinate>
+          <Coordinate>-3.657600</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>6.5532</Width>
-        <Height>3.6576</Height>
+        <Width>6.553200</Width>
+        <Height>3.657600</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>0</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>0</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>6.5532</Coordinate>
-            <Coordinate>8.382</Coordinate>
-            <Coordinate>-3.6576</Coordinate>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface constructionIdRef="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8" surfaceType="ExteriorWall" id="Surface_5">
+      <AdjacentSpaceId spaceIdRef="sp-1-Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>6.553200</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>-3.657600</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>8.382000</Width>
+        <Height>3.657600</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>8.382000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>6.553200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-3.657600</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
   </Campus>
+  <Construction id="Interior_Partition">
+    <Name>Interior Partition</Name>
+  </Construction>
+  <Construction id="ExtSlabCarpet_4in_ClimateZone_1-8">
+    <Name>ExtSlabCarpet 4in ClimateZone 1-8</Name>
+  </Construction>
+  <Construction id="Interior_Ceiling">
+    <Name>Interior Ceiling</Name>
+  </Construction>
+  <Construction id="Interior_Door">
+    <Name>Interior Door</Name>
+  </Construction>
+  <Construction id="Interior_Floor">
+    <Name>Interior Floor</Name>
+  </Construction>
+  <Construction id="Exterior_Door">
+    <Name>Exterior Door</Name>
+  </Construction>
+  <Construction id="Interior_Wall">
+    <Name>Interior Wall</Name>
+  </Construction>
+  <Construction id="ASHRAE_189.1-2009_ExtRoof_IEAD_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8</Name>
+  </Construction>
+  <Construction id="ASHRAE_189.1-2009_ExtWall_Mass_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtWall Mass ClimateZone 7-8</Name>
+  </Construction>
+  <WindowType id="Interior_Window">
+    <Name>Interior Window</Name>
+  </WindowType>
+  <WindowType id="ASHRAE_189.1-2009_ExtWindow_ClimateZone_7-8">
+    <Name>ASHRAE 189.1-2009 ExtWindow ClimateZone 7-8</Name>
+  </WindowType>
   <Zone id="sp-1-Zone">
     <Name>sp-1-Zone</Name>
   </Zone>
+  <DocumentHistory>
+    <CreatedBy date="2016-07-14T14:35:27-06:00" personId="unknown" programId="openstudio"/>
+    <ProgramInfo id="openstudio">
+      <ProductName>OpenStudio</ProductName>
+      <Version>1.12.2</Version>
+      <Platform>Windows</Platform>
+      <ProjectEntity/>
+    </ProgramInfo>
+    <PersonInfo id="unknown">
+      <FirstName>Unknown</FirstName>
+      <LastName>Unknown</LastName>
+    </PersonInfo>
+  </DocumentHistory>
 </gbXML>

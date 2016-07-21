@@ -44,6 +44,23 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
     return args
   end
+  
+  def add_defaults(model)
+    vt = OpenStudio::OSVersion::VersionTranslator.new
+    template = vt.loadModel("#{File.dirname(__FILE__)}/resources/MinimalTemplate.osm").get
+    space_type = template.getSpaceTypes[0]
+    default_schedule_set = template.getDefaultScheduleSets[0]
+    default_construction_set = template.getDefaultConstructionSets[0]
+    
+    space_type = space_type.clone(model).to_SpaceType.get
+    default_schedule_set = default_schedule_set.clone(model).to_DefaultScheduleSet.get
+    default_construction_set = default_construction_set.clone(model).to_DefaultConstructionSet.get
+    
+    building = model.getBuilding
+    building.setSpaceType(space_type)
+    building.setDefaultScheduleSet(default_schedule_set)
+    building.setDefaultConstructionSet(default_construction_set)
+  end
 
   def makeNewZones(model,zones,newbase,height,newzonenames,newlevel)
     retarr = []
@@ -117,6 +134,12 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
     test_case = runner.getStringArgumentValue("testcases", user_arguments)
 	
 
+    # add in default templates
+    add_defaults(model)
+    
+    # create an unnoccupied space type with no loads or people
+    unnoccupied_space_type = OpenStudio::Model::SpaceType.new(model)
+    
   #add a switch statement based upon the test case number
   case test_case
     when "Test Case 1"
@@ -147,6 +170,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 		
       sp4 = OpenStudio::Model::Space.new(model)
       sp4.setBuildingStory(level1p)
+      sp4.setSpaceType(unnoccupied_space_type)
       sp4.setName("sp-4-Space")
 		
       sp3 = OpenStudio::Model::Space.new(model)
@@ -1909,21 +1933,22 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       nwgroof = OpenStudio::Model::Surface.new(nwgpolygon,model)
       nwgroof.setSpace(sp2)
       #s roof panel
-      point1 = OpenStudio::Point3d.new(14.941085*ft_to_m,0,20*ft_to_m)
-      point2 = OpenStudio::Point3d.new(20*ft_to_m,13.49*ft_to_m,30.11783*ft_to_m)
-      point3 = OpenStudio::Point3d.new(25.0589*ft_to_m,0,20*ft_to_m)
-      point4 = OpenStudio::Point3d.new(40*ft_to_m,0,20*ft_to_m)
-      point5 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,36.1886*ft_to_m)
-      point6 = OpenStudio::Point3d.new(0,0,20*ft_to_m)
-      srpolygon = OpenStudio::Point3dVector.new
-      srpolygon << point1
-      srpolygon << point2
-      srpolygon << point3
-      srpolygon << point4
-      srpolygon << point5
-      srpolygon << point6
-      sroof = OpenStudio::Model::Surface.new(srpolygon,model)
-      sroof.setSpace(sp2)
+      # DLM: this surface does not seem to be planar
+      #point1 = OpenStudio::Point3d.new(14.941085*ft_to_m,0,20*ft_to_m)
+      #point2 = OpenStudio::Point3d.new(20*ft_to_m,13.49*ft_to_m,30.11783*ft_to_m)
+      #point3 = OpenStudio::Point3d.new(25.0589*ft_to_m,0,20*ft_to_m)
+      #point4 = OpenStudio::Point3d.new(40*ft_to_m,0,20*ft_to_m)
+      #point5 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,36.1886*ft_to_m)
+      #point6 = OpenStudio::Point3d.new(0,0,20*ft_to_m)
+      #srpolygon = OpenStudio::Point3dVector.new
+      #srpolygon << point1
+      #srpolygon << point2
+      #srpolygon << point3
+      #srpolygon << point4
+      #srpolygon << point5
+      #srpolygon << point6
+      #sroof = OpenStudio::Model::Surface.new(srpolygon,model)
+      #sroof.setSpace(sp2)
       #gable wall
       point1 = OpenStudio::Point3d.new(14.941085*ft_to_m,0,20*ft_to_m)
       point2 = OpenStudio::Point3d.new(25.0589*ft_to_m,0,20*ft_to_m)
@@ -2086,6 +2111,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       
       sp2 = OpenStudio::Model::Space.new(model)
       sp2.setBuildingStory(level2)
+      sp2.setSpaceType(unnoccupied_space_type)
       sp2.setName("sp-2-Unoccupied_Auditorium")
       
       swpoint = OpenStudio::Point3d.new(0,0,10*ft_to_m)
@@ -2227,7 +2253,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
         #create zones
         new_zone = OpenStudio::Model::ThermalZone.new(model)
         space.setThermalZone(new_zone)
-        zone_name = space.name.get.gsub("Space","Zone")
+        zone_name = space.name.get.gsub("Space","Zone").gsub("sp","zn")
         new_zone.setName(zone_name)
         end
       end
@@ -3116,6 +3142,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #plenum
       sp5 = OpenStudio::Model::Space.new(model)
       sp5.setBuildingStory(level1p)
+      sp5.setSpaceType(unnoccupied_space_type)
       sp5.setName("Space_zone_5")
       
       swpoint = OpenStudio::Point3d.new(0,0,2.7342)
@@ -3621,6 +3648,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #plenum
       sp11 = OpenStudio::Model::Space.new(model)
       sp11.setBuildingStory(level2p)
+      sp11.setSpaceType(unnoccupied_space_type)
       sp11.setName("Space_zone_11")
       
       swpoint = OpenStudio::Point3d.new(0,0,6.7056)
@@ -4126,6 +4154,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #plenum
       sp17 = OpenStudio::Model::Space.new(model)
       sp17.setBuildingStory(level3p)
+      sp17.setSpaceType(unnoccupied_space_type)
       sp17.setName("Space_zone_17")
       
       swpoint = OpenStudio::Point3d.new(0,0,10.668)
