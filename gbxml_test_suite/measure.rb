@@ -1741,13 +1741,13 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(10*ft_to_m)
+      level2.setNominalZCoordinate(10*ft_to_m)
       level2.setName("Level 2")
       roofBase = OpenStudio::Model::BuildingStory.new(model)
-      roofBase.setNominalFloortoFloorHeight(20*ft_to_m)
+      roofBase.setNominalZCoordinate(20*ft_to_m)
       roofBase.setName("Roof Base")
       
       sp1 = OpenStudio::Model::Space.new(model)
