@@ -1799,7 +1799,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
 
       #nw roof
       point1 = OpenStudio::Point3d.new(0,0,20*ft_to_m)
-      point2 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,36.1886*ft_to_m)
+      point2 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,35.000*ft_to_m)
       point3 = OpenStudio::Point3d.new(0,40*ft_to_m,20*ft_to_m)
       nwpolygon = OpenStudio::Point3dVector.new
       nwpolygon << point1
@@ -1810,7 +1810,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #n roof
       point1 = OpenStudio::Point3d.new(40*ft_to_m,40*ft_to_m,20*ft_to_m)
       point2 = OpenStudio::Point3d.new(0,40*ft_to_m,20*ft_to_m)
-      point3 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,36.1886*ft_to_m)
+      point3 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,35.000*ft_to_m)
       npolygon = OpenStudio::Point3dVector.new
       npolygon << point1
       npolygon << point2
@@ -1820,7 +1820,7 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       #ne roof
       point1 = OpenStudio::Point3d.new(40*ft_to_m,0,20*ft_to_m)
       point2 = OpenStudio::Point3d.new(40*ft_to_m,40*ft_to_m,20*ft_to_m)
-      point3 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,36.1886*ft_to_m)
+      point3 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,35.000*ft_to_m)
       npolygon = OpenStudio::Point3dVector.new
       npolygon << point1
       npolygon << point2
@@ -1850,21 +1850,21 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       nwgroof.setSpace(sp2)
       #s roof panel
       # DLM: this surface does not seem to be planar
-      #point1 = OpenStudio::Point3d.new(14.941085*ft_to_m,0,20*ft_to_m)
-      #point2 = OpenStudio::Point3d.new(20*ft_to_m,13.49*ft_to_m,30.11783*ft_to_m)
-      #point3 = OpenStudio::Point3d.new(25.0589*ft_to_m,0,20*ft_to_m)
-      #point4 = OpenStudio::Point3d.new(40*ft_to_m,0,20*ft_to_m)
-      #point5 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,36.1886*ft_to_m)
-      #point6 = OpenStudio::Point3d.new(0,0,20*ft_to_m)
-      #srpolygon = OpenStudio::Point3dVector.new
-      #srpolygon << point1
-      #srpolygon << point2
-      #srpolygon << point3
-      #srpolygon << point4
-      #srpolygon << point5
-      #srpolygon << point6
-      #sroof = OpenStudio::Model::Surface.new(srpolygon,model)
-      #sroof.setSpace(sp2)
+      point1 = OpenStudio::Point3d.new(14.941085*ft_to_m,0,20*ft_to_m)
+      point2 = OpenStudio::Point3d.new(20*ft_to_m,13.49*ft_to_m,30.11783*ft_to_m)
+      point3 = OpenStudio::Point3d.new(25.0589*ft_to_m,0,20*ft_to_m)
+      point4 = OpenStudio::Point3d.new(40*ft_to_m,0,20*ft_to_m)
+      point5 = OpenStudio::Point3d.new(20*ft_to_m,20*ft_to_m,35.000*ft_to_m)
+      point6 = OpenStudio::Point3d.new(0,0,20*ft_to_m)
+      srpolygon = OpenStudio::Point3dVector.new
+      srpolygon << point1
+      srpolygon << point2
+      srpolygon << point3
+      srpolygon << point4
+      srpolygon << point5
+      srpolygon << point6
+      sroof = OpenStudio::Model::Surface.new(srpolygon,model)
+      sroof.setSpace(sp2)
       #gable wall
       point1 = OpenStudio::Point3d.new(14.941085*ft_to_m,0,20*ft_to_m)
       point2 = OpenStudio::Point3d.new(25.0589*ft_to_m,0,20*ft_to_m)
