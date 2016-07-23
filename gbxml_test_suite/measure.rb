@@ -147,7 +147,14 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
     add_defaults(model)
     
     # create an unnoccupied space type with no loads or people
+    # usage: `space.setSpaceType(unnoccupied_space_type)’
     unnoccupied_space_type = OpenStudio::Model::SpaceType.new(model)
+    
+    # create an air wall construction
+    # usage: `surface.setConstruction(air_wall_construction)’
+    air_wall_material = OpenStudio::Model::AirWallMaterial.new(model)
+    air_wall_construction = OpenStudio::Model::Construction.new(model)
+    air_wall_construction.setLayer(air_wall_material)
     
   #add a switch statement based upon the test case number
   case test_case
@@ -158,19 +165,19 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level1p = OpenStudio::Model::BuildingStory.new(model)
-      level1p.setNominalFloortoFloorHeight(10*ft_to_m)
+      level1p.setNominalZCoordinate(10*ft_to_m)
       level1p.setName("Level 1 Plenum")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(13*ft_to_m)
+      level2.setNominalZCoordinate(13*ft_to_m)
       level2.setName("Level 2")
       level2p = OpenStudio::Model::BuildingStory.new(model)
-      level2p.setNominalFloortoFloorHeight(23*ft_to_m)
+      level2p.setNominalZCoordinate(23*ft_to_m)
       level2p.setName("Level 2 Plenum")
       level3 = OpenStudio::Model::BuildingStory.new(model)
-      level3.setNominalFloortoFloorHeight(26*ft_to_m)
+      level3.setNominalZCoordinate(26*ft_to_m)
       level3.setName("Level 3")
 		
       sp1 = OpenStudio::Model::Space.new(model)
@@ -513,10 +520,10 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(13*ft_to_m)
+      level2.setNominalZCoordinate(13*ft_to_m)
       level2.setName("Level 2")
       shades = OpenStudio::Model::ShadingSurfaceGroup.new(model)
 
@@ -781,13 +788,13 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(13*ft_to_m)
+      level2.setNominalZCoordinate(13*ft_to_m)
       level2.setName("Level 2") 
       level3 = OpenStudio::Model::BuildingStory.new(model)
-      level3.setNominalFloortoFloorHeight(26*ft_to_m)
+      level3.setNominalZCoordinate(26*ft_to_m)
       level3.setName("Level 3") 
     
       sp1 = OpenStudio::Model::Space.new(model)
@@ -1274,13 +1281,13 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       levelb1 = OpenStudio::Model::BuildingStory.new(model)
-      levelb1.setNominalFloortoFloorHeight(-12*ft_to_m)
+      levelb1.setNominalZCoordinate(-12*ft_to_m)
       levelb1.setName("Level B1")
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(10*ft_to_m)
+      level2.setNominalZCoordinate(10*ft_to_m)
       level2.setName("Level 2")  
 
       sp1 = OpenStudio::Model::Space.new(model)
@@ -1402,10 +1409,10 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(7)
+      level2.setNominalZCoordinate(7)
       level2.setName("Level 2")
 
       sp1 = OpenStudio::Model::Space.new(model)
@@ -1997,13 +2004,13 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(10*ft_to_m)
+      level2.setNominalZCoordinate(10*ft_to_m)
       level2.setName("Level 2")
       roofBase = OpenStudio::Model::BuildingStory.new(model)
-      roofBase.setNominalFloortoFloorHeight(30*ft_to_m)
+      roofBase.setNominalZCoordinate(30*ft_to_m)
       roofBase.setName("Roof Level")
       
       sp1 = OpenStudio::Model::Space.new(model)
@@ -2284,13 +2291,13 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(7)
+      level2.setNominalZCoordinate(7)
       level2.setName("Level 2")
       level3 = OpenStudio::Model::BuildingStory.new(model)
-      level3.setNominalFloortoFloorHeight(14)
+      level3.setNominalZCoordinate(14)
       level3.setName("Level 3")
       
       sp1 = OpenStudio::Model::Space.new(model)
@@ -2700,25 +2707,25 @@ class GBXMLTestSuite < OpenStudio::Ruleset::ModelUserScript
       facility = model.getFacility
       building = model.getBuilding
       level1 = OpenStudio::Model::BuildingStory.new(model)
-      level1.setNominalFloortoFloorHeight(0)
+      level1.setNominalZCoordinate(0)
       level1.setName("Level 1")
       level1p = OpenStudio::Model::BuildingStory.new(model)
-      level1p.setNominalFloortoFloorHeight(2.7342)
+      level1p.setNominalZCoordinate(2.7342)
       level1p.setName("Level 1 Plenum")
       level2 = OpenStudio::Model::BuildingStory.new(model)
-      level2.setNominalFloortoFloorHeight(3.9624)
+      level2.setNominalZCoordinate(3.9624)
       level2.setName("Level 2")
       level2p = OpenStudio::Model::BuildingStory.new(model)
-      level2p.setNominalFloortoFloorHeight(6.7056)
+      level2p.setNominalZCoordinate(6.7056)
       level2p.setName("Level 2 Plenum")
       level3 = OpenStudio::Model::BuildingStory.new(model)
-      level3.setNominalFloortoFloorHeight(7.9248)
+      level3.setNominalZCoordinate(7.9248)
       level3.setName("Level 3")
       level3p = OpenStudio::Model::BuildingStory.new(model)
-      level3p.setNominalFloortoFloorHeight(10.668)
+      level3p.setNominalZCoordinate(10.668)
       level3p.setName("Level 3 Plenum")
       levelr = OpenStudio::Model::BuildingStory.new(model)
-      levelr.setNominalFloortoFloorHeight(11.8872)
+      levelr.setNominalZCoordinate(11.8872)
       levelr.setName("Roof Level")
       
       sp0 = OpenStudio::Model::Space.new(model)

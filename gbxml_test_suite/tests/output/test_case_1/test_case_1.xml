@@ -1,167 +1,127 @@
-<gbXML xmlns:xsd="http://www.w3.org/2001/XMLSchema" temperatureUnit="C" xmlns="http://www.gbxml.org/schema" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" areaUnit="SquareMeters" lengthUnit="Meters" volumeUnit="CubicMeters" xmlns:xhtml="http://www.w3.org/1999/xhtml" useSIUnitsForResults="true" SurfaceReferenceLocation="Centerline" version="6.01">
+<gbXML volumeUnit="CubicMeters" SurfaceReferenceLocation="Centerline" xmlns="http://www.gbxml.org/schema" xsi:schemaLocation="http://www.gbxml.org/schema http://gbxml.org/schema/6-01/GreenBuildingXML_Ver6.01.xsd" areaUnit="SquareMeters" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:xsd="http://www.w3.org/2001/XMLSchema" useSIUnitsForResults="true" temperatureUnit="C" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" lengthUnit="Meters" version="6.01">
   <Campus id="Facility">
     <Name>Facility</Name>
-    <Building id="Building_1" buildingType="Unknown">
+    <Building buildingType="Unknown" id="Building_1">
       <Name>Building 1</Name>
       <Area>148.273252</Area>
-      <Space buildingStoreyIdRef="Level_1" id="sp_1_Space" zoneIdRef="sp_1_Zone">
-        <Name>sp-1-Space</Name>
-        <Area>66.890189</Area>
-        <Volume>203.881295</Volume>
-      </Space>
-      <Space buildingStoreyIdRef="Level_1_Plenum" id="sp_4_Space" zoneIdRef="sp_4_Zone">
+      <Space buildingStoreyIdRef="Level_1_Plenum" zoneIdRef="sp_4_Zone" id="sp_4_Space">
         <Name>sp-4-Space</Name>
         <Area>66.890189</Area>
         <Volume>61.164389</Volume>
       </Space>
-      <Space buildingStoreyIdRef="Level_1" id="sp_2_Space" zoneIdRef="sp_2_Zone">
+      <Space buildingStoreyIdRef="Level_1" zoneIdRef="sp_2_Zone" id="sp_2_Space">
         <Name>sp-2-Space</Name>
         <Area>14.492874</Area>
         <Volume>114.853130</Volume>
       </Space>
-      <Space buildingStoreyIdRef="Level_2" id="sp_3_Space" zoneIdRef="sp_3_Zone">
+      <Space buildingStoreyIdRef="Level_1" zoneIdRef="sp_1_Zone" id="sp_1_Space">
+        <Name>sp-1-Space</Name>
+        <Area>66.890189</Area>
+        <Volume>203.881295</Volume>
+      </Space>
+      <Space buildingStoreyIdRef="Level_2" zoneIdRef="sp_3_Zone" id="sp_3_Space">
         <Name>sp-3-Space</Name>
         <Area>66.890189</Area>
         <Volume>265.045684</Volume>
       </Space>
-      <BuildingStorey id="Level_3">
-        <Name>Level 3</Name>
-        <Level>0.000000</Level>
+      <BuildingStorey id="Level_2">
+        <Name>Level 2</Name>
+        <Level>3.962400</Level>
       </BuildingStorey>
       <BuildingStorey id="Level_1_Plenum">
         <Name>Level 1 Plenum</Name>
-        <Level>3.048000</Level>
-      </BuildingStorey>
-      <BuildingStorey id="Level_2_Plenum">
-        <Name>Level 2 Plenum</Name>
-        <Level>0.000000</Level>
-      </BuildingStorey>
-      <BuildingStorey id="Level_2">
-        <Name>Level 2</Name>
         <Level>3.048000</Level>
       </BuildingStorey>
       <BuildingStorey id="Level_1">
         <Name>Level 1</Name>
         <Level>0.000000</Level>
       </BuildingStorey>
+      <BuildingStorey id="Level_3">
+        <Name>Level 3</Name>
+        <Level>7.924800</Level>
+      </BuildingStorey>
+      <BuildingStorey id="Level_2_Plenum">
+        <Name>Level 2 Plenum</Name>
+        <Level>7.010400</Level>
+      </BuildingStorey>
     </Building>
-    <Surface id="Surface_15" constructionIdRef="Interior_Wall" surfaceType="InteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
-      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>3.962400</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>6.096000</Width>
-        <Height>3.962400</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_18" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.076200</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>2.438400</Width>
-        <Height>7.924800</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.076200</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.438400</Coordinate>
-            <Coordinate>0.076200</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.438400</Coordinate>
-            <Coordinate>0.076200</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.076200</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_9" constructionIdRef="Interior_Wall" surfaceType="InteriorWall">
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_8">
       <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
-      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
       <RectangularGeometry>
-        <Azimuth>90</Azimuth>
+        <Azimuth>0</Azimuth>
         <CartesianPoint>
           <Coordinate>0.000000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.096000</Coordinate>
           <Coordinate>3.048000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>6.096000</Width>
+        <Width>10.972800</Width>
         <Height>0.914400</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
+            <Coordinate>-10.972800</Coordinate>
             <Coordinate>6.096000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
             <Coordinate>6.096000</Coordinate>
             <Coordinate>3.962400</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
             <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_17" constructionIdRef="Interior_Wall" surfaceType="InteriorWall">
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_3">
+      <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.096000</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>10.972800</Width>
+        <Height>3.048000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="InteriorWall" constructionIdRef="Interior_Wall" id="Surface_17">
       <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
       <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
       <RectangularGeometry>
@@ -200,313 +160,7 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_14" constructionIdRef="ASHRAE_189.1_2009_ExtRoof_IEAD_ClimateZone_7_8" surfaceType="Roof">
-      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>7.924800</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>10.972800</Width>
-        <Height>6.096000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_10" constructionIdRef="Interior_Ceiling" surfaceType="Ceiling">
-      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
-      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>3.962400</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>10.972800</Width>
-        <Height>6.096000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_5" constructionIdRef="Interior_Ceiling" surfaceType="Ceiling">
-      <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
-      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
-        </CartesianPoint>
-        <Tilt>0</Tilt>
-        <Width>10.972800</Width>
-        <Height>6.096000</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_13" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>3.962400</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>10.972800</Width>
-        <Height>3.962400</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_12" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
-      <RectangularGeometry>
-        <Azimuth>330.945</Azimuth>
-        <CartesianPoint>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>8.875910</Width>
-        <Height>3.448418</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_20" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
-      <RectangularGeometry>
-        <Azimuth>0</Azimuth>
-        <CartesianPoint>
-          <Coordinate>2.438400</Coordinate>
-          <Coordinate>6.019800</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>2.438400</Width>
-        <Height>7.924800</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>2.438400</Coordinate>
-            <Coordinate>6.019800</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.438400</Coordinate>
-            <Coordinate>6.019800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.019800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.019800</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_22" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1_8" surfaceType="SlabOnGrade">
-      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
-      <RectangularGeometry>
-        <Azimuth>90</Azimuth>
-        <CartesianPoint>
-          <Coordinate>2.438400</Coordinate>
-          <Coordinate>0.076200</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-        </CartesianPoint>
-        <Tilt>180</Tilt>
-        <Width>2.438400</Width>
-        <Height>5.943600</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>2.438400</Coordinate>
-            <Coordinate>0.076200</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.076200</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.019800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>2.438400</Coordinate>
-            <Coordinate>6.019800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_16" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
-      <RectangularGeometry>
-        <Azimuth>180</Azimuth>
-        <CartesianPoint>
-          <Coordinate>-10.972800</Coordinate>
-          <Coordinate>0.000000</Coordinate>
-          <Coordinate>3.962400</Coordinate>
-        </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>10.972800</Width>
-        <Height>3.962400</Height>
-      </RectangularGeometry>
-      <PlanarGeometry>
-        <PolyLoop>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>7.924800</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-        </PolyLoop>
-      </PlanarGeometry>
-    </Surface>
-    <Surface id="Surface_19" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_19">
       <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -544,45 +198,314 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_3" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_13">
+      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
       <RectangularGeometry>
         <Azimuth>0</Azimuth>
         <CartesianPoint>
           <Coordinate>0.000000</Coordinate>
           <Coordinate>6.096000</Coordinate>
-          <Coordinate>0.000000</Coordinate>
+          <Coordinate>3.962400</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
         <Width>10.972800</Width>
-        <Height>3.048000</Height>
+        <Height>3.962400</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
             <Coordinate>-10.972800</Coordinate>
             <Coordinate>6.096000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>-10.972800</Coordinate>
             <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
             <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
             <Coordinate>6.096000</Coordinate>
-            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_2" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
+    <Surface surfaceType="InteriorWall" constructionIdRef="Interior_Wall" id="Surface_24">
+      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
+      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.019800</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>5.943600</Width>
+        <Height>0.914400</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_16">
+      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
+      <RectangularGeometry>
+        <Azimuth>180</Azimuth>
+        <CartesianPoint>
+          <Coordinate>-10.972800</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>3.962400</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>10.972800</Width>
+        <Height>3.962400</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_12">
+      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
+      <RectangularGeometry>
+        <Azimuth>330.945</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.096000</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>8.875910</Width>
+        <Height>3.448418</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_20">
+      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
+      <RectangularGeometry>
+        <Azimuth>0</Azimuth>
+        <CartesianPoint>
+          <Coordinate>2.438400</Coordinate>
+          <Coordinate>6.019800</Coordinate>
+          <Coordinate>0.000000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>2.438400</Width>
+        <Height>7.924800</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>2.438400</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.438400</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="InteriorWall" constructionIdRef="Interior_Wall" id="Surface_23">
+      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
+      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.019800</Coordinate>
+          <Coordinate>3.962400</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>5.943600</Width>
+        <Height>3.962400</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Ceiling" constructionIdRef="Interior_Ceiling" id="Surface_10">
+      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
+      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.096000</Coordinate>
+          <Coordinate>3.962400</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>10.972800</Width>
+        <Height>6.096000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" constructionIdRef="ASHRAE_189.1_2009_ExtRoof_IEAD_ClimateZone_7_8" id="Surface_14">
+      <AdjacentSpaceId spaceIdRef="sp_3_Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.096000</Coordinate>
+          <Coordinate>7.924800</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>10.972800</Width>
+        <Height>6.096000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>7.924800</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_2">
       <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
       <RectangularGeometry>
         <Azimuth>270</Azimuth>
@@ -620,7 +543,84 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_21" constructionIdRef="ASHRAE_189.1_2009_ExtRoof_IEAD_ClimateZone_7_8" surfaceType="Roof">
+    <Surface surfaceType="Ceiling" constructionIdRef="Interior_Ceiling" id="Surface_5">
+      <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
+      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
+      <RectangularGeometry>
+        <Azimuth>90</Azimuth>
+        <CartesianPoint>
+          <Coordinate>0.000000</Coordinate>
+          <Coordinate>6.096000</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>0</Tilt>
+        <Width>10.972800</Width>
+        <Height>6.096000</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_7">
+      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
+      <RectangularGeometry>
+        <Azimuth>270</Azimuth>
+        <CartesianPoint>
+          <Coordinate>-10.972800</Coordinate>
+          <Coordinate>6.096000</Coordinate>
+          <Coordinate>3.048000</Coordinate>
+        </CartesianPoint>
+        <Tilt>90</Tilt>
+        <Width>6.096000</Width>
+        <Height>0.914400</Height>
+      </RectangularGeometry>
+      <PlanarGeometry>
+        <PolyLoop>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.962400</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>6.096000</Coordinate>
+            <Coordinate>3.048000</Coordinate>
+          </CartesianPoint>
+        </PolyLoop>
+      </PlanarGeometry>
+    </Surface>
+    <Surface surfaceType="Roof" constructionIdRef="ASHRAE_189.1_2009_ExtRoof_IEAD_ClimateZone_7_8" id="Surface_21">
       <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -658,45 +658,45 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_8" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
+    <Surface surfaceType="ExteriorWall" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" id="Surface_18">
+      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
       <RectangularGeometry>
-        <Azimuth>0</Azimuth>
+        <Azimuth>180</Azimuth>
         <CartesianPoint>
           <Coordinate>0.000000</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
+          <Coordinate>0.076200</Coordinate>
+          <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
         <Tilt>90</Tilt>
-        <Width>10.972800</Width>
-        <Height>0.914400</Height>
+        <Width>2.438400</Width>
+        <Height>7.924800</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
+            <Coordinate>2.438400</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+          </CartesianPoint>
+          <CartesianPoint>
+            <Coordinate>2.438400</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>7.924800</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
-          </CartesianPoint>
-          <CartesianPoint>
-            <Coordinate>0.000000</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>7.924800</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_1" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1_8" surfaceType="SlabOnGrade">
+    <Surface surfaceType="SlabOnGrade" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1_8" id="Surface_1">
       <AdjacentSpaceId spaceIdRef="sp_1_Space"/>
       <RectangularGeometry>
         <Azimuth>90</Azimuth>
@@ -734,50 +734,50 @@
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
-    <Surface id="Surface_7" constructionIdRef="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8" surfaceType="ExteriorWall">
-      <AdjacentSpaceId spaceIdRef="sp_4_Space"/>
+    <Surface surfaceType="SlabOnGrade" constructionIdRef="ExtSlabCarpet_4in_ClimateZone_1_8" id="Surface_22">
+      <AdjacentSpaceId spaceIdRef="sp_2_Space"/>
       <RectangularGeometry>
-        <Azimuth>270</Azimuth>
+        <Azimuth>90</Azimuth>
         <CartesianPoint>
-          <Coordinate>-10.972800</Coordinate>
-          <Coordinate>6.096000</Coordinate>
-          <Coordinate>3.048000</Coordinate>
+          <Coordinate>2.438400</Coordinate>
+          <Coordinate>0.076200</Coordinate>
+          <Coordinate>0.000000</Coordinate>
         </CartesianPoint>
-        <Tilt>90</Tilt>
-        <Width>6.096000</Width>
-        <Height>0.914400</Height>
+        <Tilt>180</Tilt>
+        <Width>2.438400</Width>
+        <Height>5.943600</Height>
       </RectangularGeometry>
       <PlanarGeometry>
         <PolyLoop>
           <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
+            <Coordinate>2.438400</Coordinate>
+            <Coordinate>0.076200</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
             <Coordinate>0.000000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
+            <Coordinate>0.076200</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.962400</Coordinate>
+            <Coordinate>0.000000</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
           <CartesianPoint>
-            <Coordinate>-10.972800</Coordinate>
-            <Coordinate>6.096000</Coordinate>
-            <Coordinate>3.048000</Coordinate>
+            <Coordinate>2.438400</Coordinate>
+            <Coordinate>6.019800</Coordinate>
+            <Coordinate>0.000000</Coordinate>
           </CartesianPoint>
         </PolyLoop>
       </PlanarGeometry>
     </Surface>
   </Campus>
-  <Construction id="ASHRAE_189.1_2009_ExtRoof_IEAD_ClimateZone_7_8">
-    <Name>ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8</Name>
-    <LayerId layerIdRef="Roof_Membrane_Layer"/>
-    <LayerId layerIdRef="Roof_Insulation__26__Layer"/>
-    <LayerId layerIdRef="Metal_Decking_Layer"/>
+  <Construction id="Interior_Ceiling">
+    <Name>Interior Ceiling</Name>
+    <LayerId layerIdRef="M11_100mm_lightweight_concrete_Layer"/>
+    <LayerId layerIdRef="F05_Ceiling_air_space_resistance_Layer"/>
+    <LayerId layerIdRef="F16_Acoustic_tile_Layer"/>
   </Construction>
   <Construction id="Interior_Wall">
     <Name>Interior Wall</Name>
@@ -785,29 +785,17 @@
     <LayerId layerIdRef="F04_Wall_air_space_resistance_Layer"/>
     <LayerId layerIdRef="G01a_19mm_gypsum_board_Layer"/>
   </Construction>
-  <Construction id="Interior_Floor">
-    <Name>Interior Floor</Name>
-    <LayerId layerIdRef="F16_Acoustic_tile_Layer"/>
-    <LayerId layerIdRef="F05_Ceiling_air_space_resistance_Layer"/>
-    <LayerId layerIdRef="M11_100mm_lightweight_concrete_Layer"/>
-  </Construction>
-  <Construction id="Interior_Ceiling">
-    <Name>Interior Ceiling</Name>
-    <LayerId layerIdRef="M11_100mm_lightweight_concrete_Layer"/>
-    <LayerId layerIdRef="F05_Ceiling_air_space_resistance_Layer"/>
-    <LayerId layerIdRef="F16_Acoustic_tile_Layer"/>
-  </Construction>
   <Construction id="ExtSlabCarpet_4in_ClimateZone_1_8">
     <Name>ExtSlabCarpet 4in ClimateZone 1-8</Name>
     <LayerId layerIdRef="MAT_CC05_4_HW_CONCRETE_Layer"/>
     <LayerId layerIdRef="CP02_CARPET_PAD_Layer"/>
   </Construction>
-  <Construction id="Interior_Door">
-    <Name>Interior Door</Name>
-    <LayerId layerIdRef="G05_25mm_wood_Layer"/>
-  </Construction>
   <Construction id="Interior_Partition">
     <Name>Interior Partition</Name>
+    <LayerId layerIdRef="G05_25mm_wood_Layer"/>
+  </Construction>
+  <Construction id="Interior_Door">
+    <Name>Interior Door</Name>
     <LayerId layerIdRef="G05_25mm_wood_Layer"/>
   </Construction>
   <Construction id="ASHRAE_189.1_2009_ExtWall_Mass_ClimateZone_7_8">
@@ -822,13 +810,29 @@
     <LayerId layerIdRef="F08_Metal_surface_Layer"/>
     <LayerId layerIdRef="I01_25mm_insulation_board_Layer"/>
   </Construction>
+  <Construction id="ASHRAE_189.1_2009_ExtRoof_IEAD_ClimateZone_7_8">
+    <Name>ASHRAE 189.1-2009 ExtRoof IEAD ClimateZone 7-8</Name>
+    <LayerId layerIdRef="Roof_Membrane_Layer"/>
+    <LayerId layerIdRef="Roof_Insulation__26__Layer"/>
+    <LayerId layerIdRef="Metal_Decking_Layer"/>
+  </Construction>
+  <Construction id="Interior_Floor">
+    <Name>Interior Floor</Name>
+    <LayerId layerIdRef="F16_Acoustic_tile_Layer"/>
+    <LayerId layerIdRef="F05_Ceiling_air_space_resistance_Layer"/>
+    <LayerId layerIdRef="M11_100mm_lightweight_concrete_Layer"/>
+  </Construction>
   <WindowType id="Interior_Window">
     <Name>Interior Window</Name>
-    <Transmittance type="Visible" surfaceType="Both" unit="Fraction">0.898</Transmittance>
+    <Transmittance unit="Fraction" surfaceType="Both" type="Visible">0.898</Transmittance>
   </WindowType>
   <WindowType id="ASHRAE_189.1_2009_ExtWindow_ClimateZone_7_8">
     <Name>ASHRAE 189.1-2009 ExtWindow ClimateZone 7-8</Name>
-    <Transmittance type="Visible" surfaceType="Both" unit="Fraction">0.4503</Transmittance>
+    <Transmittance unit="Fraction" surfaceType="Both" type="Visible">0.4503</Transmittance>
+  </WindowType>
+  <WindowType id="Construction_1">
+    <Name>Construction 1</Name>
+    <Transmittance unit="Fraction" surfaceType="Both" type="Visible">1</Transmittance>
   </WindowType>
   <Layer id="G05_25mm_wood_Layer">
     <Name>G05 25mm wood Layer</Name>
@@ -900,214 +904,214 @@
   </Layer>
   <Material id="G05_25mm_wood">
     <Name>G05 25mm wood</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.5</Reflectance>
     <Roughness value="MediumSmooth"/>
     <Thickness unit="Meters">0.0254</Thickness>
     <Conductivity unit="WPerMeterK">0.15</Conductivity>
     <Density unit="KgPerCubicM">608</Density>
     <SpecificHeat unit="JPerKgK">1630</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.5</Absorptance>
   </Material>
   <Material id="id_1IN_Stucco">
     <Name>1IN Stucco</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.08</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.08</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.08</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.08</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.08</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.08</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.08</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.08</Reflectance>
     <Roughness value="Smooth"/>
     <Thickness unit="Meters">0.0253</Thickness>
     <Conductivity unit="WPerMeterK">0.6918</Conductivity>
     <Density unit="KgPerCubicM">1858</Density>
     <SpecificHeat unit="JPerKgK">837</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.92</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.92</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.92</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.92</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.92</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.92</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.92</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.92</Absorptance>
   </Material>
   <Material id="id_8IN_Concrete_HW">
     <Name>8IN Concrete HW</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.35</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.35</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.35</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.35</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.35</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.35</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.35</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.35</Reflectance>
     <Roughness value="MediumRough"/>
     <Thickness unit="Meters">0.2033</Thickness>
     <Conductivity unit="WPerMeterK">1.7296</Conductivity>
     <Density unit="KgPerCubicM">2243</Density>
     <SpecificHeat unit="JPerKgK">837</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.65</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.65</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.65</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.65</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.65</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.65</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.65</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.65</Absorptance>
   </Material>
   <Material id="Wall_Insulation__44_">
     <Name>Wall Insulation [44]</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.5</Reflectance>
     <Roughness value="MediumRough"/>
     <Thickness unit="Meters">0.1104</Thickness>
     <Conductivity unit="WPerMeterK">0.0432</Conductivity>
     <Density unit="KgPerCubicM">91</Density>
     <SpecificHeat unit="JPerKgK">837</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.5</Absorptance>
   </Material>
   <Material id="id_1_2IN_Gypsum">
     <Name>1/2IN Gypsum</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.6</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.6</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.6</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.6</Reflectance>
     <Roughness value="Smooth"/>
     <Thickness unit="Meters">0.0127</Thickness>
     <Conductivity unit="WPerMeterK">0.16</Conductivity>
     <Density unit="KgPerCubicM">784.9</Density>
     <SpecificHeat unit="JPerKgK">830</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.4</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.4</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.4</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.4</Absorptance>
   </Material>
   <Material id="MAT_CC05_4_HW_CONCRETE">
     <Name>MAT-CC05 4 HW CONCRETE</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.15</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.15</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.15</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.15</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.15</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.15</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.15</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.15</Reflectance>
     <Roughness value="Rough"/>
     <Thickness unit="Meters">0.1016</Thickness>
     <Conductivity unit="WPerMeterK">1.311</Conductivity>
     <Density unit="KgPerCubicM">2240</Density>
     <SpecificHeat unit="JPerKgK">836.8</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.85</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.85</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.85</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.85</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.85</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.85</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.85</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.85</Absorptance>
   </Material>
   <Material id="CP02_CARPET_PAD">
     <Name>CP02 CARPET PAD</Name>
     <Roughness value="Smooth"/>
     <R-value unit="SquareMeterKPerW">0.1</R-value>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.8</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.8</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.8</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.8</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.8</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.8</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.8</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.8</Absorptance>
   </Material>
   <Material id="Roof_Membrane">
     <Name>Roof Membrane</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.3</Reflectance>
     <Roughness value="VeryRough"/>
     <Thickness unit="Meters">0.0095</Thickness>
     <Conductivity unit="WPerMeterK">0.16</Conductivity>
     <Density unit="KgPerCubicM">1121.29</Density>
     <SpecificHeat unit="JPerKgK">1460</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.7</Absorptance>
   </Material>
   <Material id="Roof_Insulation__26_">
     <Name>Roof Insulation [26]</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.3</Reflectance>
     <Roughness value="MediumRough"/>
     <Thickness unit="Meters">0.2941</Thickness>
     <Conductivity unit="WPerMeterK">0.049</Conductivity>
     <Density unit="KgPerCubicM">265</Density>
     <SpecificHeat unit="JPerKgK">836.8</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.7</Absorptance>
   </Material>
   <Material id="Metal_Decking">
     <Name>Metal Decking</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.4</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.4</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.4</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.4</Reflectance>
     <Roughness value="MediumSmooth"/>
     <Thickness unit="Meters">0.0015</Thickness>
     <Conductivity unit="WPerMeterK">45.006</Conductivity>
     <Density unit="KgPerCubicM">7680</Density>
     <SpecificHeat unit="JPerKgK">418.4</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.6</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.6</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.6</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.6</Absorptance>
   </Material>
   <Material id="F16_Acoustic_tile">
     <Name>F16 Acoustic tile</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.7</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.7</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.7</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.7</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.7</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.7</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.7</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.7</Reflectance>
     <Roughness value="MediumSmooth"/>
     <Thickness unit="Meters">0.0191</Thickness>
     <Conductivity unit="WPerMeterK">0.06</Conductivity>
     <Density unit="KgPerCubicM">368</Density>
     <SpecificHeat unit="JPerKgK">590</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.3</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.3</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.3</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.3</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.3</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.3</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.3</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.3</Absorptance>
   </Material>
   <Material id="F05_Ceiling_air_space_resistance">
     <Name>F05 Ceiling air space resistance</Name>
@@ -1115,43 +1119,43 @@
   </Material>
   <Material id="M11_100mm_lightweight_concrete">
     <Name>M11 100mm lightweight concrete</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.5</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.5</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.5</Reflectance>
     <Roughness value="MediumRough"/>
     <Thickness unit="Meters">0.1016</Thickness>
     <Conductivity unit="WPerMeterK">0.53</Conductivity>
     <Density unit="KgPerCubicM">1280</Density>
     <SpecificHeat unit="JPerKgK">840</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.5</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.5</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.5</Absorptance>
   </Material>
   <Material id="G01a_19mm_gypsum_board">
     <Name>G01a 19mm gypsum board</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.6</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.6</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.6</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.6</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.6</Reflectance>
     <Roughness value="MediumSmooth"/>
     <Thickness unit="Meters">0.019</Thickness>
     <Conductivity unit="WPerMeterK">0.16</Conductivity>
     <Density unit="KgPerCubicM">800</Density>
     <SpecificHeat unit="JPerKgK">1090</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.4</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.4</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.4</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.4</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.4</Absorptance>
   </Material>
   <Material id="F04_Wall_air_space_resistance">
     <Name>F04 Wall air space resistance</Name>
@@ -1159,58 +1163,58 @@
   </Material>
   <Material id="F08_Metal_surface">
     <Name>F08 Metal surface</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.3</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.3</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.3</Reflectance>
     <Roughness value="Smooth"/>
     <Thickness unit="Meters">0.0008</Thickness>
     <Conductivity unit="WPerMeterK">45.28</Conductivity>
     <Density unit="KgPerCubicM">7824</Density>
     <SpecificHeat unit="JPerKgK">500</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.7</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.7</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.7</Absorptance>
   </Material>
   <Material id="I01_25mm_insulation_board">
     <Name>I01 25mm insulation board</Name>
-    <Reflectance type="ExtIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="IntIR" surfaceType="Both" unit="Fraction">0.1</Reflectance>
-    <Reflectance type="ExtSolar" surfaceType="Both" unit="Fraction">0.4</Reflectance>
-    <Reflectance type="IntSolar" surfaceType="Both" unit="Fraction">0.4</Reflectance>
-    <Reflectance type="ExtVisible" surfaceType="Both" unit="Fraction">0.4</Reflectance>
-    <Reflectance type="IntVisible" surfaceType="Both" unit="Fraction">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntIR">0.1</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtSolar">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntSolar">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="ExtVisible">0.4</Reflectance>
+    <Reflectance unit="Fraction" surfaceType="Both" type="IntVisible">0.4</Reflectance>
     <Roughness value="MediumRough"/>
     <Thickness unit="Meters">0.0254</Thickness>
     <Conductivity unit="WPerMeterK">0.03</Conductivity>
     <Density unit="KgPerCubicM">43</Density>
     <SpecificHeat unit="JPerKgK">1210</SpecificHeat>
-    <Absorptance type="ExtIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="IntIR" unit="Fraction">0.9</Absorptance>
-    <Absorptance type="ExtSolar" unit="Fraction">0.6</Absorptance>
-    <Absorptance type="IntSolar" unit="Fraction">0.6</Absorptance>
-    <Absorptance type="ExtVisible" unit="Fraction">0.6</Absorptance>
-    <Absorptance type="IntVisible" unit="Fraction">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="ExtIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="IntIR">0.9</Absorptance>
+    <Absorptance unit="Fraction" type="ExtSolar">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="IntSolar">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="ExtVisible">0.6</Absorptance>
+    <Absorptance unit="Fraction" type="IntVisible">0.6</Absorptance>
   </Material>
-  <Zone id="sp_2_Zone">
-    <Name>sp-2-Zone</Name>
-  </Zone>
-  <Zone id="sp_1_Zone">
-    <Name>sp-1-Zone</Name>
-  </Zone>
   <Zone id="sp_4_Zone">
     <Name>sp-4-Zone</Name>
   </Zone>
   <Zone id="sp_3_Zone">
     <Name>sp-3-Zone</Name>
   </Zone>
+  <Zone id="sp_1_Zone">
+    <Name>sp-1-Zone</Name>
+  </Zone>
+  <Zone id="sp_2_Zone">
+    <Name>sp-2-Zone</Name>
+  </Zone>
   <DocumentHistory>
-    <CreatedBy date="2016-07-22T17:40:13-06:00" programId="openstudio" personId="unknown"/>
+    <CreatedBy date="2016-07-22T18:01:05-06:00" programId="openstudio" personId="unknown"/>
     <ProgramInfo id="openstudio">
       <ProductName>OpenStudio</ProductName>
       <Version>1.12.2</Version>
